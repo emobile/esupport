@@ -1,0 +1,53 @@
+<%= form_for(@progress) do |f| %>
+  <% if @progress.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@progress.errors.count, "error") %> prohibited this progress from being saved:</h2>
+
+      <ul>
+        <% @progress.errors.full_messages.each do |msg| %>
+          <li><%= msg %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="row-fluid">
+    <div class="block span6" id='show-box-100'>
+      <a href="#parts_info" class="block-heading" data-toggle="collapse"><%= t(:current_progress)%></a>
+      <div id="parts_info" class="block-body collapse in">
+        <br />
+        <div class="field">
+          <%= f.label :short_description %><br />
+          <%= f.text_field :short_description %>
+        </div>
+        <div class="field">
+          <%= f.label :full_description %><br />
+          <%= f.text_area :full_description %>
+        </div>
+        <div class="field">
+          <%= f.hidden_field :user_id, :value => current_user.id %>
+        </div>
+        <%if params[:order_id].blank?%>
+          <%@orders = current_user.role.super_admin == true ? Order.all : Order.where(:branch_id => current_user.branch_id)%>
+          <div class="field">
+            <%= f.label :order %><br />
+            <%= f.collection_select(:order_id, @orders, :id, :client_id, :prompt => true)%>
+          </div>
+        <%else%>
+          <div class="field">
+            <%= f.hidden_field :order_id, :value => params[:order_id]%>
+          </div>
+        <%end%>
+        <%= f.hidden_field :branch_id, :value => current_user.branch_id%>
+      </div>
+    </div>
+  </div>     
+
+  <div class="form-actions">
+    <%= f.submit nil, :class => 'btn btn-primary' %>
+    <%if can? :index, Progress%>
+      <%= link_to t(:back, :default => t("helpers.links.back")),
+        progresses_path, :class => 'btn'  %>
+    <%end%>
+  </div>
+<% end %>

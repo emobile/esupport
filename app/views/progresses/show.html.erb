@@ -1,0 +1,64 @@
+<%content_for :breadcrumb do%>
+  <ul class="breadcrumb">
+    <%if can? :show, Progress and signed_in?%>
+      <li><%=link_to @current_user.branch.name, @current_user.branch%><span class="divider">/</span></li>
+    <%end%>
+    <%if can? :index, Progress%>
+      <li><%=link_to t(:index), progresses_path%><span class="divider">/</span></li>
+    <%end%>
+    <li class="active"><%=@progress.order_id%></li>
+  </ul>
+<%end%>
+
+<div class="row-fluid">
+  <div class="block span6">
+    <a href="#details" class="block-heading" data-toggle="collapse"><%= t(:general_info) %></a>
+    <div id="details" class="block-body collapse in">
+      <p>
+        <b>Short description:</b>
+        <%= @progress.short_description %>
+      </p>
+      <p>
+        <b>User:</b>
+        <%= @progress.user.fullname %>
+      </p>
+      <p>
+        <b>Order Id:</b>
+        <%= @progress.order_id %>
+      </p>
+    </div>
+  </div>
+  <div class="block span6">
+    <a href="#box-info-backgroud" class="block-heading" data-toggle="collapse"><%= t(:description) %></a>
+    <div id="box-info-backgroud" class="block-body collapse in">
+      <br />
+      <p>
+        <%= @progress.full_description %>
+      </p>
+    </div>
+  </div>
+</div>
+
+<div class="form-actions">
+  <%if can? :index, Progress%>
+    <%= link_to t(:back, :default => t("helpers.links.back")),
+      progresses_path, :class => 'btn'  %>
+  <%end%>
+  <%if can? :edit, Progress%>
+    <%= link_to t(:edit, :default => t("helpers.links.edit")),
+      edit_progress_path(@progress), :class => 'btn' %>
+  <%end%>
+  <%if can? :destroy, Progress%>
+    <%= link_to t(:destroy, :default => t("helpers.links.destroy")),
+      progress_path(@progress),
+      :method => 'delete',
+      :data => { :confirm => t('.confirm', :default => t("helpers.links.confirm", :default => 'Are you sure?')) },
+      :class => 'btn btn-danger' %>
+  <%end%>
+  <%if can? :new, Progress%>
+    <%= link_to t(:new, :default => t("helpers.links.new")),
+      new_progress_path,
+      :class => 'btn btn-primary', :title => t(:new) %>
+  <%end%>
+</div>
+

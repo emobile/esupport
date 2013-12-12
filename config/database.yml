@@ -1,0 +1,37 @@
+# MySQL.  Versions 4.1 and 5.0 are recommended.
+#
+#
+# Be sure to use new-style password hashing:
+#   http://dev.mysql.com/doc/refman/5.0/en/old-client.html
+development:
+  adapter: postgresql
+  host: localhost
+  database: esupport
+  schema: development
+  port: 5432
+  username: postgres
+  password: postgres
+  
+test:
+  adapter: mysql2
+  database: admin_servinetmx
+  host: servi-net.us
+  username: servi-net-mx
+  password: emobilej2011
+
+local:
+  adapter: postgresql
+  host: localhost
+  database: esupport
+  schema: development
+  port: 5432
+  username: postgres
+  password: postgres
+
+production:
+  adapter: mysql2
+  database: servinet_servinet
+  host: localhost
+  username: servinet_servine
+  password: emobilej2011
+

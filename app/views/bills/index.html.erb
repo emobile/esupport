@@ -1,0 +1,91 @@
+<div class="btn-toolbar">
+  <%if can? :new, Bill and @is_user%>
+    <%= link_to t(:new, :default => t("helpers.links.new")),
+      new_bill_path,
+      :class => 'btn btn-primary', :title => t(:new) %>
+  <%end%>
+  <%=  link_to t(:export_this_page_csv), bills_path(format: "csv"), :class=>"btn" %>
+  <%=  link_to t(:export_this_page_xls), bills_path(format: "xls"), :class=>"btn"%>
+  <%=  link_to t(:export_all_csv), bills_path(format: "csv", :all => true), :class=>"btn"%>
+  <%=  link_to t(:export_all_xls), bills_path(format: "xls", :all => true), :class=>"btn"%>
+  <div class="btn-group">
+  </div>
+</div>
+
+<%content_for :breadcrumb do%>
+  <ul class="breadcrumb">
+    <%if @is_user%>
+      <li><%=link_to @current_user.branch.name, @current_user.branch%><span class="divider">/</span></li>
+      <li class="active"><%=t(:index)%></li>
+    <%end%>
+  </ul> 
+<%end%>
+
+<div class="well">
+  <table class="table">
+    <thead>
+      <tr>
+        <th><%= t'.id' %></th>
+        <th><%= t'.name' %></th>
+        <th><%= t'.rfc' %></th>
+        <th><%= t'.email' %></th>
+        <th><%= t'.phone1' %></th>
+        <th><%= t'.client' %></th>
+        <th><%= t'.actions' %></th>
+    </thead>
+
+    <tbody>
+      <% @bills.each do |bill| %>
+        <tr>
+          <%if can? :show, Bill%>
+            <td><%=link_to bill.id, bill, :class => 'btn btn-mini', :title => t(:show)%></td>
+          <%else%>
+            <td><%= label bill.id, bill.id, :class => 'btn btn-mini', :title => t(:show)%></td>
+          <%end%>
+          <td><%= bill.name %></td>
+          <td><%= bill.rfc %></td>
+          <td><%= bill.email %></td>
+          <td><%= bill.phone1 %></td>
+          <td><%= bill.client.fullname %></td>
+          <td>         
+            <ul class="nav nav-pills">
+              <li class="dropdown">
+                <a class="dropdown-toggle" data-toggle="dropdown" href="#" title='<%=t(:actions)%>'><i class="icon-cog"></i>&nbsp;<i class="icon-caret-down"></i></a>
+                <ul class="dropdown-menu">
+                  <%if can? :show, Bill%>
+                    <li>
+                      <%= link_to bill do %>
+                        <i class="icon-eye-open"></i>&nbsp;&nbsp;<%=t(:show, :default => t("helpers.links.show"))%>
+                      <%end%>
+                    </li>
+                  <%end%>
+                  <%if can? :edit, Bill%>
+                    <li>
+                      <%= link_to edit_bill_path(bill) do %>
+                        <i class="icon-pencil"></i>&nbsp;&nbsp;<%=t(:edit, :default => t("helpers.links.edit"))%>
+                      <%end%>
+                    </li>
+                  <%end%>
+                  <%if can? :destroy, Bill%>
+                    <li>
+                      <%= link_to  bill, :method => :delete, :data => { :confirm => t('.confirm', :default => t("helpers.links.confirm", :default => 'Are you sure?')) } do %>
+                        <i class="icon-trash"></i>&nbsp;&nbsp;<%=t(:destroy, :default => t("helpers.links.destroy"))%>
+                      <%end%>
+                    </li>
+                  <%end%>
+                </ul>
+              </li>
+            </ul>
+          </td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+</div>
+<br />
+
+
+<div class="page_info">
+  <%= page_entries_info @billes %>
+  <%= will_paginate @billes, :renderer => BootstrapPagination::Rails %>
+</div>

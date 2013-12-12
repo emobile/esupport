@@ -1,0 +1,323 @@
+<%@page_is_dialog = false%>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <%= stylesheet_link_tag    "application", :media => "all" %>
+    <%= javascript_include_tag "application" %>
+    <%= csrf_meta_tags %>
+    <meta charset="utf-8">            
+    <title><%= "eSupport : " + t("activerecord.models.#{controller_name}") %></title>
+    <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <!-- Demo page code -->
+
+    <style type="text/css">
+      #line-chart {
+        height:300px;
+        width:800px;
+        margin: 0px auto;
+        margin-top: 1em;
+      }
+      .brand { font-family: georgia, serif; }
+      .brand .first {
+        color: #ccc;
+        font-style: italic;
+      }
+      .brand .second {
+        color: #fff;
+        font-weight: bold;
+      }
+    </style>
+
+    <script>
+      CKEDITOR.config.toolbar = [
+        ['Styles', 'Format', 'Font', 'FontSize'],
+        '/',
+        ['Bold', 'Italic', 'Underline', 'StrikeThrough', '-', 'Undo', 'Redo', '-', 'Cut', 'Copy', 'Paste', 'Find', 'Replace', 'Preview', '-', 'Outdent', 'Indent', 'JustifyLeft', 'JustifyCenter', 'JustifyRight', 'JustifyBlock', '-', 'Print', 'Image', 'Smiley']
+      ];
+      CKEDITOR.config.language = 'es';
+    </script>
+
+    <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+  <body class="<%#=data.page.body_tag%>"> 
+    <!--<![endif]-->
+<%#unless data.page.show_header == false%>
+    <div class="navbar">
+      <div class="navbar-inner">
+        <ul class="nav pull-right">
+          <%if signed_in?%>
+            <li><%= link_to new_comment_path, :class=>"hidden-phone visible-tablet visible-desktop", :role=>"button"  do%>
+                <i class="icon-comments-alt"></i><%= " " + t(:leave_comment)%>
+              <%end%>
+            </li>
+            <li id="fat-menu" class="dropdown">
+              <a href="#" role="button" class="dropdown-toggle" data-toggle="dropdown">
+                <i class="icon-user"></i><%= " " +  @current_user.fullname%>
+                <i class="icon-caret-down"></i>
+              </a>
+              <ul class="dropdown-menu">
+                <li><%= link_to @current_user do%>
+                    <i class="icon-user"></i><%=  " " + t(:my_account) +  " " +  @current_user.fullname%>
+                  <%end%>
+                </li>
+                <li class="divider"></li>
+                <li><%= link_to destroy_user_session_path do%>
+                    <i class="icon-signout"></i><%=  " " + t(:logout) + " " +  @current_user.username%>
+                  <%end%>
+                </li>                
+              </ul>
+            </li>
+          <%else%>
+            <li id="fat-menu" class="dropdown">
+              <a href="#" role="button" class="dropdown-toggle" data-toggle="dropdown">
+                <i class="icon-signin"></i><%=  " " + t(:signin)%>
+                <i class="icon-caret-down"></i>
+              </a>
+              <ul class="dropdown-menu">
+                <li><%= link_to new_user_session_path do%>
+                    <i class="icon-user"></i><%= " " + t(:user_signin)%>
+                  <%end%>
+                </li>
+                <li class="divider"></li>
+                <li><%= link_to new_client_session_path do%>
+                    <i class="icon-group"></i><%= " " + t(:client_signin)%>
+                  <%end%>
+                </li>
+              </ul>
+            </li>
+          <%end%>
+        </ul>
+        <a href="http://servi-net.us" style="margin:auto;"><%=image_tag("/assets/logo.png", :style => "margin-top:.6%;", :width => "80px")%></a>
+      </div>
+    </div>
+<%#end%>
+
+
+<%#unless data.page.show_menu == false %>
+    <div class="sidebar-nav">
+      <form class="search form-inline">
+        <input type="text" placeholder='<%=t(:repair_centers)%>'>
+      </form>
+      <a href="<%=root_path%>" class="nav-header collapsed"><i class="icon-home"></i ><%=t(:home)%></a>
+      <%if !signed_in?%>
+        <a href="#users" class="nav-header collapsed" data-toggle="collapse"><i class="icon-user"></i ><%= t(:user_access)%><i class="icon-chevron-up"></i></a>
+        <ul id="users" class="nav nav-list collapse">
+          <li><%= render "devise/shared/links" %></li>
+        </ul>
+        <a href="#clients" class="nav-header collapsed" data-toggle="collapse"><i class="icon-group"></i ><%= t(:client_access)%><i class="icon-chevron-up"></i></a>
+        <ul id="clients" class="nav nav-list collapse">
+          <li><%= render "devise/shared/client_links" %></li>
+        </ul>
+      <%else%>
+        <a href="#accounts-menu" class="nav-header collapsed" data-toggle="collapse"><i class="icon-user"></i><%= t(:account)%><i class="icon-chevron-up"></i></a>
+        <ul id="accounts-menu" class="nav nav-list collapse">
+          <li><%= link_to t(:logout) + @current_user.username, destroy_user_session_path%></li>
+          <li><%= link_to t(:my_account) + @current_user.fullname, @current_user%></li>
+          <%if current_client.blank?%>
+            <li><%= link_to t(:edit_my_account), edit_user_path(@current_user)%></li>
+          <%else%>
+            <li><%= link_to t(:edit_my_account), edit_client_path(@current_user)%></li>
+            <li><%= link_to Bill, bills_path%></li>
+          <%end%>
+        </ul>
+        <a href="#branches" class="nav-header collapsed" data-toggle="collapse"><i class="icon-tasks"></i><%=t('activerecord.models.branches')%><i class="icon-chevron-up"></i></a></a>
+      <ul id="branches" class="nav nav-list collapse<%#=expand_if(data.page.menu_expand, 'dashboard')%>">
+        <li><%= link_to t(:all_branches), branches_path%></li>
+        <% Branch.all.each do |branch| %>
+          <li><%= link_to branch.name, branch%></li>
+        <% end %>
+      </ul>
+<<<<<<< HEAD
+      <% if client_session.blank? %>
+        <%unless current_user.blank?%>
+          <% dash_boar_title = @current_user.role.super_admin == true ? t(:administration) : @current_user.branch.name %>
+          <a href="#dashboard-menu" class="nav-header collapsed" data-toggle="collapse"><i class="icon-share-alt "></i><%= dash_boar_title%><i class="icon-chevron-up"></i></a></a>
+      <%else%>
+        <% dash_boar_title = t(:my_account) %>
+        <a href="#dashboard-menu" class="nav-header collapsed" data-toggle="collapse"><i class="icon-share-alt "></i><%= dash_boar_title%><i class="icon-chevron-up"></i></a></a>   
+=======
+    <%else%>
+      <a href="#accounts-menu" class="nav-header collapsed" data-toggle="collapse"><i class="icon-user"></i><%= t(:account)%><i class="icon-chevron-up"></i></a>
+
+        <ul id="accounts-menu" class="nav nav-list collapse">
+          <li><%= link_to t(:logout) + @current_user.username, destroy_user_session_path%></li>
+          <li><%= link_to t(:my_account) + @current_user.fullname, @current_user%></li>
+          <%if @is_user%>
+            <li><%= link_to t(:edit_my_account), edit_user_path(@current_user)%></li>
+          <%else%>
+            <li><%= link_to t(:edit_my_account), edit_client_path(@current_user)%></li>
+            <li><%= link_to Bill, bills_path%></li>
+          <%end%>
+        </ul>
+
+      <a href="#branches" class="nav-header collapsed" data-toggle="collapse"><i class="icon-tasks"></i><%=t('activerecord.models.branches')%><i class="icon-chevron-up"></i></a></a>
+    <ul id="branches" class="nav nav-list collapse<%#=expand_if(data.page.menu_expand, 'dashboard')%>">
+      <li><%= link_to t(:all_branches), branches_path%></li>
+      <% Branch.all.each do |branch| %>
+        <li><%= link_to branch.name, branch%></li>
+      <% end %>
+    </ul>
+    <% if client_session.blank? %>
+      <%unless current_user.blank?%>
+        <% dash_boar_title = @current_user.role.super_admin == true ? t(:administration) : @current_user.branch.name %>
+        <a href="#dashboard-menu" class="nav-header collapsed" data-toggle="collapse"><i class="icon-share-alt "></i><%= dash_boar_title%><i class="icon-chevron-up"></i></a></a>
+    <%else%>
+      <% dash_boar_title = t(:my_account) %>
+      <a href="#dashboard-menu" class="nav-header collapsed" data-toggle="collapse"><i class="icon-share-alt "></i><%= dash_boar_title%><i class="icon-chevron-up"></i></a></a>   
+>>>>>>> 3f28ddab8e65f3589472730857a394d3ea3c06f5
+    <%end%>
+    <ul id="dashboard-menu" class="nav nav-list collapse<%#=expand_if(data.page.menu_expand, 'dashboard')%>">
+      <% if can? :index, User %>
+        <li><%= link_to t('activerecord.models.users'), users_path%></li>
+      <% end %>
+      <% if can? :index, Role %>
+        <li><%= link_to t('activerecord.models.roles'), roles_path%></li>
+      <% end %>
+      <% if can? :index, Status %>
+        <li><%= link_to t('activerecord.models.statuses'), statuses_path%></li>
+      <% end %>
+      <% if can? :index, Client %>
+        <li><%= link_to t('activerecord.models.clients'), clients_path%></li>
+      <% end %>
+      <% if can? :index, Cellphone %>
+        <li><%= link_to t('activerecord.models.cellphones'), cellphones_path%></li>
+      <% end %>
+      <% if can? :index, Computer %>
+        <li><%= link_to t('activerecord.models.computers'), computers_path%></li>
+      <% end %>
+      <% if can? :index, ClientNeed %>
+        <li><%= link_to t('activerecord.models.client_needs'), client_needs_path%></li>
+      <% end %>
+      <% if can? :index, Part %>
+        <li><%= link_to t('activerecord.models.parts'), parts_path%></li>
+      <% end %>
+      <% if can? :index, Workshop %>
+        <li><%= link_to t('activerecord.models.workshops'), workshops_path%></li>
+      <% end %>
+      <% if can? :index, Bill %>
+        <li><%= link_to t('activerecord.models.bills'), bills_path%></li>
+      <% end %>
+      <% if can? :index, Progress %>
+        <li><%= link_to t('activerecord.models.progress'), progresses_path%></li>
+      <% end %>
+      <% if can? :index, Order %>
+        <li><%= link_to t('activerecord.models.orders'), orders_path%></li>
+      <% end %>
+      <% if can? :index, Comment %>
+        <li><%= link_to t('activerecord.models.comments'), comments_path%></li>
+      <% end %>
+    </ul>
+    <%if can? :new, Order%>
+      <%=link_to new_order_path, :class=>"nav-header" do%>
+        <i class="icon-cog"></i><%=t(:new_order_service)%>
+      <%end%>
+    <%end%>
+    <%if can? :index, ErrorReport%>
+      <%=link_to error_reports_path, :class=>"nav-header" do%>
+        <i class="icon-exclamation-sign"></i><%=t(:errors_reports)%>
+      <%end%>
+    <%end%>
+    <%if can? :new, Comment%>
+      <%=link_to new_comment_path, :class=>"nav-header" do%>
+        <i class="icon-comments-alt"></i><%=t(:leave_comment)%>
+      <%end%>
+    <%end%>
+  <%else%>
+    <a href="#branch-menu" class="nav-header collapsed" data-toggle="collapse"><i class="icon-dashboard"></i><%=t(:my_orders)%><i class="icon-chevron-up"></i></a></a>
+    <ul id="branch-menu" class="nav nav-list collapse<%#=expand_if(data.page.menu_expand, 'dashboard')%>">
+      <li><%= link_to t(:show_all), orders_path%></li>
+    </ul> 
+  <%end%>
+<%end%>
+
+<a href="#legal-menu" class="nav-header" data-toggle="collapse"><i class="icon-legal"></i> <%=t(:legal)%> </a>
+<a href="help.html" class="nav-header" ><i class="icon-question-sign"></i> <%=t(:help) %> </a>
+<a href="faq.html" class="nav-header" ><i class="icon-comment"></i> <%= t(:faq)  %>  </a>
+</div>
+<%#end%>
+
+<%unless @page_is_dialog %>
+  <div class="content">
+    <div class="header">
+      <div class="stats">
+        <%if signed_in? and @is_user%>
+          <%if can? :index, User%>
+            <p class="stat"><span class="number"><%=link_to User.where("branch_id = #{current_user.branch_id} and id != 1").count, users_path%></span><%=link_to t("activerecord.models.users"), users_path %></p>            
+          <%else%>
+            <p class="stat"><span class="number"><%=User.where("branch_id = #{current_user.branch_id} and id != 1").count%></span><%= t("activerecord.models.users") %></p> 
+          <%end%>
+          <%if can? :index, Client%>
+            <p class="stat"><span class="number"><%=link_to Client.count, clients_path%></span><%=link_to t("activerecord.models.clients"), clients_path %></p>
+          <%else%>
+            <p class="stat"><span class="number"><%=Client.count%></span><%= t("activerecord.models.clients") %></p>
+          <%end%>
+          <%if can? :index, Order%> 
+            <p class="stat"><span class="number"><%=link_to Order.where("status_id != 3").count, orders_path%></span><%=link_to t("activerecord.models.orders"), orders_path%></p>
+          <%else%>
+            <p class="stat"><span class="number"><%=Order.where("status_id != 3").count%></span><%= t("activerecord.models.orders") %></p>
+          <%end%>
+        <%elsif signed_in? and !@is_user%>
+          <p class="stat"><span class="number"><%=Order.where(:client_id => current_client.id).count%></span><%=link_to t(:my_orders), orders_path %></p>
+        <%end%>
+      </div>
+      <%if signed_in? and controller_name == "welcome"%>
+        <h1 class="page-title"><%= t("activerecord.models.#{controller_name}")  + " " +  @current_user.role.name%></h1>
+      <%else%>
+        <h1 class="page-title"><%= t("activerecord.models.#{controller_name}")%></h1>
+      <%end%>
+    </div>
+    <%= yield :breadcrumb %>
+    <div class="container-fluid">
+      <div class="row-fluid">
+        <% if flash[:notice] %>
+          <div class="alert alert-info">
+            <button type="button" class="close" data-dismiss="alert">x</button>
+            <%= flash[:notice] %>
+          </div>
+        <% end %>
+        <% if flash[:error] %>
+          <div class="alert alert-error">
+            <button type="button" class="close" data-dismiss="alert">x</button>
+            <%= flash[:error] %>
+          </div>
+        <% end %>
+        <% if flash[:alert] %>
+          <div class="alert alert-alert">
+            <button type="button" class="close" data-dismiss="alert">x</button>
+            <%= flash[:alert] %>
+          </div>
+        <% end %>
+  <%#=current_user%>
+  <%#=@is_user%>
+  <%#=current_client%>
+        <%= yield %>
+        <%= debug(params) if Rails.env.development? or Rails.env.local?%>
+        <%@host = Rails.env.production? ? "http://servi-net.us" : "http://localhost:3000"%>
+
+  <%#unless data.page.show_footer == false %>
+        <footer>
+          <hr>
+
+          <!-- Purchase a site license to remove this link from the footer: http://www.portnine.com/bootstrap-themes -->
+          <p class="pull-right">A web service <a href="http://www.portnine.com/bootstrap-themes" target="_blank">powered</a> by <a href="http://www.portnine.com" target="_blank">eMobile</a></p>
+
+          <p>&copy; 2013 <a href="http://www.portnine.com" target="_blank">eMobile</a></p>
+        </footer>
+  <%#end%>
+      </div>
+    </div>
+  </div>
+<%else%>
+  <%= yield %>
+<%end%>
+</body>
+</html>
+
+

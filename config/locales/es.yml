@@ -1,0 +1,1286 @@
+es:
+    not_authorized: "Usted no tiene permiso para realizar esta acción."
+    general_info: "Informacíon General"
+    contact_info: "Informacíon de Contacto"
+    newa: "Nueva"
+    about_us: "Sobre Nosotros"
+    user_general_info: "Informacíon General del Usuario"
+    address: "Informacíon de Contacto"
+    client_info: "Informacíon del Cliente"
+    edit_client_info: "Editar Informacíon del Cliente"
+    bill_info: "Informacíon de Facturacíon"
+    edit_bill_info: "Editar Informacíon de Facturacíon del Cliente"
+    devise_info: "Informacíon del Equipo"
+    Cellphone: "Celular"
+    actions: "Acciones"
+    add: "Agregar"
+    my_orders: "Mis Ordenes de Servicio"
+    show_all: "Ver Todas mis Ordenes de Servicio" 
+    will_paginate:
+      previous_label: "Anteriores"
+      next_label: "Siguientes"
+      page_gap: "&hellip;"
+      page_entries_info:
+        single_page:
+          zero:  "Ninguno encontrado"
+          one:   "Mostrando 1 %{model}"
+          other: "Mostrando todos (%{count})"
+        single_page_html:
+          zero:  "Ninguno encontrado"
+          one:   "Mostrando <b>1</b> %{model}"
+          other: "Mostrando todos <b>(%{count})</b>"
+        multi_page: "Mostrando %{from} - %{to} de %{count} en total"
+        multi_page_html: "Mostrando <b>%{from}&nbsp;-&nbsp;%{to}</b> de <b> %{count}</b> en total"  
+    date:
+      abbr_day_names:
+      - dom
+      - lun
+      - mar
+      - mié
+      - jue
+      - vie
+      - sáb
+      abbr_month_names:
+      -
+      - ene
+      - feb
+      - mar
+      - abr
+      - may
+      - jun
+      - jul
+      - ago
+      - sep
+      - oct
+      - nov
+      - dic
+      day_names:
+      - domingo
+      - lunes
+      - martes
+      - miércoles
+      - jueves
+      - viernes
+      - sábado
+      formats:
+        default: ! '%d/%m/%Y'
+        long: ! '%A, %d de %B de %Y'
+        short: ! '%d de %b'
+      month_names:
+      -
+      - Enero
+      - Febrero
+      - Marzo
+      - Abril
+      - Mayo
+      - Junio
+      - Julio
+      - Agosto
+      - Septiembre
+      - Octubre
+      - Noviembre
+      - Diciembre
+      order:
+      - :day
+      - :month
+      - :year
+    datetime:
+      distance_in_words:
+        about_x_hours:
+          one: cerca de 1 hora
+          other: cerca de %{count} horas
+        about_x_months:
+          one: cerca de 1 mes
+          other: cerca de %{count} meses
+        about_x_years:
+          one: cerca de 1 año
+          other: cerca de %{count} años
+        almost_x_years:
+          one: casi 1 año
+          other: casi %{count} años
+        half_a_minute: medio minuto
+        less_than_x_minutes:
+          one: menos de 1 minuto
+          other: menos de %{count} minutos
+        less_than_x_seconds:
+          one: menos de 1 segundo
+          other: menos de %{count} segundos
+        over_x_years:
+          one: más de 1 año
+          other: más de %{count} años
+        x_days:
+          one: 1 día
+          other: ! '%{count} días'
+        x_minutes:
+          one: 1 minuto
+          other: ! '%{count} minutos'
+        x_months:
+          one: 1 mes
+          other: ! '%{count} meses'
+        x_seconds:
+          one: 1 segundo
+          other: ! '%{count} segundos'
+      prompts:
+        day: Día
+        hour: Hora
+        minute: Minuto
+        month: Mes
+        second: Segundos
+        year: Año
+    errors: &errors
+      format: ! '%{attribute} %{message}'
+      messages:
+        accepted: debe ser aceptado
+        blank: no puede estar en blanco
+        confirmation: no coincide con la confirmación
+        empty: no puede estar vacío
+        equal_to: debe ser igual a %{count}
+        even: debe ser un número par
+        exclusion: está reservado
+        greater_than: debe ser mayor que %{count}
+        greater_than_or_equal_to: debe ser mayor o igual que %{count}
+        inclusion: no está incluído en la lista
+        invalid: es inválido
+        less_than: debe ser menor que %{count}
+        less_than_or_equal_to: debe ser menor o igual que %{count}
+        not_a_number: no es un número
+        not_an_integer: debe ser un entero
+        odd: debe ser un número non
+        record_invalid: ! 'La validación falló: %{errors}'
+        taken: ya ha sido tomado
+        too_long:
+          one: es demasiado largo (máximo 1 caracter)
+          other: es demasiado largo (máximo %{count} caracteres)
+        too_short:
+          one: es demasiado corto (mínimo 1 caracter)
+          other: es demasiado corto (mínimo %{count} caracteres)
+        wrong_length:
+          one: longitud errónea (debe ser de 1 caracter)
+          other: longitud errónea (debe ser de %{count} caracteres)
+      template:
+        body: ! 'Revise que los siguientes campos sean válidos:'
+        header:
+          one: ! '%{model} no pudo guardarse debido a 1 error'
+          other: ! '%{model} no pudo guardarse debido a %{count} errores'
+    helpers:
+      links:
+        show: Mostrar
+        edit: Editar
+        destroy: Eliminar
+        back: Regresar
+        new: Agregar
+      actions: Acciones
+      select:
+        prompt: Por favor selecciona
+      submit:
+        create: Crear %{model}
+        submit: Guardar %{model}
+        update: Actualizar %{model}
+    number:
+      currency:
+        format:
+          delimiter: ! ','
+          format: ! '%u%n'
+          precision: 2
+          separator: .
+          significant: false
+          strip_insignificant_zeros: false
+          unit: $
+      format:
+        delimiter: ! ','
+        precision: 2
+        separator: .
+        significant: false
+        strip_insignificant_zeros: false
+      human:
+        decimal_units:
+          format: ! '%n %u'
+          units:
+            billion: mil millones
+            million: millón
+            quadrillion: mil billones
+            thousand: mil
+            trillion: billón
+            unit: ''
+        format:
+          delimiter: ! ','
+          precision: 3
+          significant: true
+          strip_insignificant_zeros: true
+        storage_units:
+          format: ! '%n %u'
+          units:
+            byte:
+              one: Byte
+              other: Bytes
+            gb: GB
+            kb: KB
+            mb: MB
+            tb: TB
+      percentage:
+        format:
+          delimiter: ! ','
+      precision:
+        format:
+          delimiter: ! ','
+    support:
+      array:
+        last_word_connector: ! ' y '
+        two_words_connector: ! ' y '
+        words_connector: ! ', '
+    time:
+      am: am
+      formats:
+        default: ! '%a, %d de %b de %Y a las %H:%M:%S %Z'
+        long: ! '%A, %d de %B de %Y a las %I:%M %p'
+        short: ! '%d de %b a las %H:%M hrs'
+      pm: pm
+    # remove these aliases after 'activemodel' and 'activerecord' namespaces are removed from Rails repository
+    activemodel:
+      errors:
+        <<: *errors
+    activerecord:
+      errors:
+        <<: *errors  
+    access: "Acceso"
+    active: "Activo"
+    actions: "Acciones"
+    administration: "Administración"
+    back: Regresar
+    by: "de"
+    cancel: "Cancelar"
+    company: "Compañia"
+    company_account: "Cuenta empresarial"
+    contact: "Contacto"
+    create: Crear
+    destroy: Eliminar
+    edit_theme: Editar Tema
+    edit: Editar
+    edit_my_account: "Editar mi cuenta"
+    account: "Cuenta"
+    branches: "Sucursales"
+    new_order_service: "Nueva orden de servicio"
+    email: Correo electrónico
+    faq: "Preguntas frecuentes"
+    hello: "Hola"
+    help: "Ayuda"
+    home: "Inicio"
+    iam: "Bienvenido, "
+    index: Indice
+    legal: "Legal"
+    library: Biblioteca
+    login: "Nombre de usuario"
+    logout: "Cerrar Sesión: "
+    my_account: "Mi Cuenta: "
+    leave_comment: "Dejar comentario"
+    new: "Agregar"
+    nono: "No"
+    export_this_page_csv: "Exportar a CVS"
+    export_this_page_xls: "Exportar XLS"
+    export_all_csv: "Exportar todos CVS"
+    export_all_xls: "Exportar todos XLS"
+    password: Contraseña
+    privacy_policy: "Politica de privacidad"
+    reg_code: "Código de Registro"
+    role: "Rol"
+    sell_solutions: "Soluciones de venta"
+    settings: "Configuraciones"
+    show: Mostrar
+    signin: Iniciar Sesión
+    user_signin: "Iniciar secion como usuario"
+    client_signin: "Iniciar secion como cliente"
+    client: "Cliente"
+    product_type: "Tipo de producto"
+    select_a_client: "Seleccione un cliente"
+    search_a_client: "Buscar un cliente"
+    condition: "Condición"
+    failure: "Falla"
+    accessories: "Accesorios"
+    legal: "Aviso legal"
+    faq: "Preguntas frecuentes"
+    repair_centers: "Buscar"
+    comment: "Comentario"
+    parts: "Partes"
+    help: "Ayuda"
+    or: "o"
+    signup: Registrarse
+    terms: "Terminos y condiciones"
+    trial: "Temporal"
+    update: Actualizar
+    user: Usuario
+    username: "Nombre de usuario"
+    user_access: "Acceso a usuarios"
+    client_access: "Acceso a clientes"
+    wbranches: "Sucursales"
+    worder: "Orden"
+    wwelcome: "Bienvenído"
+    wstatuses: "Estatus"
+    wcomputers: "Computadoras"
+    wcellphones: "Celulares"
+    wclients: "Clientes"
+    wcompanies: "Compañias"
+    wcreators: "Creadores"
+    wcurrencies: "Tipos de cambio"
+    wclient_needs: "Trabajos a Realizar"
+    wregistrations: "Registro"
+    welcome: "Bienvenido"
+    wsessions: "Seciones"
+    wworkshops: "Talleres"
+    wbills: "Facturas"
+    wprogress: "Progreso"
+    wcomments: "Comentarios"
+    wips: "Direcciones IP"
+    wlanguages: "Lenguajes"
+    worders: "Ordenes"
+    wroutes: "Rutas"
+    wparts: "Partes"
+    wtrucks: "Camiones"
+    wpermissions: "Permisos"
+    wproducts: "Productos"
+    wregions: "Regiones"
+    wroles: "Roles"
+    wtasks: "Tareas"
+    wusers: Usuarios
+    yesyes: "Si"
+    
+    currencies:
+      editing_currency: "Editando tipo de cambio"
+      new_currency: "Nuevo tipo de cambio"
+      index:
+        list_currencies: "Listando de tipos de cambio"
+        country: "País"
+        currency: "Tipo de cambio"
+      show:
+        country: "País: "
+        currency: "Tipo de cambio: "
+
+    #desde aqui empiezan las vistas
+    users:
+        editing_user: "Editando usuario"
+        library_admin: ¿Es administrador de biblioteca?
+        new_user: Nuevo usuario
+        we_need_psw: "(Necesitamos tu contraseña actual para confirmar tus cambios)"
+        prohibited: "prohiben a este usuario de ser guardado."
+        mg_user_updated: "El usuario fue actualizado satisfactoriamente."
+        index:
+           first_name: "Nombre(s)"
+           last_name: "Apellido"
+           phone1: "Telefono"
+           phone2: "Celular"
+           address1: "Direccion"
+           address2: "Colonia"
+           zip: "Codigo postal"
+           city: "Ciudad"
+           state: "Estado"
+           country: "País"
+           role_id: "Rol"
+           branch_id: "Sucursal"
+           active: "Activo"
+           created_at: "Creado en"
+           updated_at: "Actualizado en"
+           username: "Nombre de usuario"
+           email: "Correo electronico"
+           sign_in_count: "Numero de seciones"
+           last_sign_in_at: "Ultimo inicio de secion"
+        show:
+           first_name: "Nombre(s)"
+           last_name: "Apellido"
+           phone1: "Telefono"
+           phone2: "Celular"
+           address1: "Direccion"
+           address2: "Colonia"
+           zip: "Codigo postal"
+           city: "Ciudad"
+           state: "Estado"
+           country: "País"
+           role_id: "Rol"
+           branch_id: "Sucursal"
+           active: "Activo"
+           created_at: "Creado en"
+           updated_at: "Actualizado en"
+           username: "Nombre de usuario"
+           email: "Correo electronico"
+           sign_in_count: "Numero de seciones"
+           last_sign_in_at: "Ultimo inicio de secion"
+        admin_edit:
+           first_name: "Nombre(s)"
+           last_name: "Apellido"
+           phone1: "Telefono"
+           phone2: "Celular"
+           address1: "Direccion"
+           address2: "Colonia"
+           zip: "Codigo postal"
+           city: "Ciudad"
+           state: "Estado"
+           country: "País"
+           role_id: "Rol"
+           branch_id: "Sucursal"
+           active: "Activo"
+           created_at: "Creado en"
+           updated_at: "Actualizado en"
+           username: "Nombre de usuario"
+           email: "Correo electronico"
+           sign_in_count: "Numero de seciones"
+           last_sign_in_at: "Ultimo inicio de secion"
+    roles:
+      new_role: Nuevo rol
+      editing_role: Editando rol
+      belongs_lib: "¿Pertenece a bilbioteca?"
+      mg_role_created: "Rol creado satisfactoriamente."
+      mg_role_updated: "Rol actualizado satisfactoriamente."
+      index:
+        name: "Nombre"
+        protected: "Protejido"
+        super_admin: "Super administrador"
+        branch_admin: "Administrador de Sucursal"
+        description: "Descripcion"
+        branch_id: "Sucursal"
+        created_at: "Creado en"
+        updated_at: "Actualizado en"
+      show:
+        name: "Nombre"
+        protected: "Protejido"
+        super_admin: "Super administrador"
+        branch_admin: "Administrador de Sucursal"
+        description: "Descripcion"
+        branch_id: "Sucursal"
+        created_at: "Creado en"
+        updated_at: "Actualizado en"
+      defaults:
+        lib_admin_title: "Administrador de biblioteca"
+        lib_admin_desc: "Este es el rol preestablecido para el administrador de la biblioteca."
+        
+    orders:
+      index:
+        client_id: "Cliente"
+        condition: "Condicón"
+        failure: "Falla"
+        comments: "Comentarios"
+        accessories: "Accesorios"
+        workshop_id: "Taller"
+        require_bill: "¿Requiere factura?"
+        bill_id: "Factura"
+        status_id: "Estatus"
+        branch_id: "Sucursal"
+        product_type: "Tipo de producto"
+        created_at: "Creado en"
+        updated_at: "Actualizado en"
+      show:
+        first_name: "Nombre(s)"
+        last_name: "Apellido"
+        phone1: "Telefono"
+        phone2: "Celular"
+        address1: "Direccion"
+        address2: "Colonia"
+        zip: "Codigo postal"
+        city: "Ciudad"
+        state: "Estado"
+        country: "País"
+        active: "Activo"
+        created_at: "Creado en"
+        updated_at: "Actualizado en"
+        username: "Nombre de usuario"
+        email: "Correo electronico"
+        client_id: "Cliente"
+        condition: "Condicón"
+        failure: "Falla"
+        comments: "Comentarios"
+        accessories: "Accesorios"
+        workshop_id: "Taller"
+        require_bill: "¿Requiere factura?"
+        bill_id: "Factura"
+        status_id: "Estatus"
+        branch_id: "Sucursal"
+        product_type: "Tipo de producto"
+        created_at: "Creado en"
+        updated_at: "Actualizado en"
+        name: "Nombre o Razon Social"
+        rfc: "RFC"
+        email: "Correo electronico"
+        phone1: "Telefono"
+        phone2: "Celular"
+        fax : "Numero de Fax"
+        address1: "Direccion"
+        address2: "Colonia"
+        zip: "Codigo postal"
+        city: "Ciudad"
+        state: "Estado"
+        country: "País"
+        created_at: "Creado en"
+        updated_at: "Actualizado en"
+    bills:
+      index:
+        name: "Nombre o Razon Social"
+        rfc: "RFC"
+        email: "Correo electronico"
+        phone1: "Telefono"
+        phone2: "Celular"
+        fax : "Numero de Fax"
+        address1: "Direccion"
+        address2: "Colonia"
+        zip: "Codigo postal"
+        city: "Ciudad"
+        state: "Estado"
+        country: "País"
+        created_at: "Creado en"
+        updated_at: "Actualizado en"
+      show:
+        name: "Nombre o Razon Social"
+        rfc: "RFC"
+        email: "Correo electronico"
+        phone1: "Telefono"
+        phone2: "Celular"
+        fax : "Numero de Fax"
+        address1: "Direccion"
+        address2: "Colonia"
+        zip: "Codigo postal"
+        city: "Ciudad"
+        state: "Estado"
+        country: "País"
+        created_at: "Creado en"
+        updated_at: "Actualizado en"
+        
+    branch:
+      index:
+        id: "Id"
+        name: "Nombre"
+        email1: "Correo electronico"
+        email2: "Correo electronico alternativo"
+        webpage: "Pagina web"
+        phone1: "Telefono"
+        phone2: "Celular"
+        address1: "Direccion"
+        address2: "Colonia"
+        zip: "Codigo postal"
+        city: "Ciudad"
+        state: "Estado"
+        country: "País"
+        description: "Descripción"
+        created_at: "Creado en"
+        updated_at: "Actualizado en"
+      show:
+        name: "Nombre"
+        email1: "Correo electronico"
+        email2: "Correo electronico alternativo"
+        webpage: "Pagina web"
+        phone1: "Telefono"
+        phone2: "Celular"
+        address1: "Direccion"
+        address2: "Colonia"
+        zip: "Codigo postal"
+        city: "Ciudad"
+        state: "Estado"
+        country: "País"
+        description: "Descripción"
+        created_at: "Creado en"
+        updated_at: "Actualizado en"
+        
+    cellphones:
+      index:
+        model: "Modelo"
+        brand: "Marca"
+        color: "Color"
+        ope_system: "Sistema operativo"
+        imei: "IMEI"
+        client_id: "Cliente"
+        branch_id: "Sucursal"
+        created_at: "Creado en"
+        updated_at: "Actualizado en"
+      show:
+        model: "Modelo"
+        brand: "Marca"
+        color: "Color"
+        ope_system: "Sistema operativo"
+        imei: "IMEI"
+        client_id: "Cliente"
+        branch_id: "Sucursal"
+        created_at: "Creado en"
+        updated_at: "Actualizado en"
+        
+    client_needs:
+      index:
+        name: "Nombre"
+        description: "Descripcion"
+        cost: "Costo"
+        branch_id: "Sucursal"
+        created_at: "Creado en"
+        updated_at: "Actualizado en"
+      show:
+        name: "Nombre"
+        description: "Descripcion"
+        cost: "Costo"
+        branch_id: "Sucursal"
+        created_at: "Creado en"
+        updated_at: "Actualizado en"
+        
+    clients:
+      index:
+        first_name: "Nombre(s)"
+        last_name: "Apellido"
+        phone1: "Telefono"
+        phone2: "Celular"
+        address1: "Direccion"
+        address2: "Colonia"
+        zip: "Codigo postal"
+        city: "Ciudad"
+        state: "Estado"
+        country: "País"
+        active: "Activo"
+        created_at: "Creado en"
+        updated_at: "Actualizado en"
+        username: "Nombre de usuario"
+        email: "Correo electronico"
+        sign_in_count: "Numero de seciones"
+        last_sign_in_at: "Ultimo inicio de secion"
+      show:
+        first_name: "Nombre(s)"
+        last_name: "Apellido"
+        phone1: "Telefono"
+        phone2: "Celular"
+        address1: "Direccion"
+        address2: "Colonia"
+        zip: "Codigo postal"
+        city: "Ciudad"
+        state: "Estado"
+        country: "País"
+        active: "Activo"
+        created_at: "Creado en"
+        updated_at: "Actualizado en"
+        username: "Nombre de usuario"
+        email: "Correo electronico"
+        sign_in_count: "Numero de seciones"
+        last_sign_in_at: "Ultimo inicio de secion"
+        
+    comments:
+      index:
+        fullname: "Nombre"
+        email: "Correo electronico"
+        comment: "Comentario"
+        created_at: "Creado en"
+        updated_at: "Actualizado en"
+      show:
+        fullname: "Nombre"
+        email: "Correo electronico"
+        comment: "Comentario"
+        created_at: "Creado en"
+        updated_at: "Actualizado en"
+        
+    computers:
+      index:
+        model: "Modelo"
+        brand: "Marca"
+        color: "Color"
+        ope_system: "Sistema operativo"
+        serial_number: "Numero de serie"
+        computer_type: "Tipo de computadora"
+        hard_drive: "Disco duro"
+        units: "Unidades"
+        memory: "Memoria"
+        proccessor: "Procesador"
+        charger: "Cargador"
+        usb: "cables USB"
+        monitor: "Monitor"
+        keyboard: "Teclado"
+        Mouse: "Raton"
+        client_id: "Cliente"
+        branch_id: "Sucursal"
+        created_at: "Creado en"
+        updated_at: "Actualizado en"
+      show:
+        model: "Modelo"
+        brand: "Marca"
+        color: "Color"
+        ope_system: "Sistema operativo"
+        serial_number: "Numero de serie"
+        computer_type: "Tipo de computadora"
+        hard_drive: "Disco duro"
+        units: "Unidades"
+        memory: "Memoria"
+        proccessor: "Procesador"
+        charger: "Cargador"
+        usb: "cables USB"
+        monitor: "Monitor"
+        keyboard: "Teclado"
+        Mouse: "Raton"
+        client_id: "Cliente"
+        branch_id: "Sucursal"
+        created_at: "Creado en"
+        updated_at: "Actualizado en"
+        
+    part:
+      index:
+        name: "Nombre"
+        description: "Descripción"
+        serial_number: "Numero de serie"
+        cost: "Costo"
+        branch_id: "Sucursal"
+        created_at: "Creado en"
+        updated_at: "Actualizado en"
+      show:
+        name: "Nombre"
+        description: "Descripción"
+        serial_number: "Numero de serie"
+        cost: "Costo"
+        branch_id: "Sucursal"
+        created_at: "Creado en"
+        updated_at: "Actualizado en"
+        
+    progress:
+      index:
+        short_description: "Descripcion corta"
+        full_description: "Descripcion detallada"
+        user_id: "Usuario"
+        order_id: "Orden"
+        branch_id: "Sucursal"
+        created_at: "Creado en"
+        updated_at: "Actualizado en"
+      show:
+        short_description: "Descripcion corta"
+        full_description: "Descripcion detallada"
+        user_id: "Usuario"
+        order_id: "Orden"
+        branch_id: "Sucursal"
+        created_at: "Creado en"
+        updated_at: "Actualizado en"
+        
+    role:
+      index:
+        name: "Nombre"
+        protected: "Protejido"
+        super_admin: "Super administrador"
+        branch_admin: "Administrador de Sucursal"
+        description: "Descripcion"
+        branch_id: "Sucursal"
+        created_at: "Creado en"
+        updated_at: "Actualizado en"
+      show:
+        name: "Nombre"
+        protected: "Protejido"
+        super_admin: "Super administrador"
+        branch_admin: "Administrador de Sucursal"
+        description: "Descripcion"
+        branch_id: "Sucursal"
+        created_at: "Creado en"
+        updated_at: "Actualizado en"
+        
+    statuses:
+      index:
+        name: "Nombre"
+        description: "Descripción"
+        hierarchy: "Gerarquia"
+        branch_id: "Sucursal"
+        created_at: "Creado en"
+        updated_at: "Actualizado en"
+      show:
+        name: "Nombre"
+        description: "Descripción"
+        hierarchy: "Gerarquia"
+        branch_id: "Sucursal"
+        created_at: "Creado en"
+        updated_at: "Actualizado en"
+        
+    workshop:
+      index:
+        name: "Nombre"
+        email1: "Correo electonico"
+        email2: "Correo electronico alternativo"
+        phone1: "Telefono"
+        phone2: "Celular"
+        fax: "Fax"
+        zip: "Codigo postal"
+        city: "Ciudad"
+        state: "Estado"
+        country: "País"
+        description: "Descripcion"
+        user_id: "Usuario"
+        branch_id: "Sucursal"
+        created_at: "Creado en"
+        updated_at: "Actualizado en"
+      show:
+        name: "Nombre"
+        email1: "Correo electonico"
+        email2: "Correo electronico alternativo"
+        phone1: "Telefono"
+        phone2: "Celular"
+        fax: "Fax"
+        zip: "Codigo postal"
+        city: "Ciudad"
+        state: "Estado"
+        country: "País"
+        description: "Descripcion"
+        user_id: "Usuario"
+        branch_id: "Sucursal"
+        created_at: "Creado en"
+        updated_at: "Actualizado en"
+        #aqui terminan las vistas
+    questions:
+      sure: ¿Está seguro?
+    helpers:
+      titles:
+        edit_male: "Editando %{model}" 
+        new_male: "Nuevo %{model}"
+        edit_female: "Editando %{model}" 
+        new_female: "Nueva %{model}"
+      submit:
+        create: "Crear %{model}"
+        update: "Actualizar %{model}"
+        submit: "Guardar %{model}"
+    err:
+      book:
+        e_creator: "Creador incorrecto, debe seleccionar una opción"
+        e_currency: "Tipo de cambio incorrecto, debe seleccionar una opción"
+        e_edition: "Edición incorrecta, debe ser una valor valido"
+        e_eisbn: "EISBN incorrecto, debe contener entre 10 y 13 caracteres"
+        e_isbn: "ISBN incorrecto, debe contener entre 10 y 13 caracteres"
+        e_title: "Titulo incorrecto, debe contener un máximo de 50 caracteres"
+        e_import: "Precio incorrecto, debe ser un numero valido y positivo"
+        e_region: "Región incorrecta, debe seleccionar una opción"
+        e_subject: "Materia incorrecta, debe seleccionar una opción"
+      creator:
+        e_name: "Nombre incorrecto, solo debe contener letras, acentos, comillas y espacios"
+        e_role: "Debe de seleccionar un rol válido."
+      curr:
+        e_country: "País incorrecto, debe contener un máximo de 60 caracteres"
+        e_currency: "Código de tipo de cambio incorrecto, debe contener 3 letras"
+      edi:
+        e_edi_name: "Nombre incorrecto, debe contener un máximo de 50 caracteres"
+        e_edi_desc: "Descripción incorrecta, debe contener un máximo de 300 caracteres"
+      lang:
+        e_lang_name: "Nombre incorrecto, debe contener un máximo de 30 caracteres"
+        e_lang_abbreviation: "Abreviación incorrecta, debe contener un máximo de 5 caracteres"
+        e_lang_desc: "Descripción incorrecta, debe contener un máximo de 100 caracteres"
+      lib:
+        e_lib_name: "Nombre incorrecto, debe contener un máximo de 150 caracteres"
+        e_institution: "Institución incorrecta, debe contener un máximo de 150 caracteres"
+        e_address: "Dirección incorrecta, debe contener un máximo de 100 caracteres"
+        e_zip: "Código Postal incorrecto, debe contener 5 números"
+        e_city: "Ciudad incorrecta, debe contener un máximo de 50 caracteres"
+        e_state: "Estado incorrecto, debe contener un máximo de 50 caracteres"
+        e_country: "País incorrecto, debe contener un máximo de 50 caracteres"
+        e_exp_date: "Fecha de expiración incorrecta, no puede estar vacía"
+        e_region: "Región inorrecta, debe seleccionar una opción"
+        not_available: "La biblioteca no esta disponible"
+      ips:
+        not_valid: "El rango de direcciónes IP no es valido."
+      reg:
+        e_reg_name: "Nombre incorrecto, debe contener un máximo de 30 caracteres"
+        e_reg_desc: "Descripción incorrecta, debe contener un máximo de 150 caracteres"
+      role:
+        e_name: "Nombre incorrecto, debe contener un máximo de 50 caracteres"
+        e_desc: "Descripción incorrecta, debe contener un máximo de 150 caracteres"
+      usr:
+        e_first_name: "Nombre incorrecto, solo debe contener letras, acentos, comillas y espacios"
+        e_last_name: "Apellido incorrecto, solo debe contener letras, acentos, comillas y espacios"
+        e_admin_yes/no: "Debes indicar si es administrador o no"
+    msg:
+      male:
+        create: "El %{model} fue creado correctamente."
+        update: "El %{model} fue actualizado correctamente."
+      female:
+        create: "La %{model} fue creada correctamente."
+        update: "La %{model} fue actualizada correctamente."
+    war: 
+      js_alert: "Por favor active JavaScript en su navegador para poder hacer uso de este sitio."
+      access:
+        denied: "Acceso denegado"
+        permission: "No tiene permiso para accesar a esta página"
+        permission_two: "No tiene permiso para accesar a la página solicitada."
+        if_admin: "si usted es administrador, favor de "
+      active:
+        acc_inactive: "Cuenta inactiva"
+    devise:
+      confirmations:
+        resend: "Reenviar instrucciones de confirmación"
+      links:
+        forgot_pwd: "¿Olvidó su contraseña?"
+        conf_inst: "¿No recibió las instrucciones de confirmación?"
+        unlock_inst: "¿No recibió las instrucciones de desbloqueo?"
+      mailer:
+        confirm:
+          conf_legend: "Usted puede confirmar su cuenta de correo electrónico a través del siguiente enlace:"
+          usr&pwd: "Su usuario y contraseña son: "
+          conf_account: "Confirmar su cuenta"
+        reset:   
+      passwords:
+        change_your: "Cambiar su contraseña"
+        new: "Nueva contraseña"
+        confirm: "Confirmar nueva contraseña"
+        change_my: "Cambiar mi contraseña"
+        forgot: "¿Olvidé mi contraseña?"
+        send_reset_inst: "Envíenme las instrucciones para reestablecer la contraseña"
+        requested: "Alguien ha solicitado restablecer su contraseña, puede hacer esto mediante la liga que aparece a continuación."
+        ignore: "Si usted no solicitó esto, por favor ignore este correo electrónico."
+        wont_change: "Su contraseña no cambiará hasta que accese a la liga que aparece arriba y cree una nueva contraseña."
+      unlock:
+        has_been_locked: "Su cuenta ha sido bloqueada debido un excesivo número de intentos fallidos de autenticación."
+        click_link: "De clic a la siguiente liga para desbloquear su cuenta:"
+        account: "Desbloquear mi cuenta"
+        resend: "Reenviar instrucciones de desbloqueo"
+    activerecord:
+        errors: 
+          template:
+            header:
+              one: "1 error evitó que este elemento ( %{model}) fuera registrado:"
+              other: "%{count} errores evitaron que este elemento ( %{model}) fuera registrado:"
+            body: "Se encontraron problemas con los siguientes campos:"
+          messages:
+            invalid_attachment_size: "esta fuera del limite (2mb), Elija un archivo diferente."
+            invalid_attachment_content_type: "error, solo los archivos de imagen (jpg/jpeg/png/gif/bmp) son permitidos."
+            taken: "registro ya existente."
+            invalid: "campo inválido."
+            blank: "no puede ser un campo vacío."
+            too_short: "valor demasiado corto."
+            too_long: "valor demasiado largo."
+            not_a_number: "no es un valor numerico."
+          models:
+            user:
+              taken: "Ya existe."
+              attributes:
+                first_name:
+                  blank: "Nombre incorrecto, no puede ser un campo vacío."
+                last_name:
+                  blank: "Apellido incorrecto, no puede ser un campo vacío."
+                email:
+                  blank: "Correo electrónico incorrecto, no puede ser un campo vacío."
+                  taken: "Correo electrónico ya utilizado por otro usuario."
+                password:
+                  blank: "incorrecto, no puede ser un campo vacío."
+                  too_short: "demasiado corta, min 8 caractéres."
+            library_theme:
+              attributes:
+                color_one:  
+                  invalid: "el formato del color debe ser RGB de la forma #00ff00 (verde)."
+                color_two:  
+                  invalid: "el formato del color debe ser RGB de la forma #00ff00 (verde)."
+                color_three:  
+                  invalid: "el formato del color debe ser RGB de la forma #00ff00 (verde)."
+            permission:
+              attributes:
+                action_name:
+                  taken: "ya concedida, seleccione una diferente"
+        attributes:
+          currency:
+            country: "País"
+            currency: "Tipo de cambio"
+          language:
+            name: "Nombre"
+            abbreviation: "Abreviación"
+            description: "Descripción"
+          order:
+            select_product_type: "Sleccione Tipo de Equipo: "
+            identifier: "No. de Pedido/Factura"
+            branch: "Sucursal"
+            client: "Cliente"
+            company: "Compañia"
+            created_at: "Creado"
+            description: "Descripción"
+            id: "id"
+            latitude: "Latitud"
+            longitude: "Longitud"
+            order_type: "Tipo de orden"
+            import: "Precio"
+            type: "Tipo"
+            seller: "Vendedor"
+            priority: "Prioridad"
+            total_due: "Total Documento"
+            delivery_method: "Tipo de Entrega"
+            delivery_date: "Fecha de Entrega"
+          product:
+            branch: "Sucursal"
+            company: "Compañia"
+            created_at: "Creado"
+            description: "Descripción"
+            id: "id"
+            name: "Nombre"
+            import: "Precio"
+            quantity: "Cantidad"
+          task:
+            branch: "Sucursal"
+            company: "Compañia"
+            comments: "Comentarios"
+            completed: "Completada"
+            created_at: "Creada"
+            description: "Descripción"
+            fullname: "Nombre"
+            id: "id"
+            latitude: "Latitud"
+            longitude: "Longitud"
+            name: "Nombre"
+            priority: "Prioridad"    
+            user: "Usuario"
+          role:
+            lib_admin: Administrador de biblioteca
+            library_id: Id de biblioteca
+            name: Nombre
+            description: Descripción
+          ip:
+            start_ip: IP inicial
+            end_ip: IP final
+            library_id: Biblioteca
+          permission:
+            role_id: Rol
+            object: Objeto
+            action_name: Nombre de la acción
+            private: Privado
+            description: Descripción
+          bill:
+            name: "Nombre o Razon Social"
+            rfc: "RFC"
+            email: "Correo electronico"
+            phone1: "Telefono"
+            phone2: "Celular"
+            fax : "Numero de Fax"
+            address1: "Direccion"
+            address2: "Colonia"
+            zip: "Codigo postal"
+            city: "Ciudad"
+            state: "Estado"
+            country: "País"
+            created_at: "Creado en"
+            updated_at: "Actualizado en"
+          branch:
+            id: "Id"
+            name: "Nombre"
+            email1: "Correo electronico"
+            email2: "Correo electronico alternativo"
+            webpage: "Pagina web"
+            phone1: "Telefono"
+            phone2: "Celular"
+            address1: "Direccion"
+            address2: "Colonia"
+            zip: "Codigo postal"
+            city: "Ciudad"
+            state: "Estado"
+            country: "País"
+            description: "Descripción"
+            created_at: "Creado en"
+            updated_at: "Actualizado en"
+          cellphone:
+            model: "Modelo"
+            brand: "Marca"
+            color: "Color"
+            ope_system: "Sistema operativo"
+            imei: "IMEI"
+            client_id: "Cliente"
+            branch_id: "Sucursal"
+            created_at: "Creado en"
+            updated_at: "Actualizado en"
+          client_need:
+            name: "Nombre"
+            description: "Descripcíon"
+            cost: "Costo"
+            branch_id: "Sucursal"
+            created_at: "Creado en"
+            updated_at: "Actualizado en"
+          client:
+            first_name: "Nombre(s)"
+            last_name: "Apellido"
+            phone1: "Telefono"
+            phone2: "Celular"
+            address1: "Direccion"
+            address2: "Colonia"
+            zip: "Codigo postal"
+            city: "Ciudad"
+            state: "Estado"
+            country: "País"
+            active: "Activo"
+            created_at: "Creado en"
+            updated_at: "Actualizado en"
+            username: "Nombre de usuario"
+            email: "Correo electronico"
+            sign_in_count: "Numero de seciones"
+            last_sign_in_at: "Ultimo inicio de secion"
+          comment:
+            fullname: "Nombre"
+            email: "Correo electronico"
+            comment: "Comentario"
+            created_at: "Creado en"
+            updated_at: "Actualizado en"
+          computer:
+            model: "Modelo"
+            brand: "Marca"
+            color: "Color"
+            ope_system: "Sistema operativo"
+            serial_number: "Numero de serie"
+            computer_type: "Tipo de computadora"
+            hard_drive: "Disco duro"
+            units: "Unidades"
+            memory: "Memoria"
+            proccessor: "Procesador"
+            charger: "Cargador"
+            usb: "cables USB"
+            monitor: "Monitor"
+            keyboard: "Teclado"
+            Mouse: "Raton"
+            client_id: "Cliente"
+            branch_id: "Sucursal"
+            created_at: "Creado en"
+            updated_at: "Actualizado en"
+          order:
+            client_id: "Cliente"
+            condition: "Condicion"
+            failure: "Falla"
+            comments: "Comentarios"
+            accessory: "Accesorio"
+            workshop_id: "Taller"
+            require_bill: "Requiere factura"
+            bill_id: "Factura"
+            status_id: "Estatus"
+            branch_id: "Sucursal"
+            product_type: "Tipo de producto"
+            created_at: "Creado en"
+            updated_at: "Actualizado en"
+            select_product_type: "Sleccione Tipo de Equipo: "
+            identifier: "No. de Pedido/Factura"
+            company_id: "Compañia"
+            description: "Descripción"
+            latitude: "Latitud"
+            longitude: "Longitud"
+            order_type: "Tipo de orden"
+            import: "Precio"
+            delivery_method: "Tipo de Entrega"
+            delivery_date: "Fecha de Entrega"
+          part:
+            name: "Nombre"
+            description: "Descripción"
+            serial_number: "Numero de serie"
+            cost: "Costo"
+            branch_id: "Sucursal"
+            created_at: "Creado en"
+            updated_at: "Actualizado en"
+          progress:
+            short_description: "Descripcion corta"
+            full_description: "Descripcion detallada"
+            user_id: "Usuario"
+            order_id: "Orden"
+            branch_id: "Sucursal"
+            created_at: "Creado en"
+            updated_at: "Actualizado en"
+          role:
+            name: "Nombre"
+            protected: "Protejido"
+            super_admin: "Super administrador"
+            branch_admin: "Administrador de Sucursal"
+            description: "Descripcion"
+            branch_id: "Sucursal"
+            created_at: "Creado en"
+            updated_at: "Actualizado en"
+          status:
+            name: "Nombre"
+            description: "Descripción"
+            hierarchy: "Gerarquia"
+            branch_id: "Sucursal"
+            created_at: "Creado en"
+            updated_at: "Actualizado en"
+          users:
+            first_name: "Nombre(s)"
+            last_name: "Apellido"
+            phone1: "Telefono"
+            phone2: "Celular"
+            address1: "Direccion"
+            address2: "Colonia"
+            zip: "Codigo postal"
+            city: "Ciudad"
+            state: "Estado"
+            country: "País"
+            role_id: "Rol"
+            branch_id: "Sucursal"
+            active: "Activo"
+            created_at: "Creado en"
+            updated_at: "Actualizado en"
+            username: "Nombre de usuario"
+            email: "Correo electronico"
+            sign_in_count: "Numero de seciones"
+            last_sign_in_at: "Ultimo inicio de secion"
+          workshop:
+            name: "Nombre"
+            email1: "Correo electonico"
+            email2: "Correo electronico alternativo"
+            phone1: "Telefono"
+            phone2: "Celular"
+            fax: "Fax"
+            zip: "Codigo postal"
+            city: "Ciudad"
+            state: "Estado"
+            country: "País"
+            description: "Descripcion"
+            user_id: "Usuario"
+            branch_id: "Sucursal"
+            created_at: "Creado en"
+            updated_at: "Actualizado en"
+        models:
+            bill: "Factura"
+            branch: "Sucursal"
+            cellphone: "Celular"
+            cellphones: "Celulares"
+            part: "Parte"
+            parts: "Partes"
+            client: "Cliente"
+            comment: "Comentario"
+            computer: "Computadora"
+            order: "Orden"
+            progress: "Progreso"
+            role: "Rol"
+            status: "Estatus"
+            user: "usuario"
+            workshop: "Taller"
+            client_need: "Requerimientos del cliente"
+            client_needs: "Requerimientos de Clientes"            
+            user: 'Usuario'
+            users: "Usuarios"
+            registrations: "Registro"
+            sessions: "Inicio de Sesión"
+            bill: 'Factura'
+            bills: 'Facturas'
+            branch_client_orders: 'Branch Client Orders'
+            branch_client_orders: 'Branch Client Orders'
+            branch: 'Sucursal'
+            branches: 'Sucursales'
+            branch_clients: 'Trabajo a realizar'
+            branch_clients: 'Trabajos a realizar'
+            client: 'Cliente'
+            clients: 'Clientes'
+            comment: 'Comentario'
+            comments: 'Comentarios'
+            computer: 'Computara'
+            computers: 'Computaras'
+            error_report: 'Error Report'
+            error_reports: 'Error Reports'
+            order_cellphone: 'Order Cellphone'
+            order_cellphones: 'Order Cellphones'
+            order_client_need: 'Order Client Need'
+            order_client_needs: 'Order Client Needs'
+            order_computer: 'Order Computer'
+            order_computers: 'Order Computers'
+            order_part: 'Order Part'
+            order_parts: 'Order Parts'
+            order: 'Orden'
+            orders: 'Ordenes'
+            progress: 'Progreso'
+            progresses: 'Progresos'
+            role: 'Rol'
+            roles: 'Roles'
+            status: 'Estatus'
+            statuses: 'Estatuses'
+            workshop: 'Taller'
+            workshops: 'Talleres'
+            welcome: "Bienvenido!"
+            welcomes: "Bienvenido!"            
+
+        delivery_date: Fecha de Entrega
+        workshop_info: Informacíon del Taller
+        edit_workshop_info: Editar Informacíon del Taller
+        all_branches: Todas las Sucursales
+        helpers:
+          links:
+            show: Show
+            edit: Edit
+            destroy: Destroy
+            back: Back
+            new: New
+          actions: Acciones
+        activrecord:
+          models:
+            progresses: Progresos
+        total_due: Adeudo Total
+        add_new_progress: Agregar Progreso        

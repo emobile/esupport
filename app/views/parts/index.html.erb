@@ -1,0 +1,90 @@
+<div class="btn-toolbar">
+  <%if can? :new, Part%>
+    <%= link_to t(:new, :default => t("helpers.links.new")),
+      new_part_path,
+      :class => 'btn btn-primary', :title => t(:new) %>
+  <%end%>
+  <%=  link_to t(:export_this_page_csv), parts_path(format: "csv"), :class=>"btn" %>
+  <%=  link_to t(:export_this_page_xls), parts_path(format: "xls"), :class=>"btn"%>
+  <%=  link_to t(:export_all_csv), parts_path(format: "csv", :all => true), :class=>"btn"%>
+  <%=  link_to t(:export_all_xls), parts_path(format: "xls", :all => true), :class=>"btn"%>
+  <div class="btn-group">
+  </div>
+</div>
+
+<%content_for :breadcrumb do%>
+  <ul class="breadcrumb">
+    <li><%=link_to @current_user.branch.name, @current_user.branch%><span class="divider">/</span></li>
+    <li class="active"><%=t(:index)%></li>
+  </ul>
+<%end%>
+
+<div class="well">
+  <table class="table">
+    <thead>
+      <tr>
+        <th>Id</th>
+        <th>Name</th>
+        <th>Description</th>
+        <th>Serial number</th>
+        <th>Cost</th>
+        <th>Branch</th>
+        <th></th>
+        <th></th>
+        <th></th>
+      </tr>
+
+      <% @parts.each do |part| %>
+        <tr>
+          <%if can? :show, Part%>
+            <td><%=link_to part.id, part, :class => 'btn btn-mini', :title => t(:show)%></td>
+          <%else%>
+            <td><%= label part.id, :class => 'btn btn-mini', :title => t(:show)%></td>
+          <%end%>
+          <td><%= part.name %></td>
+          <td><%= part.description %></td>
+          <td><%= part.serial_number %></td>
+          <td><%= part.cost %></td>
+          <td><%= part.branch.name %></td>
+          <td>         
+            <ul class="nav nav-pills">
+              <li class="dropdown">
+                <a class="dropdown-toggle" data-toggle="dropdown" href="#" title='<%=t(:actions)%>'><i class="icon-cog"></i>&nbsp;<i class="icon-caret-down"></i></a>
+                <ul class="dropdown-menu">
+                  <%if can? :show, Part%>
+                    <li>
+                      <%= link_to part do %>
+                        <i class="icon-eye-open"></i>&nbsp;&nbsp;<%=t(:show, :default => t("helpers.links.show"))%>
+                      <%end%>
+                    </li>
+                  <%end%>
+                  <%if can? :edit, Part%>
+                    <li>
+                      <%= link_to edit_part_path(part) do %>
+                        <i class="icon-pencil"></i>&nbsp;&nbsp;<%=t(:edit, :default => t("helpers.links.edit"))%>
+                      <%end%>
+                    </li>
+                  <%end%>
+                  <%if can? :destroy, Part%>
+                    <li>
+                      <%= link_to  part, :method => :delete, :data => { :confirm => t('.confirm', :default => t("helpers.links.confirm", :default => 'Are you sure?')) } do %>
+                        <i class="icon-trash"></i>&nbsp;&nbsp;<%=t(:destroy, :default => t("helpers.links.destroy"))%>
+                      <%end%>
+                    </li>
+                  <%end%>
+                </ul>
+              </li>
+            </ul>
+          </td>
+        </tr>
+      <% end %>
+      </tbody>
+  </table>
+</div>
+<br />
+
+
+<div class="page_info">
+  <%= page_entries_info @partes %>
+  <%= will_paginate @partes, :renderer => BootstrapPagination::Rails %>
+</div>

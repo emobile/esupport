@@ -1,0 +1,64 @@
+<%= form_for(@cellphone) do |f| %>
+  <div class="row-fluid">
+    <div class="block span6">
+      <a href="#description" class="block-heading" data-toggle="collapse"><%= controller.action_name.titlecase + " " + controller_name.singularize.titlecase %></a>
+      <div id="description" class="block-body collapse in">
+        <% if @cellphone.errors.any? %>
+          <div id="error_explanation">
+            <h2><%= pluralize(@cellphone.errors.count, "error") %> prohibited this cellphone from being saved:</h2>
+
+            <ul>
+              <% @cellphone.errors.full_messages.each do |msg| %>
+                <li><%= msg %></li>
+              <% end %>
+            </ul>
+          </div>
+        <% end %>
+        <br />
+                <div class="field">
+          <%= f.label :model %><br />
+          <%= f.autocomplete_field :model, autocomplete_cellphone_model_orders_path, :update_elements => {:brand => '#cellphone_brand', :color => '#cellphone_color', :ope_system => '#cellphone_ope_system'} %>
+        </div>
+        <div class="field">
+          <%= f.label :brand %><br />
+          <%= f.text_field :brand %>
+        </div>
+        <div class="field">
+          <%= f.label :color %><br />
+          <%= f.text_field :color %>
+        </div>
+        <div class="field">
+          <%= f.label :ope_system %><br />
+          <%= f.text_field :ope_system %>
+        </div>
+        <div class="field">
+          <%= f.label :imei %><br />
+          <%= f.text_field :imei %>
+        </div>
+        <%@branches = current_user.role.super_admin == true ? Branch.all : Branch.where(:id => current_user.branch_id)%>
+        <div class="field">
+          <%= f.label :branch %><br />
+          <%= f.collection_select(:branch_id, @branches, :id, :name, :prompt => false)%>
+        </div>
+        <div class="field">
+          <%= f.label :client %><br />
+          <%if controller.action_name == "new" or controller.action_name == "create"%>
+            <div class="field">
+              <%= f.collection_select(:client_id, Client.all, :id, :fullname, {:prompt => true}, :onchange =>'display_user_info(this.value)')%>
+            </div>
+          <%else%>
+            <%= f.text_field :client_name, :value => @cellphone.client.fullname, :readonly => true %>
+            <%= f.hidden_field :client_id %>
+          <%end%>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="form-actions">
+    <%= f.submit nil, :class => 'btn btn-primary' %>
+    <%if can? :index, Cellphone%>
+      <%= link_to t(:back, :default => t("helpers.links.back")),
+        cellphones_path, :class => 'btn'  %>
+    <%end%>
+  </div>
+<% end %>

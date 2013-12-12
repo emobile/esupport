@@ -1,0 +1,21 @@
+<div id="body">
+  <div class="row-fluid">
+    <div class="dialog">
+      <div class="block">
+        <a href="#<%=request.env['ORIGINAL_FULLPATH'].sub(/^(.*\/).*/, '\1/').gsub('/', '')%>" class="block-heading" data-toggle="collapse"><%=t(:signin)%><span class="label label-notice"><%=t(:help)%></span></a>
+        <div class="block-body">
+          <%= form_for(resource, :as => resource_name, :url => session_path(resource_name)) do |f| %>
+            <div><%= f.label :login %>
+              <%= f.text_field :login, :autofocus => true %></div>
+
+            <div><%= f.label :password %>
+              <%= f.password_field :password %></div>
+            <br />
+            <%= f.submit t(:signin), :class=>"btn btn-primary btn-medium"%> 
+          <% end %>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+

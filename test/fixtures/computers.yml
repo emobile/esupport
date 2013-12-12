@@ -1,0 +1,33 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  brand: MyString
+  model: MyString
+  serial_number: MyString
+  type: 
+  hard_drive: MyString
+  units: MyString
+  memory: MyString
+  color: MyString
+  charger: MyString
+  usb: MyString
+  monitor: MyString
+  keyboard: MyString
+  mouse: MyString
+  client: 
+
+two:
+  brand: MyString
+  model: MyString
+  serial_number: MyString
+  type: 
+  hard_drive: MyString
+  units: MyString
+  memory: MyString
+  color: MyString
+  charger: MyString
+  usb: MyString
+  monitor: MyString
+  keyboard: MyString
+  mouse: MyString
+  client: 

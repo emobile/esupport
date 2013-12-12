@@ -1,0 +1,25 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  model: 
+  brand: 
+  color: MyString
+  ope_system: MyString
+  imei: MyString
+  condition: MyText
+  accessories: MyText
+  failure: MyText
+  comments: MyText
+  client: 
+
+two:
+  model: 
+  brand: 
+  color: MyString
+  ope_system: MyString
+  imei: MyString
+  condition: MyText
+  accessories: MyText
+  failure: MyText
+  comments: MyText
+  client: 

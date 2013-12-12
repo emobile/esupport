@@ -1,0 +1,14 @@
+<%content_for :breadcrumb do%>
+  <ul class="breadcrumb">
+    <%if signed_in?%>
+      <li><%=link_to @current_user.branch.name, @current_user.branch%><span class="divider">/</span></li>
+    <%else%>
+      <li><%=link_to t(:home), root_path%><span class="divider">/</span></li>
+    <%end%>
+    <%if can? :index, Branch%>
+      <li><%=link_to t(:index), branches_path%><span class="divider">/</span></li>
+    <%end%>
+    <li class="active"><%=t(:newa) + " " + t("activerecord.models.branch")%></li>
+  </ul>
+<%end%>
+<%= render 'form' %>

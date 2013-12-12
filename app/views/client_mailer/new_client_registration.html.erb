@@ -1,0 +1,14 @@
+<p><%= t(:iam) + @resource.email %>!</p>
+
+<%= t('devise.mailer.confirm.conf_legend') %>
+
+<% if !@resource.password.nil? %>
+  <p><%= t('devise.mailer.confirm.usr&pwd') %></p>
+  <p><%= t(:username_only) + ": " + @resource.username %></p>
+  <p><%= t(:password) + ": " + @resource.password %></p>
+<% else %>
+  <p><%= t(:username_only)+": " + @resource.username %></p>
+<% end %>
+
+<p><%= link_to t('devise.mailer.confirm.conf_account'), confirmation_url(@resource, :confirmation_token => @resource.confirmation_token) %></p>
+
