@@ -10,20 +10,20 @@ class Ability
       can :manage, :all
     elsif @user and @user.role.branch_admin == true
       can :read, Branch 
-      can [:new, :create, :edi, :update], Branch, :id => @user.branch_id
+      can [:new, :create, :edi, :update], Branch#, :id => @user.branch_id
       can :manage, Client
       #can [:edi, :update, :show, :get_bill_by_client_id], Bill
       can [:index, :show], Role
-      can [:new, :create, :show], Comment, :fullname => @user.fullname
-      can :manage, User, :branch_id => @user.branch_id 
+      can [:new, :create, :show], Comment#, :fullname => @user.fullname
+      can :manage, User#, :branch_id => @user.branch_id 
       can :manage, Order#, :branch_id => @user.branch_id 
-      can [:index, :show], Status, :branch_id => @user.branch_id 
-      can :manage, Part, :branch_id => @user.branch_id 
-      can :manage, Workshop, :branch_id => @user.branch_id 
-      can :manage, Cellphone, :branch_id => @user.branch_id 
-      can :manage, Computer, :branch_id => @user.branch_id 
+      can [:index, :show], Status#, :branch_id => @user.branch_id 
+      can :manage, Part#, :branch_id => @user.branch_id 
+      can :manage, Workshop#, :branch_id => @user.branch_id 
+      can :manage, Cellphone#, :branch_id => @user.branch_id 
+      can :manage, Computer#, :branch_id => @user.branch_id 
       can :manage, Progress#, :branch_id => @user.branch_id 
-      can :manage, ClientNeed, :branch_id => @user.branch_id   
+      can :manage, ClientNeed#, :branch_id => @user.branch_id   
       can :manage, Bill
     elsif @client
       can :index, Branch 
@@ -36,10 +36,10 @@ class Ability
       can :show, Comment#, :id => @client.id  
       can :show, Order
       can :show, Part      
-      can [:index, :show], Order, :client_id => @client.id 
-      can [:index, :show,:edit, :update], Bill, :client_id => @client.id 
-    else
-      can [:new, :create, :show], Client 
+      can [:index, :show]#, Order, :client_id => @client.id 
+      can [:index, :show,:edit, :update], Bill#, :client_id => @client.id 
+    else   
+      can [:new, :create, :edit, :update, :show], Client 
     end
   end
   #  def initialize(client)
