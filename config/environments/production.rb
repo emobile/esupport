@@ -66,7 +66,7 @@ Esupport::Application.configure do
   # config.active_record.auto_explain_threshold_in_seconds = 0.5
   
   config.active_support.deprecation = :stderr 
-  config.action_mailer.default_url_options = { :host => 'servinet.emobile-demos.com.mx' } 
+  config.action_mailer.default_url_options = { :host => 'servi-net.us' } 
   config.action_mailer.perform_deliveries = true
   config.action_mailer.delivery_method = :smtp
   config.action_mailer.default :charset => "utf-8"
@@ -74,11 +74,11 @@ Esupport::Application.configure do
   ActionMailer::Base.smtp_settings = {
     :enable_starttls_auto => true,
     :openssl_verify_mode => 'none',
-    :address => 'mail.emobile-demos.com.mx',
+    :address => 'mail.servi-net.us',
     :port => 587,
-    :domain => 'servinet.emobile-demos.com.mx',
+    :domain => 'servi-net.us',
     :authentication => :login,
-    :user_name => 'no-reply@emobile-demos.com.mx',
+    :user_name => 'no-reply@servi-net.us',
     :password => 'alex990480'
   }
   
