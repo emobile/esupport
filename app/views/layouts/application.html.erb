@@ -239,7 +239,7 @@
         <%end%>
       </div>
       <%if signed_in? and controller_name == "welcome"%>
-        <h1 class="page-title"><%= t("activerecord.models.#{controller_name}")  + " " +  @current_user.role.name%></h1>
+        <h1 class="page-title"><%= t("activerecord.models.#{controller_name}")  + " " +  @current_user.fullname%></h1>
       <%else%>
         <h1 class="page-title"><%= t("activerecord.models.#{controller_name}")%></h1>
       <%end%>
