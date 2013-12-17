@@ -34,7 +34,7 @@ class Ability
       can :new, Comment 
       can :create, Comment 
       can :show, Comment#, :id => @client.id  
-      can :show, Order
+      can [:show, :index], Order
       can :show, Part      
       can [:index, :show]#, Order, :client_id => @client.id 
       can [:index, :show,:edit, :update], Bill#, :client_id => @client.id 
