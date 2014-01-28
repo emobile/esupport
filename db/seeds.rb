@@ -27,10 +27,10 @@ ClientNeed.create(name: "El equipo no prende", cost: 300, description: "Revisar 
 ClientNeed.create(name: "El eqipo se apaga solo", cost: 300, description: "Revisar porque el  eqipo se apaga solo", branch_id: 1)
 
 SerialNumber.create(part_id: 1, serial_number: "10000001")
-SerialNumber.create(part_id: 1, serial_number: "10000002")
-SerialNumber.create(part_id: 1, serial_number: "10000003")
-SerialNumber.create(part_id: 1, serial_number: "10000004")
-SerialNumber.create(part_id: 1, serial_number: "10000005")
+SerialNumber.create(part_id: 2, serial_number: "10000002")
+SerialNumber.create(part_id: 3, serial_number: "10000003")
+SerialNumber.create(part_id: 4, serial_number: "10000004")
+SerialNumber.create(part_id: 5, serial_number: "10000005")
 
 Role.create(name: "Cliente", description: "Puede ver sus ordenes.", branch_id: 1, protected: true, super_admin: false, branch_admin: false, client: true)
 #Branch.create(name: "ecom", webpage: "http://www.ecom.com.mx", email1: "aballesteros@emobile.com.mx", email2: "aballesteros@emobile.com.mx", phone1: "18009345674", phone2: "18009345674", address1: "N/A", address2: "N/A", zip: 32125, city: "Chihuahua", state: "chihuahua", country: "Mexico", description: "N/A")
