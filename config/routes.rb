@@ -1,5 +1,8 @@
 Esupport::Application.routes.draw do
-  
+  get "serial_numbers/serial_number_with_part"
+  resources :serial_numbers
+
+
   resources :error_reports
 
 
@@ -14,7 +17,7 @@ Esupport::Application.routes.draw do
   end
   resources :orders
 
-
+  get "client_needs/get_client_need_by_name"
   resources :client_needs
 
   get "bills/get_bill_by_client_id"

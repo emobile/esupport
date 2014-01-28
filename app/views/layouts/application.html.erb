@@ -169,6 +169,9 @@
       <% if can? :index, Part %>
         <li><%= link_to t('activerecord.models.parts'), parts_path%></li>
       <% end %>
+      <% if can? :index, SerialNumber %>
+        <li><%= link_to t('activerecord.models.serial_numbers'), serial_numbers_path%></li>
+      <% end %>
       <% if can? :index, Workshop %>
         <li><%= link_to t('activerecord.models.workshops'), workshops_path%></li>
       <% end %>

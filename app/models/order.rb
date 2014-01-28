@@ -9,9 +9,10 @@ class Order < ActiveRecord::Base
   has_many :progresses, :dependent => :destroy
   has_many :order_progresses, :dependent => :destroy
   has_many :order_parts, :dependent => :destroy
-  has_many :parts, :through => :order_parts
+  has_many :serial_numbers
+  has_many :parts, :through => :serial_numbers
   attr_accessible :parts_attributes
-  accepts_nested_attributes_for :parts, :allow_destroy => true
+  accepts_nested_attributes_for :serial_numbers, :allow_destroy => true
   has_many :order_client_needs
   has_many :client_needs, :through => :order_client_needs
   attr_accessible :client_needs_attributes
@@ -23,9 +24,7 @@ class Order < ActiveRecord::Base
   has_many :order_computers
   has_many :computers, :through => :order_computers
   attr_accessible :computers_attributes
-  accepts_nested_attributes_for :computers, :allow_destroy => true
-  
-  
+  accepts_nested_attributes_for :computers, :allow_destroy => true 
   
   attr_accessible :accessories, :comments, :condition, :failure, :client_id, :product_type, :workshop_id, :bill_id, :require_bill, :status_id, :branch_id, :total_due, :delivery_date, :identifier
   validates :identifier, :condition, :failure, :client_id, :product_type, :workshop_id, :status_id, :branch_id, :bill_id, :delivery_date, :presence => true

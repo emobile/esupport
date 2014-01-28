@@ -7,7 +7,7 @@ gem 'rails', '3.2.11'
 
 gem 'sqlite3'
 #gem "activerecord-postgresql-adapter"
-#gem "pg"
+gem "pg"
 gem "thin"
 gem "less-rails"
 gem "therubyracer"

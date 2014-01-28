@@ -98,4 +98,9 @@ class ClientNeedsController < ApplicationController
       format.json { head :no_content }
     end
   end
+  
+  def get_client_need_by_name
+    @client_need = ClientNeed.find_by_name(params[:client_need_name])
+    render json: @client_need
+  end
 end

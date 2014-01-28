@@ -5,7 +5,7 @@
 <div class="field">
   <%= f.label :cost, :id => "label_order_client_needs_attributes_0_cost" %>
 <%#= f.number_field :cost%>
-  <%= f.number_field :cost, :id => "order_client_needs_attributes_0_cost" %>
+  <%= f.text_field :cost, :id => "order_client_needs_attributes_0_cost" %>
 </div>
 <div class="field">
   <%= f.hidden_field :branch_id, :value => current_user.branch_id, :id => "order_client_needs_attributes_0_branch_id"  %>

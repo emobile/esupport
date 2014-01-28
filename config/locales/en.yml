@@ -816,6 +816,8 @@ es:
       progresses: 'Progresses'
       role: 'Role'
       roles: 'Roles'
+      serial_number: "Serial number"
+      serial_numbers: "Serial numbers"
       status: 'Status'
       statuses: 'Statuses'
       workshop: 'Workshop'

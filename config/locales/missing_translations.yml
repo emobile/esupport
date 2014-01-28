@@ -51,7 +51,7 @@ es:
   login_info: Información de Acceso
   passwords: Contrasenãs
   id: Id
-  comment_by: 'Comentario Realizado Por: '
+  comment_by: ! 'Comentario Realizado Por: '
   user_info: Información de Usuario
   billing_info: Informaciíon de facturación
   edit_billing_info: Editar Informaciíon de facturación
@@ -64,7 +64,7 @@ es:
       branch: Sucursal
       no_branch_available: No hay sucursal disponible
       other: Otro
-  something_wrong: 'Error: '
+  something_wrong: ! 'Error: '
   backtrace: Backtrace
   clients:
     index:

@@ -1260,6 +1260,8 @@ es:
             progresses: 'Progresos'
             role: 'Rol'
             roles: 'Roles'
+            serial_number: "Número de serie"
+            serial_numbers: "Números de serie"
             status: 'Estatus'
             statuses: 'Estatuses'
             workshop: 'Taller'
