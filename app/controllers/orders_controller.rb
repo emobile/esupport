@@ -79,11 +79,16 @@ class OrdersController < ApplicationController
   # POST /orders
   # POST /orders.json
   def create
+    sns = params[:order][:serial_numbers_attributes] || {}
+    params[:order].remove(:serial_numbers_attributes)
     @order = Order.new(params[:order])
     @order.editing = false
     @product = @order.product_type.downcase.pluralize
     respond_to do |format|
       if @order.save
+        sns.each do |sn|
+          OrderSerialNumbers.create(order_id: @order.id, serial_number_id: sn[:id])
+        end
         total_due = 0
         @order.parts.each do |part|
           total_due = part.cost + total_due
@@ -105,6 +110,7 @@ class OrdersController < ApplicationController
   # PUT /orders/1.json
   def update
     @order = Order.find(params[:id])
+    sns = params[:order][:serial_numbers_attributes] || {}
     @order.editing = true
     @client = Client.find_by_id(@order.client_id)
     @bill = Bill.find_by_id((@order.bill_id))
@@ -112,6 +118,13 @@ class OrdersController < ApplicationController
     @product = @order.product_type.downcase.pluralize
     respond_to do |format|
       if @order.update_attributes(params[:order])
+        sns.each do |sn|
+          if sn[:_destroy] == "true"
+            OrderSerialNumbers.find_by_order_id_and_serial_number_id(@order.id, sn[:id]).destroy
+          else
+            OrderSerialNumbers.create(order_id: @order.id, serial_number_id: sn[:id])
+          end
+        end
         total_due = 0
         @order.parts.each do |part|
           total_due = part.cost + total_due

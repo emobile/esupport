@@ -45655,3 +45655,688 @@ Served asset /ckeditor-jquery.js - 304 Not Modified (2ms)
 
 Started GET "/assets/bootstrap-datepicker.js?body=1" for 127.0.0.1 at 2014-01-28 14:20:23 -0700
 Served asset /bootstrap-datepicker.js - 304 Not Modified (0ms)
+
+
+Started GET "/orders/new" for 127.0.0.1 at 2014-01-28 14:35:51 -0700
+Processing by OrdersController#new as HTML
+  [1m[36mUser Load (0.9ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mClient Load (0.7ms)[0m  [1mSELECT "clients".* FROM "clients" WHERE "clients"."id" = 1 LIMIT 1[0m
+  [1m[35mRole Load (0.5ms)[0m  SELECT "roles".* FROM "roles" WHERE "roles"."id" = 1 LIMIT 1
+  [1m[36mBranch Load (0.5ms)[0m  [1mSELECT "branches".* FROM "branches" WHERE "branches"."id" = 1 LIMIT 1[0m
+  Rendered orders/_cellphone_fields.html.erb (10.6ms)
+  Rendered orders/_computer_fields.html.erb (15.1ms)
+  [1m[35mClient Load (0.8ms)[0m  SELECT "clients".* FROM "clients" 
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "roles".* FROM "roles" WHERE "roles"."id" = 1 LIMIT 1[0m
+  [1m[35mBranch Load (0.5ms)[0m  SELECT "branches".* FROM "branches" 
+  [1m[36mWorkshop Load (0.5ms)[0m  [1mSELECT "workshops".* FROM "workshops" WHERE "workshops"."branch_id" = 1[0m
+  Rendered orders/_form.html.erb (634.5ms)
+  Rendered orders/new.html.erb within layouts/application (1019.4ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT "branches".* FROM "branches" 
+  [1m[36m (0.9ms)[0m  [1mSELECT COUNT(*) FROM "users" WHERE (branch_id = 1 and id != 1)[0m
+  [1m[35m (0.6ms)[0m  SELECT COUNT(*) FROM "clients" 
+  [1m[36m (0.7ms)[0m  [1mSELECT COUNT(*) FROM "orders" WHERE (status_id != 3)[0m
+Completed 200 OK in 1991ms (Views: 1466.6ms | ActiveRecord: 45.4ms)
+
+
+Started GET "/assets/twitter-bootstrap-static/bootstrap.css?body=1" for 127.0.0.1 at 2014-01-28 14:35:53 -0700
+Served asset /twitter-bootstrap-static/bootstrap.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter-bootstrap-static/fontawesome.css?body=1" for 127.0.0.1 at 2014-01-28 14:35:53 -0700
+Served asset /twitter-bootstrap-static/fontawesome.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap_and_overrides.css?body=1" for 127.0.0.1 at 2014-01-28 14:35:53 -0700
+Served asset /bootstrap_and_overrides.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/datepicker.css?body=1" for 127.0.0.1 at 2014-01-28 14:35:54 -0700
+Served asset /datepicker.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/autocomplete.css?body=1" for 127.0.0.1 at 2014-01-28 14:35:54 -0700
+Served asset /autocomplete.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/elements.css?body=1" for 127.0.0.1 at 2014-01-28 14:35:54 -0700
+Served asset /elements.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/error_reports.css?body=1" for 127.0.0.1 at 2014-01-28 14:35:54 -0700
+Served asset /error_reports.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-01-28 14:35:54 -0700
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/theme.css?body=1" for 127.0.0.1 at 2014-01-28 14:35:54 -0700
+Served asset /theme.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-01-28 14:35:54 -0700
+Served asset /jquery.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-01-28 14:35:54 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery-ui.js?body=1" for 127.0.0.1 at 2014-01-28 14:35:54 -0700
+Served asset /jquery-ui.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/autocomplete-rails.js?body=1" for 127.0.0.1 at 2014-01-28 14:35:54 -0700
+Served asset /autocomplete-rails.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-transition.js?body=1" for 127.0.0.1 at 2014-01-28 14:35:54 -0700
+Served asset /twitter/bootstrap/bootstrap-transition.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-alert.js?body=1" for 127.0.0.1 at 2014-01-28 14:35:54 -0700
+Served asset /twitter/bootstrap/bootstrap-alert.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-modal.js?body=1" for 127.0.0.1 at 2014-01-28 14:35:54 -0700
+Served asset /twitter/bootstrap/bootstrap-modal.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-dropdown.js?body=1" for 127.0.0.1 at 2014-01-28 14:35:54 -0700
+Served asset /twitter/bootstrap/bootstrap-dropdown.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-scrollspy.js?body=1" for 127.0.0.1 at 2014-01-28 14:35:54 -0700
+Served asset /twitter/bootstrap/bootstrap-scrollspy.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-tab.js?body=1" for 127.0.0.1 at 2014-01-28 14:35:54 -0700
+Served asset /twitter/bootstrap/bootstrap-tab.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-tooltip.js?body=1" for 127.0.0.1 at 2014-01-28 14:35:54 -0700
+Served asset /twitter/bootstrap/bootstrap-tooltip.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-popover.js?body=1" for 127.0.0.1 at 2014-01-28 14:35:54 -0700
+Served asset /twitter/bootstrap/bootstrap-popover.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-button.js?body=1" for 127.0.0.1 at 2014-01-28 14:35:54 -0700
+Served asset /twitter/bootstrap/bootstrap-button.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-collapse.js?body=1" for 127.0.0.1 at 2014-01-28 14:35:54 -0700
+Served asset /twitter/bootstrap/bootstrap-collapse.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-carousel.js?body=1" for 127.0.0.1 at 2014-01-28 14:35:54 -0700
+Served asset /twitter/bootstrap/bootstrap-carousel.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-typeahead.js?body=1" for 127.0.0.1 at 2014-01-28 14:35:54 -0700
+Served asset /twitter/bootstrap/bootstrap-typeahead.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-affix.js?body=1" for 127.0.0.1 at 2014-01-28 14:35:54 -0700
+Served asset /twitter/bootstrap/bootstrap-affix.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap.js?body=1" for 127.0.0.1 at 2014-01-28 14:35:54 -0700
+Served asset /twitter/bootstrap.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery_nested_form.js?body=1" for 127.0.0.1 at 2014-01-28 14:35:54 -0700
+Served asset /jquery_nested_form.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/ckeditor-jquery.js?body=1" for 127.0.0.1 at 2014-01-28 14:35:55 -0700
+Served asset /ckeditor-jquery.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/bootstrap-datepicker.js?body=1" for 127.0.0.1 at 2014-01-28 14:35:55 -0700
+Served asset /bootstrap-datepicker.js - 304 Not Modified (0ms)
+
+
+Started GET "/clients/1.json?callback=jQuery17209801450327504426_1390944955304&_=1390945229347" for 127.0.0.1 at 2014-01-28 14:40:29 -0700
+Processing by ClientsController#show as JSON
+  Parameters: {"callback"=>"jQuery17209801450327504426_1390944955304", "_"=>"1390945229347", "id"=>"1"}
+  [1m[35mUser Load (0.7ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mClient Load (0.5ms)[0m  [1mSELECT "clients".* FROM "clients" WHERE "clients"."id" = $1 LIMIT 1[0m  [["id", "1"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mClient Load (0.9ms)[0m  [1mSELECT "clients".* FROM "clients" WHERE "clients"."id" = 1 LIMIT 1[0m
+  [1m[35mRole Load (0.5ms)[0m  SELECT "roles".* FROM "roles" WHERE "roles"."id" = 1 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "clients".* FROM "clients" WHERE "clients"."id" = $1 LIMIT 1[0m  [["id", "1"]]
+Completed 200 OK in 418ms (Views: 1.4ms | ActiveRecord: 14.3ms)
+
+
+Started GET "/bills/1.json?autocomplete=true&callback=jQuery17209801450327504426_1390944955305&_=1390945229351" for 127.0.0.1 at 2014-01-28 14:40:30 -0700
+Processing by BillsController#show as JSON
+  Parameters: {"autocomplete"=>"true", "callback"=>"jQuery17209801450327504426_1390944955305", "_"=>"1390945229351", "id"=>"1"}
+  [1m[35mUser Load (0.7ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mBill Load (0.6ms)[0m  [1mSELECT "bills".* FROM "bills" WHERE "bills"."id" = $1 LIMIT 1[0m  [["id", "1"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mClient Load (0.7ms)[0m  [1mSELECT "clients".* FROM "clients" WHERE "clients"."id" = 1 LIMIT 1[0m
+  [1m[35mRole Load (0.7ms)[0m  SELECT "roles".* FROM "roles" WHERE "roles"."id" = 1 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "bills".* FROM "bills" WHERE "bills"."id" = $1 LIMIT 1[0m  [["id", "1"]]
+Completed 200 OK in 424ms (Views: 1.0ms | ActiveRecord: 19.1ms)
+
+
+Started GET "/orders/autocomplete_part_name?term=ca" for 127.0.0.1 at 2014-01-28 14:40:47 -0700
+Processing by OrdersController#autocomplete_part_name as JSON
+  Parameters: {"term"=>"ca"}
+  [1m[35mUser Load (0.7ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mClient Load (0.8ms)[0m  SELECT "clients".* FROM "clients" WHERE "clients"."id" = 1 LIMIT 1
+  [1m[36mRole Load (0.5ms)[0m  [1mSELECT "roles".* FROM "roles" WHERE "roles"."id" = 1 LIMIT 1[0m
+  [1m[35mPart Load (16.9ms)[0m  SELECT "parts".* FROM "parts" WHERE (UPPER(name) LIKE UPPER('%ca%') and branch_id = 1)
+  [1m[36mSerialNumber Load (0.4ms)[0m  [1mSELECT "serial_numbers".* FROM "serial_numbers" WHERE "serial_numbers"."part_id" = 4 LIMIT 1[0m
+Completed 200 OK in 668ms (Views: 1.1ms | ActiveRecord: 37.1ms)
+
+
+Started GET "/orders/autocomplete_client_need_name?term=ca" for 127.0.0.1 at 2014-01-28 14:40:50 -0700
+Processing by OrdersController#autocomplete_client_need_name as JSON
+  Parameters: {"term"=>"ca"}
+  [1m[35mUser Load (0.6ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mClient Load (0.7ms)[0m  SELECT "clients".* FROM "clients" WHERE "clients"."id" = 1 LIMIT 1
+  [1m[36mRole Load (0.5ms)[0m  [1mSELECT "roles".* FROM "roles" WHERE "roles"."id" = 1 LIMIT 1[0m
+  [1m[35mClientNeed Load (0.5ms)[0m  SELECT "client_needs".* FROM "client_needs" WHERE (UPPER(name) LIKE UPPER('%ca%') and branch_id = 1)
+Completed 200 OK in 613ms (Views: 0.6ms | ActiveRecord: 17.2ms)
+
+
+Started GET "/client_needs/get_client_need_by_name?client_need_name=Cambiar+Teclado" for 127.0.0.1 at 2014-01-28 14:40:52 -0700
+Processing by ClientNeedsController#get_client_need_by_name as JSON
+  Parameters: {"client_need_name"=>"Cambiar Teclado"}
+  [1m[36mUser Load (0.7ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mClient Load (0.7ms)[0m  [1mSELECT "clients".* FROM "clients" WHERE "clients"."id" = 1 LIMIT 1[0m
+  [1m[35mRole Load (0.5ms)[0m  SELECT "roles".* FROM "roles" WHERE "roles"."id" = 1 LIMIT 1
+  [1m[36mClientNeed Load (0.5ms)[0m  [1mSELECT "client_needs".* FROM "client_needs" WHERE "client_needs"."name" = 'Cambiar Teclado' LIMIT 1[0m
+Completed 200 OK in 608ms (Views: 0.8ms | ActiveRecord: 16.8ms)
+
+
+Started GET "/serial_numbers/serial_number_with_part?part_name=Cargador+para+iPhone" for 127.0.0.1 at 2014-01-28 14:40:53 -0700
+Processing by SerialNumbersController#serial_number_with_part as JSON
+  Parameters: {"part_name"=>"Cargador para iPhone"}
+  [1m[35mUser Load (0.7ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mPart Load (0.5ms)[0m  [1mSELECT "parts".* FROM "parts" WHERE "parts"."name" = 'Cargador para iPhone' LIMIT 1[0m
+  [1m[35mSerialNumber Load (0.6ms)[0m  SELECT "serial_numbers".* FROM "serial_numbers" WHERE "serial_numbers"."part_id" = 4 LIMIT 1
+Completed 200 OK in 303ms (Views: 0.4ms | ActiveRecord: 12.2ms)
+
+
+Started POST "/orders" for 127.0.0.1 at 2014-01-28 14:40:56 -0700
+Processing by OrdersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"s1zWUopcDOuNrrA/HvqFwSFaHhT6IAVjWEuSkqwgzQ8=", "order"=>{"identifier"=>"123", "delivery_date"=>"28-01-2014", "client_id"=>"1", "require_bill"=>"0", "bill_id"=>"1", "branch_id"=>"1", "workshop_id"=>"1", "status_id"=>"1", "product_type"=>"Cellphone", "cellphones_attributes"=>{"0"=>{"model"=>"qwe", "brand"=>"e", "color"=>"qwe", "ope_system"=>"qwe", "imei"=>"123", "branch_id"=>"1", "client_id"=>"1"}}, "condition"=>"qwe", "failure"=>"qwe", "comments"=>"qwe", "accessories"=>"qwe", "serial_numbers_attributes"=>{"1390945253887"=>{"id"=>"", "_destroy"=>"false"}, "1390945253896"=>{"id"=>"4", "_destroy"=>"false"}}, "client_needs_attributes"=>{"1390945252437"=>{"id"=>"", "_destroy"=>"false"}, "1390945252443"=>{"id"=>"3", "_destroy"=>"false"}}}, "part-name"=>"", "client-need-name"=>"", "commit"=>"Crear Orden"}
+  [1m[36mUser Load (0.7ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mSerialNumber Load (0.9ms)[0m  SELECT "serial_numbers".* FROM "serial_numbers" INNER JOIN "order_serial_numbers" ON "serial_numbers"."id" = "order_serial_numbers"."serial_number_id" WHERE "order_serial_numbers"."order_id" IS NULL AND "serial_numbers"."id" IN (0, 4)
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (18.8ms)[0m  INSERT INTO "error_reports" ("action_name", "backtrace", "branch_id", "controller_name", "created_at", "description", "environment", "error_time", "line_number", "original_path", "referrer_url", "updated_at", "user") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13) RETURNING "id"  [["action_name", "create"], ["backtrace", ["/var/lib/gems/1.9.1/gems/activerecord-3.2.11/lib/active_record/nested_attributes.rb:462:in `raise_nested_attributes_record_not_found'", "/var/lib/gems/1.9.1/gems/activerecord-3.2.11/lib/active_record/nested_attributes.rb:427:in `block in assign_nested_attributes_for_collection_association'", "/var/lib/gems/1.9.1/gems/activerecord-3.2.11/lib/active_record/nested_attributes.rb:400:in `each'", "/var/lib/gems/1.9.1/gems/activerecord-3.2.11/lib/active_record/nested_attributes.rb:400:in `assign_nested_attributes_for_collection_association'", "/var/lib/gems/1.9.1/gems/activerecord-3.2.11/lib/active_record/nested_attributes.rb:288:in `serial_numbers_attributes='", "/var/lib/gems/1.9.1/gems/activerecord-3.2.11/lib/active_record/attribute_assignment.rb:94:in `block in assign_attributes'", "/var/lib/gems/1.9.1/gems/activerecord-3.2.11/lib/active_record/attribute_assignment.rb:93:in `each'", "/var/lib/gems/1.9.1/gems/activerecord-3.2.11/lib/active_record/attribute_assignment.rb:93:in `assign_attributes'", "/var/lib/gems/1.9.1/gems/activerecord-3.2.11/lib/active_record/base.rb:497:in `initialize'", "/var/lib/gems/1.9.1/gems/cancan-1.6.10/lib/cancan/controller_resource.rb:85:in `new'", "/var/lib/gems/1.9.1/gems/cancan-1.6.10/lib/cancan/controller_resource.rb:85:in `build_resource'", "/var/lib/gems/1.9.1/gems/cancan-1.6.10/lib/cancan/controller_resource.rb:66:in `load_resource_instance'", "/var/lib/gems/1.9.1/gems/cancan-1.6.10/lib/cancan/controller_resource.rb:32:in `load_resource'", "/var/lib/gems/1.9.1/gems/cancan-1.6.10/lib/cancan/controller_resource.rb:25:in `load_and_authorize_resource'", "/var/lib/gems/1.9.1/gems/cancan-1.6.10/lib/cancan/controller_resource.rb:10:in `block in add_before_filter'", "/var/lib/gems/1.9.1/gems/activesupport-3.2.11/lib/active_support/callbacks.rb:440:in `_run__3140864880078791430__process_action__194564701570495868__callbacks'", "/var/lib/gems/1.9.1/gems/activesupport-3.2.11/lib/active_support/callbacks.rb:405:in `__run_callback'", "/var/lib/gems/1.9.1/gems/activesupport-3.2.11/lib/active_support/callbacks.rb:385:in `_run_process_action_callbacks'", "/var/lib/gems/1.9.1/gems/activesupport-3.2.11/lib/active_support/callbacks.rb:81:in `run_callbacks'", "/var/lib/gems/1.9.1/gems/actionpack-3.2.11/lib/abstract_controller/callbacks.rb:17:in `process_action'", "/var/lib/gems/1.9.1/gems/actionpack-3.2.11/lib/action_controller/metal/rescue.rb:29:in `process_action'", "/var/lib/gems/1.9.1/gems/actionpack-3.2.11/lib/action_controller/metal/instrumentation.rb:30:in `block in process_action'", "/var/lib/gems/1.9.1/gems/activesupport-3.2.11/lib/active_support/notifications.rb:123:in `block in instrument'", "/var/lib/gems/1.9.1/gems/activesupport-3.2.11/lib/active_support/notifications/instrumenter.rb:20:in `instrument'", "/var/lib/gems/1.9.1/gems/activesupport-3.2.11/lib/active_support/notifications.rb:123:in `instrument'", "/var/lib/gems/1.9.1/gems/actionpack-3.2.11/lib/action_controller/metal/instrumentation.rb:29:in `process_action'", "/var/lib/gems/1.9.1/gems/actionpack-3.2.11/lib/action_controller/metal/params_wrapper.rb:207:in `process_action'", "/var/lib/gems/1.9.1/gems/activerecord-3.2.11/lib/active_record/railties/controller_runtime.rb:18:in `process_action'", "/var/lib/gems/1.9.1/gems/actionpack-3.2.11/lib/abstract_controller/base.rb:121:in `process'", "/var/lib/gems/1.9.1/gems/actionpack-3.2.11/lib/abstract_controller/rendering.rb:45:in `process'", "/var/lib/gems/1.9.1/gems/actionpack-3.2.11/lib/action_controller/metal.rb:203:in `dispatch'", "/var/lib/gems/1.9.1/gems/actionpack-3.2.11/lib/action_controller/metal/rack_delegation.rb:14:in `dispatch'", "/var/lib/gems/1.9.1/gems/actionpack-3.2.11/lib/action_controller/metal.rb:246:in `block in action'", "/var/lib/gems/1.9.1/gems/actionpack-3.2.11/lib/action_dispatch/routing/route_set.rb:73:in `call'", "/var/lib/gems/1.9.1/gems/actionpack-3.2.11/lib/action_dispatch/routing/route_set.rb:73:in `dispatch'", "/var/lib/gems/1.9.1/gems/actionpack-3.2.11/lib/action_dispatch/routing/route_set.rb:36:in `call'", "/var/lib/gems/1.9.1/gems/journey-1.0.4/lib/journey/router.rb:68:in `block in call'", "/var/lib/gems/1.9.1/gems/journey-1.0.4/lib/journey/router.rb:56:in `each'", "/var/lib/gems/1.9.1/gems/journey-1.0.4/lib/journey/router.rb:56:in `call'", "/var/lib/gems/1.9.1/gems/actionpack-3.2.11/lib/action_dispatch/routing/route_set.rb:601:in `call'", "/var/lib/gems/1.9.1/gems/i18n-missing_translations-0.0.2/lib/i18n/missing_translations.rb:26:in `call'", "/var/lib/gems/1.9.1/gems/warden-1.2.1/lib/warden/manager.rb:35:in `block in call'", "/var/lib/gems/1.9.1/gems/warden-1.2.1/lib/warden/manager.rb:34:in `catch'", "/var/lib/gems/1.9.1/gems/warden-1.2.1/lib/warden/manager.rb:34:in `call'", "/var/lib/gems/1.9.1/gems/actionpack-3.2.11/lib/action_dispatch/middleware/best_standards_support.rb:17:in `call'", "/var/lib/gems/1.9.1/gems/rack-1.4.5/lib/rack/etag.rb:23:in `call'", "/var/lib/gems/1.9.1/gems/rack-1.4.5/lib/rack/conditionalget.rb:35:in `call'", "/var/lib/gems/1.9.1/gems/actionpack-3.2.11/lib/action_dispatch/middleware/head.rb:14:in `call'", "/var/lib/gems/1.9.1/gems/actionpack-3.2.11/lib/action_dispatch/middleware/params_parser.rb:21:in `call'", "/var/lib/gems/1.9.1/gems/actionpack-3.2.11/lib/action_dispatch/middleware/flash.rb:242:in `call'", "/var/lib/gems/1.9.1/gems/rack-1.4.5/lib/rack/session/abstract/id.rb:210:in `context'", "/var/lib/gems/1.9.1/gems/rack-1.4.5/lib/rack/session/abstract/id.rb:205:in `call'", "/var/lib/gems/1.9.1/gems/actionpack-3.2.11/lib/action_dispatch/middleware/cookies.rb:341:in `call'", "/var/lib/gems/1.9.1/gems/activerecord-3.2.11/lib/active_record/query_cache.rb:64:in `call'", "/var/lib/gems/1.9.1/gems/activerecord-3.2.11/lib/active_record/connection_adapters/abstract/connection_pool.rb:479:in `call'", "/var/lib/gems/1.9.1/gems/actionpack-3.2.11/lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'", "/var/lib/gems/1.9.1/gems/activesupport-3.2.11/lib/active_support/callbacks.rb:405:in `_run__3508530125755720630__call__4046538622180321925__callbacks'", "/var/lib/gems/1.9.1/gems/activesupport-3.2.11/lib/active_support/callbacks.rb:405:in `__run_callback'", "/var/lib/gems/1.9.1/gems/activesupport-3.2.11/lib/active_support/callbacks.rb:385:in `_run_call_callbacks'", "/var/lib/gems/1.9.1/gems/activesupport-3.2.11/lib/active_support/callbacks.rb:81:in `run_callbacks'", "/var/lib/gems/1.9.1/gems/actionpack-3.2.11/lib/action_dispatch/middleware/callbacks.rb:27:in `call'", "/var/lib/gems/1.9.1/gems/actionpack-3.2.11/lib/action_dispatch/middleware/reloader.rb:65:in `call'", "/var/lib/gems/1.9.1/gems/actionpack-3.2.11/lib/action_dispatch/middleware/remote_ip.rb:31:in `call'", "/var/lib/gems/1.9.1/gems/actionpack-3.2.11/lib/action_dispatch/middleware/debug_exceptions.rb:16:in `call'", "/var/lib/gems/1.9.1/gems/actionpack-3.2.11/lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'", "/var/lib/gems/1.9.1/gems/railties-3.2.11/lib/rails/rack/logger.rb:32:in `call_app'", "/var/lib/gems/1.9.1/gems/railties-3.2.11/lib/rails/rack/logger.rb:16:in `block in call'", "/var/lib/gems/1.9.1/gems/activesupport-3.2.11/lib/active_support/tagged_logging.rb:22:in `tagged'", "/var/lib/gems/1.9.1/gems/railties-3.2.11/lib/rails/rack/logger.rb:16:in `call'", "/var/lib/gems/1.9.1/gems/actionpack-3.2.11/lib/action_dispatch/middleware/request_id.rb:22:in `call'", "/var/lib/gems/1.9.1/gems/rack-1.4.5/lib/rack/methodoverride.rb:21:in `call'", "/var/lib/gems/1.9.1/gems/rack-1.4.5/lib/rack/runtime.rb:17:in `call'", "/var/lib/gems/1.9.1/gems/activesupport-3.2.11/lib/active_support/cache/strategy/local_cache.rb:72:in `call'", "/var/lib/gems/1.9.1/gems/rack-1.4.5/lib/rack/lock.rb:15:in `call'", "/var/lib/gems/1.9.1/gems/actionpack-3.2.11/lib/action_dispatch/middleware/static.rb:62:in `call'", "/var/lib/gems/1.9.1/gems/railties-3.2.11/lib/rails/engine.rb:479:in `call'", "/var/lib/gems/1.9.1/gems/railties-3.2.11/lib/rails/application.rb:223:in `call'", "/var/lib/gems/1.9.1/gems/rack-1.4.5/lib/rack/content_length.rb:14:in `call'", "/var/lib/gems/1.9.1/gems/railties-3.2.11/lib/rails/rack/log_tailer.rb:17:in `call'", "/var/lib/gems/1.9.1/gems/thin-1.5.1/lib/thin/connection.rb:81:in `block in pre_process'", "/var/lib/gems/1.9.1/gems/thin-1.5.1/lib/thin/connection.rb:79:in `catch'", "/var/lib/gems/1.9.1/gems/thin-1.5.1/lib/thin/connection.rb:79:in `pre_process'", "/var/lib/gems/1.9.1/gems/thin-1.5.1/lib/thin/connection.rb:54:in `process'", "/var/lib/gems/1.9.1/gems/thin-1.5.1/lib/thin/connection.rb:39:in `receive_data'", "/var/lib/gems/1.9.1/gems/eventmachine-1.0.3/lib/eventmachine.rb:187:in `run_machine'", "/var/lib/gems/1.9.1/gems/eventmachine-1.0.3/lib/eventmachine.rb:187:in `run'", "/var/lib/gems/1.9.1/gems/thin-1.5.1/lib/thin/backends/base.rb:63:in `start'", "/var/lib/gems/1.9.1/gems/thin-1.5.1/lib/thin/server.rb:159:in `start'", "/var/lib/gems/1.9.1/gems/rack-1.4.5/lib/rack/handler/thin.rb:13:in `run'", "/var/lib/gems/1.9.1/gems/rack-1.4.5/lib/rack/server.rb:268:in `start'", "/var/lib/gems/1.9.1/gems/railties-3.2.11/lib/rails/commands/server.rb:70:in `start'", "/var/lib/gems/1.9.1/gems/railties-3.2.11/lib/rails/commands.rb:55:in `block in <top (required)>'", "/var/lib/gems/1.9.1/gems/railties-3.2.11/lib/rails/commands.rb:50:in `tap'", "/var/lib/gems/1.9.1/gems/railties-3.2.11/lib/rails/commands.rb:50:in `<top (required)>'", "script/rails:6:in `require'", "script/rails:6:in `<main>'"]], ["branch_id", nil], ["controller_name", "orders"], ["created_at", Tue, 28 Jan 2014 21:40:58 UTC +00:00], ["description", "Couldn't find SerialNumber with ID=4 for Order with ID="], ["environment", "development"], ["error_time", 2014-01-28 08:40:58 -0700], ["line_number", "/var/lib/gems/1.9.1/gems/activerecord-3.2.11/lib/active_record/nested_attributes.rb:462"], ["original_path", "/orders"], ["referrer_url", "http://localhost:3000/orders/new"], ["updated_at", Tue, 28 Jan 2014 21:40:58 UTC +00:00], ["user", "System Administrator"]]
+  [1m[36m (13.9ms)[0m  [1mCOMMIT[0m
+  Rendered welcome/index.html.erb within layouts/application (9.0ms)
+  [1m[35mBranch Load (0.4ms)[0m  SELECT "branches".* FROM "branches" 
+  [1m[36mRole Load (0.5ms)[0m  [1mSELECT "roles".* FROM "roles" WHERE "roles"."id" = 1 LIMIT 1[0m
+  [1m[35mUser Load (1.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mClient Load (0.9ms)[0m  [1mSELECT "clients".* FROM "clients" WHERE "clients"."id" = 1 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "roles".* FROM "roles" WHERE "roles"."id" = 1 LIMIT 1
+  [1m[36m (0.7ms)[0m  [1mSELECT COUNT(*) FROM "users" WHERE (branch_id = 1 and id != 1)[0m
+  [1m[35m (0.7ms)[0m  SELECT COUNT(*) FROM "clients" 
+  [1m[36m (0.7ms)[0m  [1mSELECT COUNT(*) FROM "orders" WHERE (status_id != 3)[0m
+Completed 200 OK in 2139ms (Views: 1191.1ms | ActiveRecord: 82.6ms)
+
+
+Started GET "/assets/twitter-bootstrap-static/bootstrap.css?body=1" for 127.0.0.1 at 2014-01-28 14:40:59 -0700
+Served asset /twitter-bootstrap-static/bootstrap.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter-bootstrap-static/fontawesome.css?body=1" for 127.0.0.1 at 2014-01-28 14:40:59 -0700
+Served asset /twitter-bootstrap-static/fontawesome.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap_and_overrides.css?body=1" for 127.0.0.1 at 2014-01-28 14:40:59 -0700
+Served asset /bootstrap_and_overrides.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/datepicker.css?body=1" for 127.0.0.1 at 2014-01-28 14:40:59 -0700
+Served asset /datepicker.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/autocomplete.css?body=1" for 127.0.0.1 at 2014-01-28 14:40:59 -0700
+Served asset /autocomplete.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/elements.css?body=1" for 127.0.0.1 at 2014-01-28 14:41:00 -0700
+Served asset /elements.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/error_reports.css?body=1" for 127.0.0.1 at 2014-01-28 14:41:00 -0700
+Served asset /error_reports.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-01-28 14:41:00 -0700
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/theme.css?body=1" for 127.0.0.1 at 2014-01-28 14:41:00 -0700
+Served asset /theme.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-01-28 14:41:00 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-01-28 14:41:00 -0700
+Served asset /jquery.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/autocomplete-rails.js?body=1" for 127.0.0.1 at 2014-01-28 14:41:00 -0700
+Served asset /autocomplete-rails.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery-ui.js?body=1" for 127.0.0.1 at 2014-01-28 14:41:00 -0700
+Served asset /jquery-ui.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-transition.js?body=1" for 127.0.0.1 at 2014-01-28 14:41:00 -0700
+Served asset /twitter/bootstrap/bootstrap-transition.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-alert.js?body=1" for 127.0.0.1 at 2014-01-28 14:41:00 -0700
+Served asset /twitter/bootstrap/bootstrap-alert.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-modal.js?body=1" for 127.0.0.1 at 2014-01-28 14:41:00 -0700
+Served asset /twitter/bootstrap/bootstrap-modal.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-dropdown.js?body=1" for 127.0.0.1 at 2014-01-28 14:41:00 -0700
+Served asset /twitter/bootstrap/bootstrap-dropdown.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-scrollspy.js?body=1" for 127.0.0.1 at 2014-01-28 14:41:00 -0700
+Served asset /twitter/bootstrap/bootstrap-scrollspy.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-tab.js?body=1" for 127.0.0.1 at 2014-01-28 14:41:00 -0700
+Served asset /twitter/bootstrap/bootstrap-tab.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-tooltip.js?body=1" for 127.0.0.1 at 2014-01-28 14:41:00 -0700
+Served asset /twitter/bootstrap/bootstrap-tooltip.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-popover.js?body=1" for 127.0.0.1 at 2014-01-28 14:41:00 -0700
+Served asset /twitter/bootstrap/bootstrap-popover.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-button.js?body=1" for 127.0.0.1 at 2014-01-28 14:41:00 -0700
+Served asset /twitter/bootstrap/bootstrap-button.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-collapse.js?body=1" for 127.0.0.1 at 2014-01-28 14:41:00 -0700
+Served asset /twitter/bootstrap/bootstrap-collapse.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-carousel.js?body=1" for 127.0.0.1 at 2014-01-28 14:41:00 -0700
+Served asset /twitter/bootstrap/bootstrap-carousel.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap.js?body=1" for 127.0.0.1 at 2014-01-28 14:41:00 -0700
+Served asset /twitter/bootstrap.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-typeahead.js?body=1" for 127.0.0.1 at 2014-01-28 14:41:00 -0700
+Served asset /twitter/bootstrap/bootstrap-typeahead.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-affix.js?body=1" for 127.0.0.1 at 2014-01-28 14:41:00 -0700
+Served asset /twitter/bootstrap/bootstrap-affix.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery_nested_form.js?body=1" for 127.0.0.1 at 2014-01-28 14:41:01 -0700
+Served asset /jquery_nested_form.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/ckeditor-jquery.js?body=1" for 127.0.0.1 at 2014-01-28 14:41:01 -0700
+Served asset /ckeditor-jquery.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/bootstrap-datepicker.js?body=1" for 127.0.0.1 at 2014-01-28 14:41:01 -0700
+Served asset /bootstrap-datepicker.js - 304 Not Modified (0ms)
+
+
+Started GET "/error_reports" for 127.0.0.1 at 2014-01-28 14:41:04 -0700
+Processing by ErrorReportsController#index as HTML
+  [1m[35mUser Load (0.7ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mClient Load (0.8ms)[0m  SELECT "clients".* FROM "clients" WHERE "clients"."id" = 1 LIMIT 1
+  [1m[36mRole Load (0.5ms)[0m  [1mSELECT "roles".* FROM "roles" WHERE "roles"."id" = 1 LIMIT 1[0m
+  [1m[35mBranch Load (0.5ms)[0m  SELECT "branches".* FROM "branches" WHERE "branches"."id" = 1 LIMIT 1
+  [1m[36mErrorReport Load (3.9ms)[0m  [1mSELECT "error_reports".* FROM "error_reports" ORDER BY id DESC LIMIT 10 OFFSET 0[0m
+  [1m[35m (0.6ms)[0m  SELECT COUNT(*) FROM "error_reports" 
+  [1m[36mErrorReport Load (1.0ms)[0m  [1mSELECT "error_reports".* FROM "error_reports" ORDER BY id DESC LIMIT 1 OFFSET 0[0m
+  Rendered error_reports/index.html.erb within layouts/application (649.0ms)
+  [1m[35mBranch Load (0.5ms)[0m  SELECT "branches".* FROM "branches" 
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "roles".* FROM "roles" WHERE "roles"."id" = 1 LIMIT 1[0m
+  [1m[35m (0.7ms)[0m  SELECT COUNT(*) FROM "users" WHERE (branch_id = 1 and id != 1)
+  [1m[36m (0.5ms)[0m  [1mSELECT COUNT(*) FROM "clients" [0m
+  [1m[35m (0.5ms)[0m  SELECT COUNT(*) FROM "orders" WHERE (status_id != 3)
+Completed 200 OK in 1634ms (Views: 1326.9ms | ActiveRecord: 33.0ms)
+
+
+Started GET "/assets/twitter-bootstrap-static/bootstrap.css?body=1" for 127.0.0.1 at 2014-01-28 14:41:06 -0700
+Served asset /twitter-bootstrap-static/bootstrap.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/twitter-bootstrap-static/fontawesome.css?body=1" for 127.0.0.1 at 2014-01-28 14:41:06 -0700
+Served asset /twitter-bootstrap-static/fontawesome.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap_and_overrides.css?body=1" for 127.0.0.1 at 2014-01-28 14:41:06 -0700
+Served asset /bootstrap_and_overrides.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/datepicker.css?body=1" for 127.0.0.1 at 2014-01-28 14:41:06 -0700
+Served asset /datepicker.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/autocomplete.css?body=1" for 127.0.0.1 at 2014-01-28 14:41:06 -0700
+Served asset /autocomplete.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/elements.css?body=1" for 127.0.0.1 at 2014-01-28 14:41:06 -0700
+Served asset /elements.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/error_reports.css?body=1" for 127.0.0.1 at 2014-01-28 14:41:06 -0700
+Served asset /error_reports.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-01-28 14:41:06 -0700
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/theme.css?body=1" for 127.0.0.1 at 2014-01-28 14:41:06 -0700
+Served asset /theme.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-01-28 14:41:06 -0700
+Served asset /jquery.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-01-28 14:41:06 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery-ui.js?body=1" for 127.0.0.1 at 2014-01-28 14:41:06 -0700
+Served asset /jquery-ui.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/autocomplete-rails.js?body=1" for 127.0.0.1 at 2014-01-28 14:41:06 -0700
+Served asset /autocomplete-rails.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-transition.js?body=1" for 127.0.0.1 at 2014-01-28 14:41:07 -0700
+Served asset /twitter/bootstrap/bootstrap-transition.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-alert.js?body=1" for 127.0.0.1 at 2014-01-28 14:41:07 -0700
+Served asset /twitter/bootstrap/bootstrap-alert.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-modal.js?body=1" for 127.0.0.1 at 2014-01-28 14:41:07 -0700
+Served asset /twitter/bootstrap/bootstrap-modal.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-dropdown.js?body=1" for 127.0.0.1 at 2014-01-28 14:41:07 -0700
+Served asset /twitter/bootstrap/bootstrap-dropdown.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-scrollspy.js?body=1" for 127.0.0.1 at 2014-01-28 14:41:07 -0700
+Served asset /twitter/bootstrap/bootstrap-scrollspy.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-tab.js?body=1" for 127.0.0.1 at 2014-01-28 14:41:07 -0700
+Served asset /twitter/bootstrap/bootstrap-tab.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-tooltip.js?body=1" for 127.0.0.1 at 2014-01-28 14:41:07 -0700
+Served asset /twitter/bootstrap/bootstrap-tooltip.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-popover.js?body=1" for 127.0.0.1 at 2014-01-28 14:41:07 -0700
+Served asset /twitter/bootstrap/bootstrap-popover.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-button.js?body=1" for 127.0.0.1 at 2014-01-28 14:41:07 -0700
+Served asset /twitter/bootstrap/bootstrap-button.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-collapse.js?body=1" for 127.0.0.1 at 2014-01-28 14:41:07 -0700
+Served asset /twitter/bootstrap/bootstrap-collapse.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-carousel.js?body=1" for 127.0.0.1 at 2014-01-28 14:41:07 -0700
+Served asset /twitter/bootstrap/bootstrap-carousel.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-typeahead.js?body=1" for 127.0.0.1 at 2014-01-28 14:41:07 -0700
+Served asset /twitter/bootstrap/bootstrap-typeahead.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-affix.js?body=1" for 127.0.0.1 at 2014-01-28 14:41:07 -0700
+Served asset /twitter/bootstrap/bootstrap-affix.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap.js?body=1" for 127.0.0.1 at 2014-01-28 14:41:07 -0700
+Served asset /twitter/bootstrap.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery_nested_form.js?body=1" for 127.0.0.1 at 2014-01-28 14:41:07 -0700
+Served asset /jquery_nested_form.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/ckeditor-jquery.js?body=1" for 127.0.0.1 at 2014-01-28 14:41:07 -0700
+Served asset /ckeditor-jquery.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/bootstrap-datepicker.js?body=1" for 127.0.0.1 at 2014-01-28 14:41:07 -0700
+Served asset /bootstrap-datepicker.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/twitter-bootstrap-static/bootstrap.css?body=1" for 127.0.0.1 at 2014-01-28 14:41:13 -0700
+Served asset /twitter-bootstrap-static/bootstrap.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter-bootstrap-static/fontawesome.css?body=1" for 127.0.0.1 at 2014-01-28 14:41:13 -0700
+Served asset /twitter-bootstrap-static/fontawesome.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap_and_overrides.css?body=1" for 127.0.0.1 at 2014-01-28 14:41:13 -0700
+Served asset /bootstrap_and_overrides.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/datepicker.css?body=1" for 127.0.0.1 at 2014-01-28 14:41:13 -0700
+Served asset /datepicker.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/autocomplete.css?body=1" for 127.0.0.1 at 2014-01-28 14:41:14 -0700
+Served asset /autocomplete.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/elements.css?body=1" for 127.0.0.1 at 2014-01-28 14:41:14 -0700
+Served asset /elements.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/error_reports.css?body=1" for 127.0.0.1 at 2014-01-28 14:41:14 -0700
+Served asset /error_reports.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-01-28 14:41:14 -0700
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/theme.css?body=1" for 127.0.0.1 at 2014-01-28 14:41:14 -0700
+Served asset /theme.css - 304 Not Modified (0ms)
+
+
+Started GET "/orders/autocomplete_part_name?term=ca" for 127.0.0.1 at 2014-01-28 14:41:37 -0700
+Processing by OrdersController#autocomplete_part_name as JSON
+  Parameters: {"term"=>"ca"}
+  [1m[36mUser Load (0.6ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mClient Load (0.7ms)[0m  [1mSELECT "clients".* FROM "clients" WHERE "clients"."id" = 1 LIMIT 1[0m
+  [1m[35mRole Load (0.5ms)[0m  SELECT "roles".* FROM "roles" WHERE "roles"."id" = 1 LIMIT 1
+  [1m[36mPart Load (0.6ms)[0m  [1mSELECT "parts".* FROM "parts" WHERE (UPPER(name) LIKE UPPER('%ca%') and branch_id = 1)[0m
+  [1m[35mSerialNumber Load (0.5ms)[0m  SELECT "serial_numbers".* FROM "serial_numbers" WHERE "serial_numbers"."part_id" = 4 LIMIT 1
+Completed 200 OK in 652ms (Views: 1.1ms | ActiveRecord: 21.9ms)
+
+
+Started GET "/serial_numbers/serial_number_with_part?part_name=Cargador+para+iPhone" for 127.0.0.1 at 2014-01-28 14:41:40 -0700
+Processing by SerialNumbersController#serial_number_with_part as JSON
+  Parameters: {"part_name"=>"Cargador para iPhone"}
+  [1m[36mUser Load (0.7ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mPart Load (0.5ms)[0m  SELECT "parts".* FROM "parts" WHERE "parts"."name" = 'Cargador para iPhone' LIMIT 1
+  [1m[36mSerialNumber Load (0.4ms)[0m  [1mSELECT "serial_numbers".* FROM "serial_numbers" WHERE "serial_numbers"."part_id" = 4 LIMIT 1[0m
+Completed 200 OK in 296ms (Views: 0.4ms | ActiveRecord: 11.9ms)
+
+
+Started POST "/orders" for 127.0.0.1 at 2014-01-28 14:42:34 -0700
+Processing by OrdersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"s1zWUopcDOuNrrA/HvqFwSFaHhT6IAVjWEuSkqwgzQ8=", "order"=>{"identifier"=>"123", "delivery_date"=>"28-01-2014", "client_id"=>"1", "require_bill"=>"0", "bill_id"=>"1", "branch_id"=>"1", "workshop_id"=>"1", "status_id"=>"1", "product_type"=>"Cellphone", "cellphones_attributes"=>{"0"=>{"model"=>"qwe", "brand"=>"qwe", "color"=>"wqe", "ope_system"=>"qwe", "imei"=>"123", "branch_id"=>"1", "client_id"=>""}}, "condition"=>"qwe", "failure"=>"qwe", "comments"=>"qwe", "accessories"=>"qwe", "serial_numbers_attributes"=>{"1390945300698"=>{"id"=>"", "_destroy"=>"false"}, "1390945300705"=>{"id"=>"4", "_destroy"=>"false"}}}, "part-name"=>"", "client-need-name"=>"", "commit"=>"Crear Orden"}
+  [1m[35mUser Load (0.6ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mSerialNumber Load (0.5ms)[0m  [1mSELECT "serial_numbers".* FROM "serial_numbers" INNER JOIN "order_serial_numbers" ON "serial_numbers"."id" = "order_serial_numbers"."serial_number_id" WHERE "order_serial_numbers"."order_id" IS NULL AND "serial_numbers"."id" IN (0, 4)[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36mSQL (4.0ms)[0m  [1mINSERT INTO "error_reports" ("action_name", "backtrace", "branch_id", "controller_name", "created_at", "description", "environment", "error_time", "line_number", "original_path", "referrer_url", "updated_at", "user") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13) RETURNING "id"[0m  [["action_name", "create"], ["backtrace", ["/var/lib/gems/1.9.1/gems/activerecord-3.2.11/lib/active_record/nested_attributes.rb:462:in `raise_nested_attributes_record_not_found'", "/var/lib/gems/1.9.1/gems/activerecord-3.2.11/lib/active_record/nested_attributes.rb:427:in `block in assign_nested_attributes_for_collection_association'", "/var/lib/gems/1.9.1/gems/activerecord-3.2.11/lib/active_record/nested_attributes.rb:400:in `each'", "/var/lib/gems/1.9.1/gems/activerecord-3.2.11/lib/active_record/nested_attributes.rb:400:in `assign_nested_attributes_for_collection_association'", "/var/lib/gems/1.9.1/gems/activerecord-3.2.11/lib/active_record/nested_attributes.rb:288:in `serial_numbers_attributes='", "/var/lib/gems/1.9.1/gems/activerecord-3.2.11/lib/active_record/attribute_assignment.rb:94:in `block in assign_attributes'", "/var/lib/gems/1.9.1/gems/activerecord-3.2.11/lib/active_record/attribute_assignment.rb:93:in `each'", "/var/lib/gems/1.9.1/gems/activerecord-3.2.11/lib/active_record/attribute_assignment.rb:93:in `assign_attributes'", "/var/lib/gems/1.9.1/gems/activerecord-3.2.11/lib/active_record/base.rb:497:in `initialize'", "/var/lib/gems/1.9.1/gems/cancan-1.6.10/lib/cancan/controller_resource.rb:85:in `new'", "/var/lib/gems/1.9.1/gems/cancan-1.6.10/lib/cancan/controller_resource.rb:85:in `build_resource'", "/var/lib/gems/1.9.1/gems/cancan-1.6.10/lib/cancan/controller_resource.rb:66:in `load_resource_instance'", "/var/lib/gems/1.9.1/gems/cancan-1.6.10/lib/cancan/controller_resource.rb:32:in `load_resource'", "/var/lib/gems/1.9.1/gems/cancan-1.6.10/lib/cancan/controller_resource.rb:25:in `load_and_authorize_resource'", "/var/lib/gems/1.9.1/gems/cancan-1.6.10/lib/cancan/controller_resource.rb:10:in `block in add_before_filter'", "/var/lib/gems/1.9.1/gems/activesupport-3.2.11/lib/active_support/callbacks.rb:440:in `_run__3140864880078791430__process_action__194564701570495868__callbacks'", "/var/lib/gems/1.9.1/gems/activesupport-3.2.11/lib/active_support/callbacks.rb:405:in `__run_callback'", "/var/lib/gems/1.9.1/gems/activesupport-3.2.11/lib/active_support/callbacks.rb:385:in `_run_process_action_callbacks'", "/var/lib/gems/1.9.1/gems/activesupport-3.2.11/lib/active_support/callbacks.rb:81:in `run_callbacks'", "/var/lib/gems/1.9.1/gems/actionpack-3.2.11/lib/abstract_controller/callbacks.rb:17:in `process_action'", "/var/lib/gems/1.9.1/gems/actionpack-3.2.11/lib/action_controller/metal/rescue.rb:29:in `process_action'", "/var/lib/gems/1.9.1/gems/actionpack-3.2.11/lib/action_controller/metal/instrumentation.rb:30:in `block in process_action'", "/var/lib/gems/1.9.1/gems/activesupport-3.2.11/lib/active_support/notifications.rb:123:in `block in instrument'", "/var/lib/gems/1.9.1/gems/activesupport-3.2.11/lib/active_support/notifications/instrumenter.rb:20:in `instrument'", "/var/lib/gems/1.9.1/gems/activesupport-3.2.11/lib/active_support/notifications.rb:123:in `instrument'", "/var/lib/gems/1.9.1/gems/actionpack-3.2.11/lib/action_controller/metal/instrumentation.rb:29:in `process_action'", "/var/lib/gems/1.9.1/gems/actionpack-3.2.11/lib/action_controller/metal/params_wrapper.rb:207:in `process_action'", "/var/lib/gems/1.9.1/gems/activerecord-3.2.11/lib/active_record/railties/controller_runtime.rb:18:in `process_action'", "/var/lib/gems/1.9.1/gems/actionpack-3.2.11/lib/abstract_controller/base.rb:121:in `process'", "/var/lib/gems/1.9.1/gems/actionpack-3.2.11/lib/abstract_controller/rendering.rb:45:in `process'", "/var/lib/gems/1.9.1/gems/actionpack-3.2.11/lib/action_controller/metal.rb:203:in `dispatch'", "/var/lib/gems/1.9.1/gems/actionpack-3.2.11/lib/action_controller/metal/rack_delegation.rb:14:in `dispatch'", "/var/lib/gems/1.9.1/gems/actionpack-3.2.11/lib/action_controller/metal.rb:246:in `block in action'", "/var/lib/gems/1.9.1/gems/actionpack-3.2.11/lib/action_dispatch/routing/route_set.rb:73:in `call'", "/var/lib/gems/1.9.1/gems/actionpack-3.2.11/lib/action_dispatch/routing/route_set.rb:73:in `dispatch'", "/var/lib/gems/1.9.1/gems/actionpack-3.2.11/lib/action_dispatch/routing/route_set.rb:36:in `call'", "/var/lib/gems/1.9.1/gems/journey-1.0.4/lib/journey/router.rb:68:in `block in call'", "/var/lib/gems/1.9.1/gems/journey-1.0.4/lib/journey/router.rb:56:in `each'", "/var/lib/gems/1.9.1/gems/journey-1.0.4/lib/journey/router.rb:56:in `call'", "/var/lib/gems/1.9.1/gems/actionpack-3.2.11/lib/action_dispatch/routing/route_set.rb:601:in `call'", "/var/lib/gems/1.9.1/gems/i18n-missing_translations-0.0.2/lib/i18n/missing_translations.rb:26:in `call'", "/var/lib/gems/1.9.1/gems/warden-1.2.1/lib/warden/manager.rb:35:in `block in call'", "/var/lib/gems/1.9.1/gems/warden-1.2.1/lib/warden/manager.rb:34:in `catch'", "/var/lib/gems/1.9.1/gems/warden-1.2.1/lib/warden/manager.rb:34:in `call'", "/var/lib/gems/1.9.1/gems/actionpack-3.2.11/lib/action_dispatch/middleware/best_standards_support.rb:17:in `call'", "/var/lib/gems/1.9.1/gems/rack-1.4.5/lib/rack/etag.rb:23:in `call'", "/var/lib/gems/1.9.1/gems/rack-1.4.5/lib/rack/conditionalget.rb:35:in `call'", "/var/lib/gems/1.9.1/gems/actionpack-3.2.11/lib/action_dispatch/middleware/head.rb:14:in `call'", "/var/lib/gems/1.9.1/gems/actionpack-3.2.11/lib/action_dispatch/middleware/params_parser.rb:21:in `call'", "/var/lib/gems/1.9.1/gems/actionpack-3.2.11/lib/action_dispatch/middleware/flash.rb:242:in `call'", "/var/lib/gems/1.9.1/gems/rack-1.4.5/lib/rack/session/abstract/id.rb:210:in `context'", "/var/lib/gems/1.9.1/gems/rack-1.4.5/lib/rack/session/abstract/id.rb:205:in `call'", "/var/lib/gems/1.9.1/gems/actionpack-3.2.11/lib/action_dispatch/middleware/cookies.rb:341:in `call'", "/var/lib/gems/1.9.1/gems/activerecord-3.2.11/lib/active_record/query_cache.rb:64:in `call'", "/var/lib/gems/1.9.1/gems/activerecord-3.2.11/lib/active_record/connection_adapters/abstract/connection_pool.rb:479:in `call'", "/var/lib/gems/1.9.1/gems/actionpack-3.2.11/lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'", "/var/lib/gems/1.9.1/gems/activesupport-3.2.11/lib/active_support/callbacks.rb:405:in `_run__3508530125755720630__call__4046538622180321925__callbacks'", "/var/lib/gems/1.9.1/gems/activesupport-3.2.11/lib/active_support/callbacks.rb:405:in `__run_callback'", "/var/lib/gems/1.9.1/gems/activesupport-3.2.11/lib/active_support/callbacks.rb:385:in `_run_call_callbacks'", "/var/lib/gems/1.9.1/gems/activesupport-3.2.11/lib/active_support/callbacks.rb:81:in `run_callbacks'", "/var/lib/gems/1.9.1/gems/actionpack-3.2.11/lib/action_dispatch/middleware/callbacks.rb:27:in `call'", "/var/lib/gems/1.9.1/gems/actionpack-3.2.11/lib/action_dispatch/middleware/reloader.rb:65:in `call'", "/var/lib/gems/1.9.1/gems/actionpack-3.2.11/lib/action_dispatch/middleware/remote_ip.rb:31:in `call'", "/var/lib/gems/1.9.1/gems/actionpack-3.2.11/lib/action_dispatch/middleware/debug_exceptions.rb:16:in `call'", "/var/lib/gems/1.9.1/gems/actionpack-3.2.11/lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'", "/var/lib/gems/1.9.1/gems/railties-3.2.11/lib/rails/rack/logger.rb:32:in `call_app'", "/var/lib/gems/1.9.1/gems/railties-3.2.11/lib/rails/rack/logger.rb:16:in `block in call'", "/var/lib/gems/1.9.1/gems/activesupport-3.2.11/lib/active_support/tagged_logging.rb:22:in `tagged'", "/var/lib/gems/1.9.1/gems/railties-3.2.11/lib/rails/rack/logger.rb:16:in `call'", "/var/lib/gems/1.9.1/gems/actionpack-3.2.11/lib/action_dispatch/middleware/request_id.rb:22:in `call'", "/var/lib/gems/1.9.1/gems/rack-1.4.5/lib/rack/methodoverride.rb:21:in `call'", "/var/lib/gems/1.9.1/gems/rack-1.4.5/lib/rack/runtime.rb:17:in `call'", "/var/lib/gems/1.9.1/gems/activesupport-3.2.11/lib/active_support/cache/strategy/local_cache.rb:72:in `call'", "/var/lib/gems/1.9.1/gems/rack-1.4.5/lib/rack/lock.rb:15:in `call'", "/var/lib/gems/1.9.1/gems/actionpack-3.2.11/lib/action_dispatch/middleware/static.rb:62:in `call'", "/var/lib/gems/1.9.1/gems/railties-3.2.11/lib/rails/engine.rb:479:in `call'", "/var/lib/gems/1.9.1/gems/railties-3.2.11/lib/rails/application.rb:223:in `call'", "/var/lib/gems/1.9.1/gems/rack-1.4.5/lib/rack/content_length.rb:14:in `call'", "/var/lib/gems/1.9.1/gems/railties-3.2.11/lib/rails/rack/log_tailer.rb:17:in `call'", "/var/lib/gems/1.9.1/gems/thin-1.5.1/lib/thin/connection.rb:81:in `block in pre_process'", "/var/lib/gems/1.9.1/gems/thin-1.5.1/lib/thin/connection.rb:79:in `catch'", "/var/lib/gems/1.9.1/gems/thin-1.5.1/lib/thin/connection.rb:79:in `pre_process'", "/var/lib/gems/1.9.1/gems/thin-1.5.1/lib/thin/connection.rb:54:in `process'", "/var/lib/gems/1.9.1/gems/thin-1.5.1/lib/thin/connection.rb:39:in `receive_data'", "/var/lib/gems/1.9.1/gems/eventmachine-1.0.3/lib/eventmachine.rb:187:in `run_machine'", "/var/lib/gems/1.9.1/gems/eventmachine-1.0.3/lib/eventmachine.rb:187:in `run'", "/var/lib/gems/1.9.1/gems/thin-1.5.1/lib/thin/backends/base.rb:63:in `start'", "/var/lib/gems/1.9.1/gems/thin-1.5.1/lib/thin/server.rb:159:in `start'", "/var/lib/gems/1.9.1/gems/rack-1.4.5/lib/rack/handler/thin.rb:13:in `run'", "/var/lib/gems/1.9.1/gems/rack-1.4.5/lib/rack/server.rb:268:in `start'", "/var/lib/gems/1.9.1/gems/railties-3.2.11/lib/rails/commands/server.rb:70:in `start'", "/var/lib/gems/1.9.1/gems/railties-3.2.11/lib/rails/commands.rb:55:in `block in <top (required)>'", "/var/lib/gems/1.9.1/gems/railties-3.2.11/lib/rails/commands.rb:50:in `tap'", "/var/lib/gems/1.9.1/gems/railties-3.2.11/lib/rails/commands.rb:50:in `<top (required)>'", "script/rails:6:in `require'", "script/rails:6:in `<main>'"]], ["branch_id", nil], ["controller_name", "orders"], ["created_at", Tue, 28 Jan 2014 21:42:36 UTC +00:00], ["description", "Couldn't find SerialNumber with ID=4 for Order with ID="], ["environment", "development"], ["error_time", 2014-01-28 08:42:36 -0700], ["line_number", "/var/lib/gems/1.9.1/gems/activerecord-3.2.11/lib/active_record/nested_attributes.rb:462"], ["original_path", "/orders"], ["referrer_url", "http://localhost:3000/orders/new"], ["updated_at", Tue, 28 Jan 2014 21:42:36 UTC +00:00], ["user", "System Administrator"]]
+  [1m[35m (15.9ms)[0m  COMMIT
+  Rendered welcome/index.html.erb within layouts/application (9.6ms)
+  [1m[36mBranch Load (0.4ms)[0m  [1mSELECT "branches".* FROM "branches" [0m
+  [1m[35mRole Load (0.5ms)[0m  SELECT "roles".* FROM "roles" WHERE "roles"."id" = 1 LIMIT 1
+  [1m[36mUser Load (0.8ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mClient Load (0.7ms)[0m  SELECT "clients".* FROM "clients" WHERE "clients"."id" = 1 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "roles".* FROM "roles" WHERE "roles"."id" = 1 LIMIT 1[0m
+  [1m[35m (0.8ms)[0m  SELECT COUNT(*) FROM "users" WHERE (branch_id = 1 and id != 1)
+  [1m[36m (0.6ms)[0m  [1mSELECT COUNT(*) FROM "clients" [0m
+  [1m[35m (0.6ms)[0m  SELECT COUNT(*) FROM "orders" WHERE (status_id != 3)
+Completed 200 OK in 1646ms (Views: 831.0ms | ActiveRecord: 57.5ms)
+
+
+Started GET "/assets/twitter-bootstrap-static/bootstrap.css?body=1" for 127.0.0.1 at 2014-01-28 14:42:37 -0700
+Served asset /twitter-bootstrap-static/bootstrap.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter-bootstrap-static/fontawesome.css?body=1" for 127.0.0.1 at 2014-01-28 14:42:37 -0700
+Served asset /twitter-bootstrap-static/fontawesome.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap_and_overrides.css?body=1" for 127.0.0.1 at 2014-01-28 14:42:37 -0700
+Served asset /bootstrap_and_overrides.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/datepicker.css?body=1" for 127.0.0.1 at 2014-01-28 14:42:37 -0700
+Served asset /datepicker.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/autocomplete.css?body=1" for 127.0.0.1 at 2014-01-28 14:42:37 -0700
+Served asset /autocomplete.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/elements.css?body=1" for 127.0.0.1 at 2014-01-28 14:42:37 -0700
+Served asset /elements.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/error_reports.css?body=1" for 127.0.0.1 at 2014-01-28 14:42:37 -0700
+Served asset /error_reports.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-01-28 14:42:37 -0700
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/theme.css?body=1" for 127.0.0.1 at 2014-01-28 14:42:37 -0700
+Served asset /theme.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-01-28 14:42:37 -0700
+Served asset /jquery.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-01-28 14:42:37 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery-ui.js?body=1" for 127.0.0.1 at 2014-01-28 14:42:37 -0700
+Served asset /jquery-ui.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/autocomplete-rails.js?body=1" for 127.0.0.1 at 2014-01-28 14:42:37 -0700
+Served asset /autocomplete-rails.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-transition.js?body=1" for 127.0.0.1 at 2014-01-28 14:42:37 -0700
+Served asset /twitter/bootstrap/bootstrap-transition.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-alert.js?body=1" for 127.0.0.1 at 2014-01-28 14:42:37 -0700
+Served asset /twitter/bootstrap/bootstrap-alert.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-modal.js?body=1" for 127.0.0.1 at 2014-01-28 14:42:37 -0700
+Served asset /twitter/bootstrap/bootstrap-modal.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-dropdown.js?body=1" for 127.0.0.1 at 2014-01-28 14:42:37 -0700
+Served asset /twitter/bootstrap/bootstrap-dropdown.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-scrollspy.js?body=1" for 127.0.0.1 at 2014-01-28 14:42:37 -0700
+Served asset /twitter/bootstrap/bootstrap-scrollspy.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-tab.js?body=1" for 127.0.0.1 at 2014-01-28 14:42:37 -0700
+Served asset /twitter/bootstrap/bootstrap-tab.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-tooltip.js?body=1" for 127.0.0.1 at 2014-01-28 14:42:37 -0700
+Served asset /twitter/bootstrap/bootstrap-tooltip.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-popover.js?body=1" for 127.0.0.1 at 2014-01-28 14:42:37 -0700
+Served asset /twitter/bootstrap/bootstrap-popover.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-button.js?body=1" for 127.0.0.1 at 2014-01-28 14:42:38 -0700
+Served asset /twitter/bootstrap/bootstrap-button.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-collapse.js?body=1" for 127.0.0.1 at 2014-01-28 14:42:38 -0700
+Served asset /twitter/bootstrap/bootstrap-collapse.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-carousel.js?body=1" for 127.0.0.1 at 2014-01-28 14:42:38 -0700
+Served asset /twitter/bootstrap/bootstrap-carousel.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-typeahead.js?body=1" for 127.0.0.1 at 2014-01-28 14:42:38 -0700
+Served asset /twitter/bootstrap/bootstrap-typeahead.js - 304 Not Modified (167ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-affix.js?body=1" for 127.0.0.1 at 2014-01-28 14:42:38 -0700
+Served asset /twitter/bootstrap/bootstrap-affix.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap.js?body=1" for 127.0.0.1 at 2014-01-28 14:42:38 -0700
+Served asset /twitter/bootstrap.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery_nested_form.js?body=1" for 127.0.0.1 at 2014-01-28 14:42:38 -0700
+Served asset /jquery_nested_form.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/ckeditor-jquery.js?body=1" for 127.0.0.1 at 2014-01-28 14:42:38 -0700
+Served asset /ckeditor-jquery.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/bootstrap-datepicker.js?body=1" for 127.0.0.1 at 2014-01-28 14:42:38 -0700
+Served asset /bootstrap-datepicker.js - 304 Not Modified (0ms)
