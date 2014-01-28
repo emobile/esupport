@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20140125182748) do
+ActiveRecord::Schema.define(:version => 20140128195202) do
 
   create_table "bills", :force => true do |t|
     t.string   "name"
@@ -225,6 +225,16 @@ ActiveRecord::Schema.define(:version => 20140125182748) do
 
   add_index "order_computers", ["computer_id"], :name => "index_order_computers_on_computer_id"
   add_index "order_computers", ["order_id"], :name => "index_order_computers_on_order_id"
+
+  create_table "order_serial_numbers", :force => true do |t|
+    t.integer  "order_id"
+    t.integer  "serial_number_id"
+    t.datetime "created_at",       :null => false
+    t.datetime "updated_at",       :null => false
+  end
+
+  add_index "order_serial_numbers", ["order_id"], :name => "index_order_serial_numbers_on_order_id"
+  add_index "order_serial_numbers", ["serial_number_id"], :name => "index_order_serial_numbers_on_serial_number_id"
 
   create_table "orders", :force => true do |t|
     t.integer  "client_id"

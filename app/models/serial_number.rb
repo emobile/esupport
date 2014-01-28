@@ -1,5 +1,7 @@
 class SerialNumber < ActiveRecord::Base
   belongs_to :part
+  has_many :order_serial_number
+  has_many :orders, :through => :order_serial_numbers
   attr_accessible :serial_number, :part_id
   
   validates :part_id, :uniqueness => {:scope => :serial_number}

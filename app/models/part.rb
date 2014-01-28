@@ -1,6 +1,5 @@
 class Part < ActiveRecord::Base
   belongs_to :branch
-  has_many :order_parts
   has_many :orders, :through => :serial_number
   has_one :serial_number
   attr_accessible :cost, :description, :name, :branch_id

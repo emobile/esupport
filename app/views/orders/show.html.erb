@@ -312,13 +312,13 @@
             <th></th>
           </tr>
 
-          <% @order.parts.each do |part| %>
+          <% @order.serial_numbers.each do |serial_number| %>
             <tr>
-              <td><%= part.name %></td>
-              <td><%= part.description %></td>
-              <td><%= part.serial_number %></td>
-              <td><%= part.cost %></td>
-              <td><%= part.branch.name %></td>
+              <td><%= serial_number.part.name %></td>
+              <td><%= serial_number.part.description %></td>
+              <td><%= serial_number.serial_number %></td>
+              <td><%= serial_number.part.cost %></td>
+              <td><%= serial_number.part.branch.name %></td>
               <td>         
                 <ul class="nav nav-pills">
                   <li class="dropdown">
@@ -326,7 +326,7 @@
                     <ul class="dropdown-menu">
                       <%if can? :show, Part%>
                         <li>
-                          <%= link_to part do %>
+                          <%= link_to serial_number.part do %>
                             <i class="icon-eye-open"></i>&nbsp;&nbsp;<%=t(:show, :default => t("helpers.links.show"))%>
                           <%end%>
                         </li>
