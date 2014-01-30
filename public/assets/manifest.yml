@@ -561,8 +561,6 @@ ckeditor/skins/moono/editor_iequirks.css: ckeditor/skins/moono/editor_iequirks.c
 ckeditor/skins/moono/editor_iequirks/index.css: ckeditor/skins/moono/editor_iequirks.css
 fontawesome-webfont.eot: fontawesome-webfont.eot
 fontawesome-webfont/index.eot: fontawesome-webfont.eot
-fontawesome-webfont.svg: fontawesome-webfont.svg
-fontawesome-webfont/index.svg: fontawesome-webfont.svg
 fontawesome-webfont.ttf: fontawesome-webfont.ttf
 fontawesome-webfont/index.ttf: fontawesome-webfont.ttf
 fontawesome-webfont.woff: fontawesome-webfont.woff

@@ -80,7 +80,7 @@ class OrdersController < ApplicationController
   # POST /orders.json
   def create
     sns = params[:order][:serial_numbers_attributes] || {}
-    params[:order].remove(:serial_numbers_attributes)
+    params[:order].delete(:serial_numbers_attributes)
     @order = Order.new(params[:order])
     @order.editing = false
     @product = @order.product_type.downcase.pluralize

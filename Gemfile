@@ -11,7 +11,7 @@ gem "pg"
 gem "thin"
 gem "less-rails"
 gem "therubyracer"
-gem 'twitter-bootstrap-rails'
+gem 'twitter-bootstrap-rails', '2.2.4' #modified line
 gem 'devise', "~> 2.2.3"
 gem "cancan"
 gem 'foreigner'

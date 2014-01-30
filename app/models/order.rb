@@ -9,14 +9,14 @@ class Order < ActiveRecord::Base
   has_many :progresses, :dependent => :destroy
   has_many :order_progresses, :dependent => :destroy
   has_many :order_serial_numbers, :dependent => :destroy
-  has_many :serial_numbers, :through => :order_serial_numbers
+  has_many :serial_numbers, :through => :order_serial_numbers, :uniq => true
   has_many :parts, :through => :serial_numbers
-  attr_accessible :serial_numbers_attributes
-  accepts_nested_attributes_for :serial_numbers, :allow_destroy => true, :reject_if => :all_blank
+  attr_accessible :order_serial_numbers_attributes
+  accepts_nested_attributes_for :order_serial_numbers, :allow_destroy => true, :reject_if => :all_blank
   has_many :order_client_needs, :dependent => :destroy
-  has_many :client_needs, :through => :order_client_needs
-  attr_accessible :client_needs_attributes
-  accepts_nested_attributes_for :client_needs, :allow_destroy => true, :reject_if => :all_blank
+  has_many :client_needs, :through => :order_client_needs, :uniq => true
+  attr_accessible :order_client_needs_attributes
+  accepts_nested_attributes_for :order_client_needs, :allow_destroy => true, :reject_if => :all_blank
   has_many :order_cellphones
   has_many :cellphones, :through => :order_cellphones
   attr_accessible :cellphones_attributes
