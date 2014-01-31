@@ -12,6 +12,7 @@ Esupport::Application.routes.draw do
     get :autocomplete_computer_model, :on => :collection
     get :autocomplete_cellphone_model, :on => :collection
     get :autocomplete_part_name, :on => :collection
+    get :autocomplete_serial_number, :on => :collection
     get :autocomplete_client_need_name, :on => :collection
     get :autocomplete_client_first_name, :on => :collection
   end

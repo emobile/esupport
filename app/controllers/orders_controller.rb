@@ -172,7 +172,16 @@ class OrdersController < ApplicationController
         "value" => part.name, 
         "description" => part.description, 
         "cost" => part.cost, 
-        "serial_number" => part.serial_number, 
+      }
+    end
+    render json: json
+  end
+  
+  def autocomplete_serial_number
+    serial_numbers = SerialNumber.joins("INNER JOIN parts p ON serial_numbers.part_id = p.id").where("branch_id = ?", current_user.branch_id).select { |s| /#{params[:term]}/i =~ "(#{s.serial_number}) #{s.part.name}" }
+    json = serial_numbers.collect do |serial_number| 
+      { "id" => serial_number.id.to_s, 
+        "value" => "(#{serial_number.serial_number}) #{serial_number.part.name}"
       }
     end
     render json: json

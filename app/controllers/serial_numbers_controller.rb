@@ -82,15 +82,13 @@ class SerialNumbersController < ApplicationController
   end
   
   def serial_number_with_part
-    @serial_number = {}
-    @part = Part.find_by_name(params[:part_name])
-    unless @part.nil?
-      unless @part.serial_number.nil?
-        @serial_number[:id] = @part.serial_number.id
-        @serial_number[:serial_number] = @part.serial_number.serial_number
-        @serial_number[:part_name] = @part.name
-        @serial_number[:part_cost] = @part.cost
-      end
+    @serial_number = SerialNumber.joins("INNER JOIN parts p ON serial_numbers.part_id = p.id").select { |s| params[:part_name] == "(#{s.serial_number}) #{s.part.name}" } || {}
+    unless @serial_number.blank?
+      @serial_number = @serial_number[0]
+      @serial_number[:id] = @serial_number.id
+      @serial_number[:serial_number] = @serial_number.serial_number
+      @serial_number[:part_name] = @serial_number.part.name
+      @serial_number[:part_cost] = @serial_number.part.cost
     end
     render json: @serial_number
   end
