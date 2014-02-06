@@ -79,6 +79,7 @@ class OrdersController < ApplicationController
   # POST /orders
   # POST /orders.json
   def create
+    qwe
     sns = params[:order][:serial_numbers_attributes] || {}
     params[:order].delete(:serial_numbers_attributes)
     @order = Order.new(params[:order])

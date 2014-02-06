@@ -1,1 +1,26 @@
-/nbproject/private/
+# Ignore bundler config
+/.bundle
+
+# Ignore the default SQLite database.
+/db/*.sqlite3
+
+# Ignore all logfiles and tempfiles.
+/log/*.log
+/tmp
+
+# Ignore the netbeans project directory.
+/nbproject
+
+# Ignore folders where avatar images are stored in the proyect.
+/avatars
+/public/system
+/public/assets
+/vendor/bundle
+# Ignore this MacOs file.
+.DS_Store
+
+# Ignore the RubyMine project directory.
+/.idea
+
+# Ignore the database configuration settings.
+config/database.yml

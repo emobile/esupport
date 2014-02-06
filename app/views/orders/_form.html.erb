@@ -494,7 +494,7 @@
           <br />
           <div style="display: inline-block;">
             <%= autocomplete_field_tag "part-name", "", autocomplete_serial_number_orders_path, :update_elements => {:id => '.search_part_id'}, :placeholder => "Buscar parte...", :style => "width: 300px;" %>
-            <%= f.link_to_add "Agregar parte", :order_serial_numbers, :class => "add parts btn btn-primary", :style => "vertical-align: top;" %>
+            <%= f.link_to_add "Agregar parte", :order_serial_numbers, :data => { :target => "#parts-table" }, :class => "add parts btn btn-primary", :style => "vertical-align: top;" %>
           </div>
           <div style="float: right;">
             <%= label_tag "Total", nil, :style => "font-weight: bold; display: inline-block;" %>
@@ -531,7 +531,7 @@
           <br />
           <div style="display: inline-block;">
             <%= autocomplete_field_tag "client-need-name", "", autocomplete_client_need_name_orders_path, :update_elements => {:id => '.search_client_need_id'}, :placeholder => "Buscar trabajo...", :style => "width: 300px;" %>
-            <%= f.link_to_add "Agregar trabajo", :order_client_needs, :class => "add client_needs btn btn-primary", :style => "vertical-align: top;" %>
+            <%= f.link_to_add "Agregar trabajo", :order_client_needs, :data => { :target => "#client-needs-table" }, :class => "add client_needs btn btn-primary", :style => "vertical-align: top;" %>
           </div>
           <div style="float: right;">
             <%= label_tag "Total", nil, :style => "font-weight: bold; display: inline-block;" %>
@@ -550,8 +550,8 @@
             </tr>
             <%= f.fields_for :order_client_needs, :wrapper => false do |order_client_need_form| %>
               <tr class="client-need-fields" style="height: 50px; border-bottom: 1px solid #ccc;">
-                <td class="client-need-id" style="width: 80px; border-right: 1px solid #ccc;"><%#= order_client_need_form.object.order.id unless order_client_need_form.object.order.nil? %></td>
-                <td class="client-need-name" style="width: 550px; border-right: 1px solid #ccc;"><%#= order_client_need_form.object.client_need.name unless order_client_need_form.object.client_need.nil? %></td>
+                <td class="client-need-id" style="width: 80px; border-right: 1px solid #ccc;"><%= order_client_need_form.object.order.id unless order_client_need_form.object.order.nil? %></td>
+                <td class="client-need-name" style="width: 550px; border-right: 1px solid #ccc;"><%= order_client_need_form.object.client_need.name unless order_client_need_form.object.client_need.nil? %></td>
                 <td class="client-need-cost" style="width: 80px; border-right: 1px solid #ccc;"><%#= "$" + "%.2f" % order_client_need_form.object.cost unless order_client_need_form.object.cost.nil? %></td>
                 <td style="width: 100px; text-align: center;">
                   <%= order_client_need_form.hidden_field :client_need_id, :class => "hidden-client-need-id" %>
@@ -561,155 +561,154 @@
             <% end %>
           </table>
         </div>
-      </div>   
-    </div>
-
-    <%if controller.action_name == "edit" or controller.action_name == "update"%>
-      <div class="row-fluid">
-        <div class="block span6" id='show-box-100'>
-          <a href="#parts_info" class="block-heading" data-toggle="collapse"><%= t(:current_progress)%></a>
-          <div id="parts_info" class="block-body collapse in">
-            <br />
-            <div class="field">
-              <%= f.label :short_description %>
-              <%= f.text_field :short_description %>
-            </div>
-            <div class="field">
-              <%= f.label :full_description %>
-              <%= f.text_area :full_description %>
-            </div>
-          </div>
-        </div>     
       </div>
-    <%end%>
 
-    <div class="form-actions">
-
-      <%= f.submit nil, :class => 'btn btn-primary', :onclick => "setDeviceClientId();" %>
-      <%if can? :index, Order%>
-        <%= link_to t(:back, :default => t("helpers.links.back")),
-          orders_path, :class => 'btn'  %>
+      <%if controller.action_name == "edit" or controller.action_name == "update"%>
+        <div class="row-fluid">
+          <div class="block span6" id='show-box-100'>
+            <a href="#parts_info" class="block-heading" data-toggle="collapse"><%= t(:current_progress)%></a>
+            <div id="parts_info" class="block-body collapse in">
+              <br />
+              <div class="field">
+                <%= f.label :short_description %>
+                <%= f.text_field :short_description %>
+              </div>
+              <div class="field">
+                <%= f.label :full_description %>
+                <%= f.text_area :full_description %>
+              </div>
+            </div>
+          </div>     
+        </div>
       <%end%>
-    </div>
-  <% end %>
-  <script type="text/javascript">
-    function updatePartsTotal() {
-      var total = 0;
 
-      $("#parts-table .part-cost").each(function() {
-        if ($(this).parent().css("display") != "none") {
-          total += parseFloat($(this).html());
-        }
-      });
+      <div class="form-actions">
 
-      $("#parts-total").text("$" + parseFloat(total).toFixed(2));
-    }
+        <%= f.submit nil, :class => 'btn btn-primary', :onclick => "setDeviceClientId();" %>
+        <%if can? :index, Order%>
+          <%= link_to t(:back, :default => t("helpers.links.back")),
+            orders_path, :class => 'btn'  %>
+        <%end%>
+      </div>
+    <% end %>
+    <script type="text/javascript">
+      function updatePartsTotal() {
+        var total = 0;
 
-    function updateClientNeedsTotal() {
-      var total = 0;
+        $("#parts-table .part-cost").each(function() {
+          if ($(this).parent().css("display") != "none") {
+            total += parseFloat($(this).html());
+          }
+        });
 
-      $("#client-needs-table .client-need-cost").each(function() {
-        if ($(this).parent().css("display") != "none") {
-          total += parseFloat($(this).html());
-        }
-      });
+        $("#parts-total").text("$" + parseFloat(total).toFixed(2));
+      }
 
-      $("#client-needs-total").text("$" + parseFloat(total).toFixed(2));
-    }
+      function updateClientNeedsTotal() {
+        var total = 0;
 
-    $(function() {
-      $("#new_client").click(function open_win() {
-        myWindow = window.open($("http:").val(), $("#new_client_path").val(), 'height=500, width=600, left=100, top=100, screenX=100, screenY=100, toolbar=no, scrollbars=yes, location=no, resizable=yes, directories=no, copyhistory=no, menubar=no');
-        myWindow.focus();
-      });
+        $("#client-needs-table .client-need-cost").each(function() {
+          if ($(this).parent().css("display") != "none") {
+            total += parseFloat($(this).html());
+          }
+        });
 
-      window.NestedFormEvents.prototype.insertFields = function(content, assoc, link) {
-        var part_name, $content, $tr, before, client_need_name;
+        $("#client-needs-total").text("$" + parseFloat(total).toFixed(2));
+      }
 
-        $content = $(content);
+      $(function() {
+        $("#new_client").click(function open_win() {
+          myWindow = window.open($("http:").val(), $("#new_client_path").val(), 'height=500, width=600, left=100, top=100, screenX=100, screenY=100, toolbar=no, scrollbars=yes, location=no, resizable=yes, directories=no, copyhistory=no, menubar=no');
+          myWindow.focus();
+        });
 
-        if ($content.hasClass("part-fields")) {
-          part_name = $("#part-name").val();
+        window.NestedFormEvents.prototype.insertFields = function(content, assoc, link) {
+          var part_name, $content, $tr, before, client_need_name;
 
-          if (part_name.trim().length > 0) {
+          $content = $(content);
 
-            if ($("#parts-table .part-name").filter(function() {
-              return $(this).html() === part_name;
-            }).length == 0) {
-              if ($("#parts-table").find("tr:eq(1)").length == 1) {
-                $tr = $("#parts-table").find("tr:eq(1)");
-                before = true;
-              }
-              else {
-                $tr = $("#parts-table").find("tr:eq(0)");
-                before = false;
-              }
+          if ($content.hasClass("part-fields")) {
+            part_name = $("#part-name").val();
 
-              $("#part-name").val("");
+            if (part_name.trim().length > 0) {
 
-              $.ajax({
-                url: "/serial_numbers/serial_number_with_part",
-                async: false,
-                data: {part_name: part_name},
-                dataType: "json",
-                success: function(serial_number) {
-                  $content.find(".hidden-serial-number-id").val(serial_number.id);
-                  $content.find(".serial-number").html(serial_number.serial_number);
-                  $content.find(".part-name").html(serial_number.part_name);
-                  $content.find(".part-cost").html(parseFloat(serial_number.part_cost).toFixed(2));
+              if ($("#parts-table .part-name").filter(function() {
+                return $(this).html() === part_name;
+              }).length == 0) {
+                if ($("#parts-table").find("tr:eq(1)").length == 1) {
+                  $tr = $("#parts-table").find("tr:eq(1)");
+                  before = true;
                 }
-              });
+                else {
+                  $tr = $("#parts-table").find("tr:eq(0)");
+                  before = false;
+                }
 
+                $("#part-name").val("");
+
+                $.ajax({
+                  url: "/serial_numbers/serial_number_with_part",
+                  async: false,
+                  data: {part_name: part_name},
+                  dataType: "json",
+                  success: function(serial_number) {
+                    $content.find(".hidden-serial-number-id").val(serial_number.id);
+                    $content.find(".serial-number").html(serial_number.serial_number);
+                    $content.find(".part-name").html(serial_number.part_name);
+                    $content.find(".part-cost").html(parseFloat(serial_number.part_cost).toFixed(2));
+                  }
+                });
+
+              }
             }
           }
-        }
-        else if ($content.hasClass("client-need-fields")) {
-          client_need_name = $("#client-need-name").val();
+          else if ($content.hasClass("client-need-fields")) {
+            client_need_name = $("#client-need-name").val();
 
-          if (client_need_name.trim().length > 0) {
+            if (client_need_name.trim().length > 0) {
 
-            if ($("#client-needs-table .client-need-name").filter(function() {
-              return $(this).html() === client_need_name;
-            }).length == 0) {
-              if ($("#client-needs-table").find("tr:eq(1)").length == 1) {
-                $tr = $("#client-needs-table").find("tr:eq(1)");
-                before = true;
-              }
-              else {
-                $tr = $("#client-needs-table").find("tr:eq(0)");
-                before = false;
-              }
-
-              $("#client-need-name").val("");
-
-              $.ajax({
-                url: "/client_needs/get_client_need_by_name",
-                async: false,
-                data: {client_need_name: client_need_name},
-                dataType: "json",
-                success: function(client_need) {
-                  $content.find(".hidden-client-need-id").val(client_need.id);
-                  $content.find(".client-need-id").html(client_need.id);
-                  $content.find(".client-need-name").html(client_need.name);
-                  $content.find(".client-need-cost").html(parseFloat(client_need.cost).toFixed(2));
+              if ($("#client-needs-table .client-need-name").filter(function() {
+                return $(this).html() === client_need_name;
+              }).length == 0) {
+                if ($("#client-needs-table").find("tr:eq(1)").length == 1) {
+                  $tr = $("#client-needs-table").find("tr:eq(1)");
+                  before = true;
                 }
-              });
+                else {
+                  $tr = $("#client-needs-table").find("tr:eq(0)");
+                  before = false;
+                }
 
+                $("#client-need-name").val("");
+
+                $.ajax({
+                  url: "/client_needs/get_client_need_by_name",
+                  async: false,
+                  data: {client_need_name: client_need_name},
+                  dataType: "json",
+                  success: function(client_need) {
+                    $content.find(".hidden-client-need-id").val(client_need.id);
+                    $content.find(".client-need-id").html(client_need.id);
+                    $content.find(".client-need-name").html(client_need.name);
+                    $content.find(".client-need-cost").html(parseFloat(client_need.cost).toFixed(2));
+                  }
+                });
+
+              }
             }
           }
-        }
 
-        if (before) {
-          return $content.insertBefore($tr);
-        }
-        else {
-          return $content.insertAfter($tr);
-        }
-      };
+          if (before) {
+            return $content.insertBefore($tr);
+          }
+          else {
+            return $content.insertAfter($tr);
+          }
+        };
 
-      $(document).on("nested:fieldRemoved nested:fieldAdded", function(e) {
-        updatePartsTotal();
-        updateClientNeedsTotal();
+        $(document).on("nested:fieldRemoved nested:fieldAdded", function(e) {
+          updatePartsTotal();
+          updateClientNeedsTotal();
+        });
       });
-    });
-  </script>
+    </script>
