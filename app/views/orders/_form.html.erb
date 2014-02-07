@@ -513,8 +513,8 @@
             </tr>
             <%= f.fields_for :order_serial_numbers, :wrapper => false do |order_serial_number_form| %>
               <tr class="part-fields" style="height: 50px; border-bottom: 1px solid #ccc;">
-                <td class="serial-number" style="width: 80px; border-right: 1px solid #ccc;"><%#= order_serial_number_form.object.serial_number.serial_number unless order_serial_number_form.object.serial_number.nil? %></td>
-                <td class="part-name" style="width: 550px; border-right: 1px solid #ccc;"><%#= order_serial_number_form.object.serial_number.name unless order_serial_number_form.object.serial_number.nil? %></td>
+                <td class="serial-number" style="width: 80px; border-right: 1px solid #ccc;"><%= order_serial_number_form.object.serial_number.serial_number unless order_serial_number_form.object.serial_number.nil? %></td>
+                <td class="part-name" style="width: 550px; border-right: 1px solid #ccc;"><%= order_serial_number_form.object.serial_number.name unless order_serial_number_form.object.serial_number.nil? %></td>
                 <td class="cost" style="width: 80px; border-right: 1px solid #ccc;"><%#= "$" + "%.2f" % order_serial_number_form.object.serial_number.part.cost unless order_serial_number_form.object.serial_number.nil? %></td>
                 <td style="width: 100px; text-align: center;">
                   <%= order_serial_number_form.hidden_field :serial_number_id, :class => "hidden-serial-number-id" %>
@@ -651,12 +651,11 @@
             client_need_name = $("#client-need-name").val();
 
             if (client_need_name.trim().length > 0) {
-              var regex = /^\((\d+)\)/;
-              var match = regex.exec(client_need_name);
 
               if ($("#client-needs-table .client-need-name").filter(function() {
-                return $(this).html() === match[1] && $(this).closest(".client-need-fields").css("display") != "none";
+                return $(this).html() === client_need_name && $(this).closest(".client-need-fields").css("display") != "none";
               }).length == 0) {
+
                 if ($("#client-needs-table").find("tr:eq(1)").length == 1) {
                   $tr = $("#client-needs-table").find("tr:eq(1)");
                   before = true;
