@@ -20,6 +20,7 @@
 //= require bootstrap-datepicker
 
 
+
 $(function() {
     $(".date").datepicker({
         dateFormat: 'dd/mm/yy',

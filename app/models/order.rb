@@ -12,11 +12,11 @@ class Order < ActiveRecord::Base
   has_many :serial_numbers, :through => :order_serial_numbers, :uniq => true
   has_many :parts, :through => :serial_numbers
   attr_accessible :order_serial_numbers_attributes
-  accepts_nested_attributes_for :order_serial_numbers, :allow_destroy => true, :reject_if => :all_blank
+  accepts_nested_attributes_for :order_serial_numbers, :allow_destroy => true
   has_many :order_client_needs, :dependent => :destroy
   has_many :client_needs, :through => :order_client_needs, :uniq => true
   attr_accessible :order_client_needs_attributes
-  accepts_nested_attributes_for :order_client_needs, :allow_destroy => true, :reject_if => :all_blank
+  accepts_nested_attributes_for :order_client_needs, :allow_destroy => true
   has_many :order_cellphones
   has_many :cellphones, :through => :order_cellphones
   attr_accessible :cellphones_attributes
