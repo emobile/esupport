@@ -514,11 +514,11 @@
             <%= f.fields_for :order_serial_numbers, :wrapper => false do |order_serial_number_form| %>
               <tr class="part-fields" style="height: 50px; border-bottom: 1px solid #ccc;">
                 <td class="serial-number" style="width: 80px; border-right: 1px solid #ccc;"><%= order_serial_number_form.object.serial_number.serial_number unless order_serial_number_form.object.serial_number.nil? %></td>
-                <td class="part-name" style="width: 550px; border-right: 1px solid #ccc;"><%= order_serial_number_form.object.serial_number.name unless order_serial_number_form.object.serial_number.nil? %></td>
-                <td class="cost" style="width: 80px; border-right: 1px solid #ccc;"><%#= "$" + "%.2f" % order_serial_number_form.object.serial_number.part.cost unless order_serial_number_form.object.serial_number.nil? %></td>
+                <td class="part-name" style="width: 550px; border-right: 1px solid #ccc;"><%= order_serial_number_form.object.serial_number.part.name unless order_serial_number_form.object.serial_number.nil? %></td>
+                <td class="cost" style="width: 80px; border-right: 1px solid #ccc;"><%= "$" + "%.2f" % order_serial_number_form.object.serial_number.part.cost unless order_serial_number_form.object.serial_number.nil? %></td>
                 <td style="width: 100px; text-align: center;">
                   <%= order_serial_number_form.hidden_field :serial_number_id, :class => "hidden-serial-number-id" %>
-                  <%= order_serial_number_form.link_to_remove "[ - ]", :class => "btn btn-danger" %>
+                  <%= order_serial_number_form.link_to_remove "[ - ]", :class => "btn btn-danger remove_nested_part" %>
                 </td>
               </tr>
             <% end %>
@@ -550,12 +550,12 @@
             </tr>
             <%= f.fields_for :order_client_needs, :wrapper => false do |order_client_need_form| %>
               <tr class="client-need-fields" style="height: 50px; border-bottom: 1px solid #ccc;">
-                <td class="client-need-id" style="width: 80px; border-right: 1px solid #ccc;"><%= order_client_need_form.object.order.id unless order_client_need_form.object.order.nil? %></td>
+                <td class="client-need-id" style="width: 80px; border-right: 1px solid #ccc;"><%= order_client_need_form.object.client_need.id unless order_client_need_form.object.client_need.nil? %></td>
                 <td class="client-need-name" style="width: 550px; border-right: 1px solid #ccc;"><%= order_client_need_form.object.client_need.name unless order_client_need_form.object.client_need.nil? %></td>
-                <td class="cost" style="width: 80px; border-right: 1px solid #ccc;"><%#= "$" + "%.2f" % order_client_need_form.object.cost unless order_client_need_form.object.cost.nil? %></td>
+                <td class="cost" style="width: 80px; border-right: 1px solid #ccc;"><%= "$" + "%.2f" % order_client_need_form.object.client_need.cost unless order_client_need_form.object.client_need.nil? %></td>
                 <td style="width: 100px; text-align: center;">
                   <%= order_client_need_form.hidden_field :client_need_id, :class => "hidden-client-need-id" %>
-                  <%= order_client_need_form.link_to_remove "[ - ]", :class => "btn btn-danger" %>
+                  <%= order_client_need_form.link_to_remove "[ - ]", :class => "btn btn-danger remove_nested_client_need" %>
                 </td>
               </tr>
             <% end %>
@@ -698,5 +698,18 @@
             return $content.insertAfter($tr);
           }
         };
+
+        $(".remove_nested_fields").on("click", function() {
+          $(this).prev().val(1);
+          var $tr = $(this).closest("tr");
+
+          if ($(this).hasClass("remove_nested_part")) {
+            $("#parts-total").text("$" + (parseFloat($("#parts-total").text().replace("$", "")) - parseFloat($tr.find(".cost").html().replace("$", ""))).toFixed(2));
+          }
+          else if ($(this).hasClass("remove_nested_client_need")) {
+            $("#client-needs-total").text("$" + (parseFloat($("#client-needs-total").text().replace("$", "")) - parseFloat($tr.find(".cost").html().replace("$", ""))).toFixed(2));
+          }
+          $tr.hide();
+        });
       });
     </script>
