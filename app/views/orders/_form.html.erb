@@ -552,7 +552,8 @@
               <tr class="client-need-fields" style="height: 50px; border-bottom: 1px solid #ccc;">
                 <td class="client-need-id" style="width: 80px; border-right: 1px solid #ccc;"><%= order_client_need_form.object.client_need.id unless order_client_need_form.object.client_need.nil? %></td>
                 <td class="client-need-name" style="width: 550px; border-right: 1px solid #ccc;"><%= order_client_need_form.object.client_need.name unless order_client_need_form.object.client_need.nil? %></td>
-                <td class="cost" style="width: 80px; border-right: 1px solid #ccc;"><%= "$" + "%.2f" % order_client_need_form.object.client_need.cost unless order_client_need_form.object.client_need.nil? %></td>
+                <% client_need_cost = "$" + "%.2f" % order_client_need_form.object.client_need.cost unless order_client_need_form.object.client_need.nil? %>
+                <td class="cost" style="width: 80px; border-right: 1px solid #ccc;"><%= order_client_need_form.text_field "cost", :value => client_need_cost, :class => "cost-input", :style => "display: none;" %><%= label_tag nil, ("$" + "%.2f" % order_client_need_form.object.client_need.cost unless order_client_need_form.object.client_need.nil?), :class => "cost-label" %></td>
                 <td style="width: 100px; text-align: center;">
                   <%= order_client_need_form.hidden_field :client_need_id, :class => "hidden-client-need-id" %>
                   <%= order_client_need_form.link_to_remove "[ - ]", :class => "btn btn-danger remove_nested_client_need" %>
@@ -634,12 +635,12 @@
                     $content.find(".serial-number").html(serial_number.serial_number);
                     $content.find(".part-name").html(serial_number.part_name);
                     var part_cost = serial_number.part_cost
-                    $content.find(".cost").html("$" + part_cost.toFixed(2));
+                    $content.find(".cost").text("$" + part_cost.toFixed(2));
                     $("#parts-total").text("$" + (parseFloat($("#parts-total").text().replace("$", "")) + parseFloat(part_cost)).toFixed(2));
                     $content.find(".remove_nested_fields").on("click", function() {
                       $(this).prev().val(1);
                       $(this).closest(".part-fields").hide();
-                      $("#parts-total").text("$" + (parseFloat($("#parts-total").text().replace("$", "")) - parseFloat($content.find(".cost").html().replace("$", ""))).toFixed(2));
+                      $("#parts-total").text("$" + (parseFloat($("#parts-total").text().replace("$", "")) - parseFloat($content.find(".cost-label").text().replace("$", ""))).toFixed(2));
                     });
                   }
                 });
@@ -677,12 +678,25 @@
                     $content.find(".client-need-id").html(client_need.id);
                     $content.find(".client-need-name").html(client_need.name);
                     var client_need_cost = client_need.cost
-                    $content.find(".cost").html("$" + client_need_cost.toFixed(2));
+                    $content.find(".cost-input").val("$" + client_need_cost.toFixed(2));
+                    $content.find(".cost-label").text("$" + client_need_cost.toFixed(2));
                     $("#client-needs-total").text("$" + (parseFloat($("#client-needs-total").text().replace("$", "")) + parseFloat(client_need_cost)).toFixed(2));
                     $content.find(".remove_nested_fields").on("click", function() {
                       $(this).prev().val(1);
                       $(this).closest(".client-need-fields").hide();
                       $("#client-needs-total").text("$" + (parseFloat($("#client-needs-total").text().replace("$", "")) - parseFloat($content.find(".cost").html().replace("$", ""))).toFixed(2));
+                    });
+                    $content.find(".cost").on("click", function(e) {
+                      if ($(e.target).is("input"))
+                        return;
+                      $content.find(".cost-input").on("keypress", function(e) {
+                        if (e.which == 13 || e.keyCode == 13) {
+                          $(this).hide();
+                          $(this).siblings(".cost-label").show().text($(this).val());
+                          return false;
+                        }
+                      }).show();
+                      $content.find(".cost-label").hide();
                     });
                   }
                 });
@@ -704,12 +718,27 @@
           var $tr = $(this).closest("tr");
 
           if ($(this).hasClass("remove_nested_part")) {
-            $("#parts-total").text("$" + (parseFloat($("#parts-total").text().replace("$", "")) - parseFloat($tr.find(".cost").html().replace("$", ""))).toFixed(2));
+            $("#parts-total").text("$" + (parseFloat($("#parts-total").text().replace("$", "")) - parseFloat($tr.find(".cost-label").html().replace("$", ""))).toFixed(2));
           }
           else if ($(this).hasClass("remove_nested_client_need")) {
-            $("#client-needs-total").text("$" + (parseFloat($("#client-needs-total").text().replace("$", "")) - parseFloat($tr.find(".cost").html().replace("$", ""))).toFixed(2));
+            $("#client-needs-total").text("$" + (parseFloat($("#client-needs-total").text().replace("$", "")) - parseFloat($tr.find(".cost-label").html().replace("$", ""))).toFixed(2));
           }
           $tr.hide();
+        });
+
+        $(".client-need-fields .cost").on("click", function(e) {
+          if ($(e.target).is("input"))
+            return;
+          $(this).children(".cost-input").show();
+          $(this).children(".cost-label").hide();
+        });
+
+        $(".cost-input").on("keypress", function(e) {
+          if (e.which == 13 || e.keyCode == 13) {
+            $(this).hide();
+            $(this).siblings(".cost-label").show().text($(this).val());
+            return false;
+          }
         });
       });
     </script>
