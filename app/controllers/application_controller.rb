@@ -19,7 +19,6 @@ class ApplicationController < ActionController::Base
     session[:language] = params[:language] || session[:language] || "en"
     I18n.locale = session[:language]
     flash[:warning] = t(:language_changed)
-    redirect_to root_path
   end
   
 #  if Rails.env == "production" or Rails.env == "development" or Rails.env == "local"
