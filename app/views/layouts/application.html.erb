@@ -52,6 +52,27 @@
     <div class="navbar">
       <div class="navbar-inner">
         <ul class="nav pull-right">
+          <li id="fat-menu" class="dropdown">
+            <a href="#" role="button" class="dropdown-toggle" data-toggle="dropdown">
+              <%= image_tag "/assets/#{I18n.locale}-flag.png"%><%= t(:language) %>
+              <i class="icon-caret-down"></i>
+            </a>
+            <ul class="dropdown-menu">
+              <li>
+                <%= link_to set_locale_path(:language => "es") do %>
+                  <img src="/assets/es-flag.png"/>Español
+                  <i class="icon-caret-down"></i>
+                <% end %>
+              </li>
+              <li class="divider"></li>
+              <li>
+                <%= link_to set_locale_path(:language => "en") do %>
+                  <img src="/assets/en-flag.png"/>English
+                  <i class="icon-caret-down"></i>
+                <% end %>
+              </li>                
+            </ul>
+          </li>
           <%if signed_in?%>
             <li><%= link_to new_comment_path, :class=>"hidden-phone visible-tablet visible-desktop", :role=>"button"  do%>
                 <i class="icon-comments-alt"></i><%= " " + t(:leave_comment)%>

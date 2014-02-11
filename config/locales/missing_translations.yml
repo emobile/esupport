@@ -92,3 +92,71 @@ es:
       confirmations: Confirmations
       passwords: Passwords
   password_confirmation: Password Confirmation
+en:
+  index: Index
+  new: New
+  worder: Worder
+  orders:
+    form:
+      identifier: Identifier
+  delivery_date: Delivery Date
+  client: Client
+  select_a_client: Select A Client
+  search_a_client: Search A Client
+  new_client: New Client
+  client_info: Client Info
+  client_id: Client Id
+  fullname: Fullname
+  phone1: Phone1
+  phone2: Phone2
+  email: Email
+  address: Address
+  billing_address: Billing Address
+  name_or_social_reason: Name Or Social Reason
+  rfc: Rfc
+  fax: Fax
+  product_type: Product Type
+  cellphone: Cellphone
+  computer: Computer
+  condition: Condition
+  failure: Failure
+  wcomments: Wcomments
+  accessories: Accessories
+  parts: Parts
+  wclient_needs: Wclient Needs
+  helpers:
+    links:
+      back: Back
+  activerecord:
+    models:
+      orders: Orders
+      branches: Branches
+      users: Users
+      roles: Roles
+      statuses: Statuses
+      clients: Clients
+      cellphones: Cellphones
+      computers: Computers
+      client_needs: Client Needs
+      parts: Parts
+      serial_numbers: Serial Numbers
+      workshops: Workshops
+      bills: Bills
+      progress: Progress
+      comments: Comments
+  leave_comment: Leave Comment
+  my_account: My Account
+  logout: Logout
+  repair_centers: Repair Centers
+  home: Home
+  account: Account
+  edit_my_account: Edit My Account
+  all_branches: All Branches
+  administration: Administration
+  new_order_service: New Order Service
+  errors_reports: Errors Reports
+  legal: Legal
+  help: Help
+  faq: Faq
+  language: Language
+  language_changed: Language Changed

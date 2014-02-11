@@ -1,6 +1,7 @@
 class ApplicationController < ActionController::Base
   protect_from_forgery
-  before_filter :get_login_type
+  before_filter :get_login_type, :set_locale
+  helper_method :set_locale
   
   def get_login_type
     if signed_in?
@@ -13,6 +14,14 @@ class ApplicationController < ActionController::Base
       end
     end
   end
+  
+  def set_locale
+    session[:language] = params[:language] || session[:language] || "en"
+    I18n.locale = session[:language]
+    flash[:warning] = t(:language_changed)
+    redirect_to root_path
+  end
+  
 #  if Rails.env == "production" or Rails.env == "development" or Rails.env == "local"
 #    if @is_user
 #      @branch = @current_user.branch_id

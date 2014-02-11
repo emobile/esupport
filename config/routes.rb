@@ -1,4 +1,6 @@
 Esupport::Application.routes.draw do
+  get :set_locale, controller:"application"
+  
   get "serial_numbers/serial_number_with_part"
   resources :serial_numbers
 

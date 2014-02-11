@@ -530,7 +530,8 @@
         <div id="client_needs_info" class="block-body collapse in">
           <br />
           <div style="display: inline-block;">
-            <%= autocomplete_field_tag "client-need-name", "", autocomplete_client_need_name_orders_path, :update_elements => {:id => '.search_client_need_id'}, :placeholder => "Buscar trabajo...", :style => "width: 300px;" %>
+            <%= autocomplete_field_tag "client-need-name", "", autocomplete_client_need_name_orders_path, :update_elements => {:id => '.search_client_need_id'}, :placeholder => "Buscar trabajo...", :style => "width: 170px;" %>
+            <%= text_field_tag "client-need-cost", nil, :placeholder => "Costo", :style => "width: 170px;" %>
             <%= f.link_to_add "Agregar trabajo", :order_client_needs, :data => { :target => "#client-needs-table" }, :class => "btn btn-primary", :style => "vertical-align: top;" %>
           </div>
           <div style="float: right;">
@@ -739,6 +740,10 @@
             $(this).siblings(".cost-label").show().text($(this).val());
             return false;
           }
+        });
+
+        $('#my_autocomplete_field').bind('railsAutocomplete.select', function(event, data) {
+          alert(data.item.id);
         });
       });
     </script>

@@ -1,4 +1,6 @@
 es:
+    language: "Lenguage"
+    language_changed: "Lenguage cambiado exitosamente"
     not_authorized: "Usted no tiene permiso para realizar esta acción."
     general_info: "Informacíon General"
     contact_info: "Informacíon de Contacto"

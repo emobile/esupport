@@ -3,6 +3,8 @@ es:
   'false': "No"
   main_title: "Butique en línea"
   home: "Inicio"
+  language: "Language"
+  language_changed: "Language changed successfully"
   logout : "Cerrar sesión"
   login: "Username o Correo Electrónico"
   password: "Contraseña"
