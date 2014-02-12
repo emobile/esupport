@@ -1,163 +1,70 @@
 ---
-es:
+en:
+  index: Índice
+  new: Nuevo
+  worder: Orden
   orders:
-    show:
-      status: Estatus
-      divise: Equipo
     form:
-      first_name: Nombre(s)
-      identifier: No. de Pedido/Factura
-    index:
-      identifier: No. de Pedido/Factura
-  delivery_date: Fecha de Entrega
-  workshop_info: Información de Taller
-  edit_workshop_info: Editar Información de Taller
-  helpers:
-    links:
-      show: Mostrar
-      edit: Editar
-      destroy: Eliminar
-      back: Regresar
-      new: Agregar
-    actions: Acciones
-  activrecord:
-    models:
-      progresses: Progresos
-  total_due: Adeudo Total
-  add_new_progress: Agregar Progreso
-  current_progress: Progreso Actuasl
-  client_id: Id del Cliente
-  fullname: Nombre Completo
-  phone1: Telefono
-  phone2: Celular
-  billing_address: Dirección de Facturacíon
-  name_or_social_reason: Nombre o Rason Social
-  rfc: Rfc
+      identifier: Identificador
+  delivery_date: Fecha de entrega
+  client: Cliente
+  select_a_client: Seleccionar un cliente
+  search_a_client: Buscar un cliente
+  new_client: Nuevo cliente
+  client_info: Información del cliente
+  client_id: Id del cliente
+  fullname: Nombre completo
+  phone1: Teléfono 1
+  phone2:
+  email: Correo electrónico
+  address: Dirección
+  billing_address: Dirección de facturación
+  name_or_social_reason: Nombre o razón social
+  rfc: RFC
   fax: Fax
+  product_type: Tipo de producto
   cellphone: Celular
   computer: Computadora
-  users:
-    index:
-      id: Id
-      branch: Sucursal
-  description: Descripcón
-  all_branches: Todas las Sucursales
-  client_general_info: Información General del Cliente
-  billing_info_is_the_same_as_delivery_info: Informaciíon de facturación es la misma
-    del cliente
-  'no': 'No'
-  'yes': Si
-  bill_address: Informaciíon de facturación
-  login_info: Información de Acceso
-  passwords: Contrasenãs
-  id: Id
-  comment_by: ! 'Comentario Realizado Por: '
-  user_info: Información de Usuario
-  billing_info: Informaciíon de facturación
-  edit_billing_info: Editar Informaciíon de facturación
-  errors_reports: Reporte de Errores
-  error_reports:
-    index:
-      referer_url: Url de Origen
-    show:
-      referer_url: Url de Origen
-      branch: Sucursal
-      no_branch_available: No hay sucursal disponible
-      other: Otro
-  something_wrong: ! 'Error: '
-  backtrace: Backtrace
-  clients:
-    index:
-      phone2s: Celular
-  details: Detalles
-  cellphones:
-    index:
-      id: Id
-  brand: Sucursal
-  client_needs:
-    index:
-      id: Id
-  bills:
-    index:
-      client: Cliente
-      actions: Acciones
-  address_info: Dirección
-  actions:
-    created: Creado
-    updated: Actualizado
-  new_client: Registrar Nuevo Cliente
-  activerecord:
-    models:
-      unlocks: Unlocks
-      confirmations: Confirmations
-      passwords: Passwords
-  password_confirmation: Password Confirmation
-en:
-  index: Index
-  new: New
-  worder: Worder
-  orders:
-    form:
-      identifier: Identifier
-  delivery_date: Delivery Date
-  client: Client
-  select_a_client: Select A Client
-  search_a_client: Search A Client
-  new_client: New Client
-  client_info: Client Info
-  client_id: Client Id
-  fullname: Fullname
-  phone1: Phone1
-  phone2: Phone2
-  email: Email
-  address: Address
-  billing_address: Billing Address
-  name_or_social_reason: Name Or Social Reason
-  rfc: Rfc
-  fax: Fax
-  product_type: Product Type
-  cellphone: Cellphone
-  computer: Computer
-  condition: Condition
-  failure: Failure
-  wcomments: Wcomments
-  accessories: Accessories
-  parts: Parts
-  wclient_needs: Wclient Needs
+  condition: Condición
+  failure: Falla
+  wcomments: Comentarios
+  accessories: Accessorios
+  parts: Partes
+  wclient_needs: Necesidades del cliente
   helpers:
     links:
-      back: Back
+      back: Regresar
   activerecord:
     models:
-      orders: Orders
-      branches: Branches
-      users: Users
+      orders: Ordenes
+      branches: Sucursales
+      users: Usuarios
       roles: Roles
-      statuses: Statuses
-      clients: Clients
-      cellphones: Cellphones
-      computers: Computers
-      client_needs: Client Needs
-      parts: Parts
-      serial_numbers: Serial Numbers
-      workshops: Workshops
-      bills: Bills
-      progress: Progress
-      comments: Comments
-      welcome: Welcome
-  leave_comment: Leave Comment
-  my_account: My Account
-  logout: Logout
-  repair_centers: Repair Centers
-  home: Home
-  account: Account
-  edit_my_account: Edit My Account
-  all_branches: All Branches
-  administration: Administration
-  new_order_service: New Order Service
-  errors_reports: Errors Reports
+      statuses: Status
+      clients: Clientes
+      cellphones: Celulares
+      computers: Computadoras
+      client_needs: Necesidades del cliente
+      parts: Partes
+      serial_numbers: Números de serie
+      workshops: Talleres
+      bills: Facturas
+      progress: Progreso
+      comments: Comentarios
+      welcome: Bienvenido
+  leave_comment: Dejar comentario
+  my_account: Mi cuenta
+  logout: Cerrar sesión
+  repair_centers: Centros de reparación
+  home: Inicio
+  account: Cuenta
+  edit_my_account: Editar mi cuenta
+  all_branches: Todas las sucursales
+  administration: Administración
+  new_order_service: Nueva orden de servicio
+  errors_reports: Reportes de errores
   legal: Legal
-  help: Help
-  faq: Faq
+  help: Ayuda
+  faq: FAQ
   language: Language
-  language_changed: Language Changed
+  comment: Comment

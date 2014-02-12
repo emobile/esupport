@@ -1,4 +1,52 @@
 es:
+  address_info: Address information
+  client_needs:
+    index:
+      id: Id
+  branch: Branch
+  cellphones: Cellphones
+  details: Details
+  something_wrong: ! 'Error: '
+  backtrace: Backtrace
+  error_reports:
+    index:
+      referer_url: Referer url
+    show:
+      referer_url: Referer url
+      branch: Branch
+      no_branch_available: No branch available
+      other: Other
+  description: Description
+  all_branches: All branches
+  client_general_info: Client general information
+  billing_info_is_the_same_as_delivery_info: Billing info is the same as delivery info
+  'no': 'No'
+  'yes': Yes
+  bill_address: Billing address
+  login_info: Login information
+  passwords: Passwords
+  id: Id
+  comment_by: ! 'Comment by: '
+  user_info: User information
+  billing_info: Billing information
+  edit_billing_info: Edit billing information
+  errors_reports: Errors report
+  total_due: Total due
+  add_new_progress: Add new progress
+  current_progress: Current progress
+  client_id: Client id
+  fullname: Fullname
+  phone1: Phone
+  phone2: Cellphone
+  billing_address: Billing address
+  name_or_social_reason: Name or social reason
+  rfc: RFC
+  fax: Fax
+  cellphone: Cellphone
+  computer: Computer
+  delivery_date: Delivery date
+  workshop_info: Workshop information
+  edit_workshop_info: Edit workshop information
   'true': "Si"
   'false': "No"
   main_title: "Butique en línea"
@@ -317,6 +365,9 @@ es:
       multi_page_html: "Mostrando <b>%{from}&nbsp;-&nbsp;%{to}</b> de <b> %{count}</b> en total"   
         
   users:
+    index:
+      id: Id
+      branch: Sucursal
     show: 
       fullname: "Nombre: "
       first_name: "Nombre(s): "
@@ -374,6 +425,8 @@ es:
       client_id: 'Client'
       created_at: 'Created At'
       updated_at: 'Updated At'
+      client: Client
+      actions: Actions
   branch_client_orders:
     show:
       id: 'Id: '
@@ -508,6 +561,7 @@ es:
       unlock_token: 'Unlock Token'
       locked_at: 'Locked At'
       authentication_token: 'Authentication Token'
+      phone2s: Cellphone
   comments:
     show:
       id: 'Id: '
@@ -667,6 +721,8 @@ es:
       delivery_date: 'Delivery Date: '
       created_at: 'Created At: '
       updated_at: 'Updated At: '
+      status: Status
+      divise: Divise
     index:
       id: 'Id'
       client_id: 'Client'
@@ -684,6 +740,10 @@ es:
       delivery_date: 'Delivery Date'
       created_at: 'Created At'
       updated_at: 'Updated At'
+      identifier: No. order/bill
+    form:
+      first_name: Name
+      identifier: No. order/bill
   progresses:
     show:
       id: 'Id: '

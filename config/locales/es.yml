@@ -1,5 +1,55 @@
 es:
-    language: "Lenguage"
+    wactions:
+      created: Creado
+      updated: Actualizado
+    new_client: Registrar nuevo cliente
+    password_confirmation: Confirmación de contraseña
+    address_info: Dirección
+    branch: Sucursal
+    details: Detalles
+    something_wrong: ! 'Error: '
+    backtrace: Rastreo
+    error_reports:
+    index:
+      referer_url: Url de origen
+    show:
+      referer_url: Url de origen
+      branch: Sucursal
+      no_branch_available: No hay sucursal disponible
+      other: Otro
+    description: Descripción
+    all_branches: Todas las sucursales
+    client_general_info: Información general del cliente
+    billing_info_is_the_same_as_delivery_info: Información de facturación es la misma
+      del cliente
+    'no': 'No'
+    'yes': Si
+    bill_address: Informacíón de facturación
+    login_info: Información de acceso
+    passwords: Contrasenãs
+    id: Id
+    comment_by: ! 'Comentario realizado por: '
+    user_info: Información de usuario
+    billing_info: Información de facturación
+    edit_billing_info: Editar información de facturación
+    errors_reports: Reporte de errores
+    total_due: Adeudo total
+    add_new_progress: Agregar progreso
+    current_progress: Progreso actual
+    client_id: Id del cliente
+    fullname: Nombre completo
+    phone1: Telefono
+    phone2: Celular
+    billing_address: Dirección de facturacíon
+    name_or_social_reason: Nombre o razón social
+    rfc: Rfc
+    fax: Fax
+    cellphone: Celular
+    computer: Computadora
+    delivery_date: Fecha de entrega
+    workshop_info: Información de taller
+    edit_workshop_info: Editar información de taller
+    language: "Lenguaje"
     language_changed: "Lenguage cambiado exitosamente"
     not_authorized: "Usted no tiene permiso para realizar esta acción."
     general_info: "Informacíon General"
@@ -11,7 +61,7 @@ es:
     client_info: "Informacíon del Cliente"
     edit_client_info: "Editar Informacíon del Cliente"
     bill_info: "Informacíon de Facturacíon"
-    edit_bill_info: "Editar Informacíon de Facturacíon del Cliente"
+    edit_bill_info: "Editar Informacíon de Facturacíon doel Cliente"
     devise_info: "Informacíon del Equipo"
     Cellphone: "Celular"
     actions: "Acciones"
@@ -384,6 +434,8 @@ es:
            email: "Correo electronico"
            sign_in_count: "Numero de seciones"
            last_sign_in_at: "Ultimo inicio de secion"
+           id: Id
+           branch: Sucursal
         show:
            first_name: "Nombre(s)"
            last_name: "Apellido"
@@ -467,6 +519,7 @@ es:
         product_type: "Tipo de producto"
         created_at: "Creado en"
         updated_at: "Actualizado en"
+        identifier: No. de pedido/factura
       show:
         first_name: "Nombre(s)"
         last_name: "Apellido"
@@ -510,6 +563,11 @@ es:
         country: "País"
         created_at: "Creado en"
         updated_at: "Actualizado en"
+        status: Estatus
+        divise: Equipo
+      form:
+        first_name: Nombre(s)
+        identifier: No. de pedido/factura
     bills:
       index:
         name: "Nombre o Razon Social"
@@ -526,6 +584,8 @@ es:
         country: "País"
         created_at: "Creado en"
         updated_at: "Actualizado en"
+        client: Cliente
+        actions: Acciones
       show:
         name: "Nombre o Razon Social"
         rfc: "RFC"
@@ -588,6 +648,7 @@ es:
         branch_id: "Sucursal"
         created_at: "Creado en"
         updated_at: "Actualizado en"
+        id: Id
       show:
         model: "Modelo"
         brand: "Marca"
@@ -607,6 +668,7 @@ es:
         branch_id: "Sucursal"
         created_at: "Creado en"
         updated_at: "Actualizado en"
+        id: Id
       show:
         name: "Nombre"
         description: "Descripcion"
@@ -634,6 +696,7 @@ es:
         email: "Correo electronico"
         sign_in_count: "Numero de seciones"
         last_sign_in_at: "Ultimo inicio de secion"
+        phone2s: Celular
       show:
         first_name: "Nombre(s)"
         last_name: "Apellido"
@@ -960,6 +1023,9 @@ es:
               attributes:
                 action_name:
                   taken: "ya concedida, seleccione una diferente"
+                  unlocks: Desbloqueos
+            confirmations: Confirmaciones
+            passwords: Contraseñas
         attributes:
           currency:
             country: "País"
@@ -1283,7 +1349,7 @@ es:
             back: Back
             new: New
           actions: Acciones
-        activrecord:
+        activerecord:
           models:
             progresses: Progresos
         total_due: Adeudo Total

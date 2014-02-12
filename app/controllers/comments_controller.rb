@@ -62,7 +62,7 @@ class CommentsController < ApplicationController
 
     respond_to do |format|
       if @comment.save
-        format.html { redirect_to @comment, notice: t("actions.created",  model: t("activerecord.models.#{controller_name.singularize.gsub(" ", "")}"))}
+        format.html { redirect_to @comment, notice: t("wactions.created",  model: t("activerecord.models.#{controller_name.singularize.gsub(" ", "")}"))}
         format.json { render json: @comment, status: :created, location: @comment }
       else
         format.html { render action: "new" }
