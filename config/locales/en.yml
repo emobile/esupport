@@ -1,4 +1,48 @@
 es:
+  leave_comment: Leave comment
+  my_account: My account
+  logout: Logout
+  repair_centers: Repair centers
+  home: Home
+  account: Account
+  edit_my_account: Edit my account
+  all_branches: All branches
+  administration: Administration
+  new_order_service: New order service
+  errors_reports: Error reports
+  legal: Legal
+  help: Help
+  faq: FAQ
+  language: Language
+  comment: Comment
+  delivery_date: Delivery date
+  client: Client
+  select_a_client: Select a client
+  search_a_client: Search a client
+  new_client: New client
+  client_info: Client information
+  client_id: Client id
+  fullname: Fullname
+  phone1: Phone
+  phone2: Cellphone
+  email: Email
+  address: Address
+  billing_address: Billing address
+  name_or_social_reason: Name or social reason
+  rfc: RFC
+  fax: Fax
+  product_type: Product type
+  cellphone: Cellphone
+  computer: Computer
+  condition: Condition
+  failure: Failure
+  wcomments: Comments
+  accessories: Accessories
+  parts: Parts
+  wclient_needs: Client needs
+  index: Index
+  new: New
+  worder: Order
   address_info: Address information
   client_needs:
     index:
@@ -49,71 +93,71 @@ es:
   edit_workshop_info: Edit workshop information
   'true': "Si"
   'false': "No"
-  main_title: "Butique en línea"
-  home: "Inicio"
+  main_title: "Main title"
+  home: "Home"
   language: "Language"
   language_changed: "Language changed successfully"
-  logout : "Cerrar sesión"
-  login: "Username o Correo Electrónico"
-  password: "Contraseña"
-  sign_up: "Regístrate"
-  sign_in: " Iniciar sesión"  
-  sign_in_or_sign_up: "Inicia Sesión o Regístrate"
-  sign_into_account: "Ingresa a tu cuenta:"
+  logout : "Logout"
+  login: "Username or email"
+  password: "Password"
+  sign_up: "Sign up"
+  sign_in: " Sign in"  
+  sign_in_or_sign_up: "Sign in or sign up"
+  sign_into_account: "Sign into account:"
   create_account: "Crea tu cuenta:"  
-  shopping_cart: " Ver Carrito"
-  welcome: "Bienvenido"
-  edit_my_account: "Editar micuenta"
-  are_you_sure?: "Esta seguro que desea eliminar este %{model}?"
+  shopping_cart: " Shopping cart"
+  welcome: "Welcome"
+  edit_my_account: "Edit my account"
+  are_you_sure?: "Are you sure you want to delete this %{model}?"
   date:
     abbr_day_names:
-    - dom
-    - lun
-    - mar
-    - mié
-    - jue
-    - vie
-    - sáb
+    - sun
+    - mon
+    - tue
+    - wed
+    - thu
+    - fri
+    - sat
     abbr_month_names:
     -
-    - ene
+    - jan
     - feb
     - mar
-    - abr
+    - apr
     - may
     - jun
     - jul
-    - ago
+    - aug
     - sep
     - oct
     - nov
-    - dic
+    - dec
     day_names:
-    - Domingo
-    - Lunes
-    - Martes
-    - Miércoles
-    - Jueves
-    - Viernes
-    - Sábado
+    - Sunday
+    - Monday
+    - Tuesday
+    - Wednesday
+    - Thursday
+    - Friday
+    - Saturday
     formats:
       default: ! '%d/%m/%Y'
       long: ! '%A, %d de %B de %Y'
       short: ! '%d de %b'
     month_names:
     -
-    - Enero
-    - Febrero
-    - Marzo
-    - Abril
-    - Mayo
-    - Junio
-    - Julio
-    - Agosto
-    - Septiembre
-    - Octubre
-    - Noviembre
-    - Diciembre
+    - January
+    - February
+    - March
+    - April
+    - May
+    - June
+    - July
+    - August
+    - September
+    - October
+    - November
+    - December
     order:
     - :day
     - :month
@@ -203,6 +247,8 @@ es:
       create: Crear %{model}
       submit: Guardar %{model}
       update: Actualizar %{model}
+    links:
+      back: Back
   number:
     currency:
       format:
@@ -854,10 +900,12 @@ es:
       branch_client_orders: 'Branch Client Orders'
       branch: 'Branch'
       branches: 'Branches'
+      branch_client: 'Branch Client'
       branch_clients: 'Branch Clients'
-      branch_clients: 'Branch Clients'
+      cellphones: 'Cellphones'
       client: 'Client'
       clients: 'Clients'
+      client_needs: 'Client needs'
       comment: 'Comment'
       comments: 'Comments'
       computer: 'Computer'
@@ -874,6 +922,7 @@ es:
       order_parts: 'Order Parts'
       order: 'Order'
       orders: 'Orders'
+      parts: 'Parts'
       progress: 'Progress'
       progresses: 'Progresses'
       role: 'Role'
@@ -881,7 +930,9 @@ es:
       serial_number: "Serial number"
       serial_numbers: "Serial numbers"
       status: 'Status'
-      statuses: 'Statuses'
+      statuses: 'Status'
+      users: 'Users'
+      welcome: 'Welcome'
       workshop: 'Workshop'
       workshops: 'Workshops'
       #END OF MODELS DO NOT DELETE OR MOVE OR TAB THIS COMMENT
