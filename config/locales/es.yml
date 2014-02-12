@@ -10,8 +10,8 @@ es:
     something_wrong: ! 'Error: '
     backtrace: Rastreo
     error_reports:
-    index:
-      referer_url: Url de origen
+    index: Índice
+    #referer_url: Url de origen
     show:
       referer_url: Url de origen
       branch: Sucursal
