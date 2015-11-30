@@ -1,0 +1,158 @@
+I AM HERE NOW
+<% content_for :title, "eSupport: Clientes" %>
+<%@header_text = true%>
+<%= nested_form_for(@client) do |f| %>
+  <% if @client.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@client.errors.count, "error") %> prohibited this client from being saved:</h2>
+      <ul>
+        <% @client.errors.full_messages.each do |msg| %>
+          <li><%= msg %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="row-fluid">
+    <div class="block span6">
+      <a href="#description" class="block-heading" data-toggle="collapse"><%= t(:client_general_info) %></a>
+      <div id="description" class="block-body collapse in">
+        <br />     
+        <div class="control-group">
+          <%= f.label :first_name, :class => 'control-label' %>
+          <div class="controls">
+            <%= f.text_field :first_name, :class => 'text_field' %>
+          </div>
+        </div>
+        <div class="control-group">
+          <%= f.label :last_name, :class => 'control-label' %>
+          <div class="controls">
+            <%= f.text_field :last_name, :class => 'text_field' %>
+          </div>
+        </div>
+        <div class="control-group">
+          <%= f.label :email, :class => 'control-label' %>
+          <div class="controls">
+            <%= f.text_field :email, :class => 'text_field' %>
+          </div>
+        </div>
+        <div class="control-group">
+          <%= f.label :phone1, :class => 'control-label' %>
+          <div class="controls">
+            <%= f.text_field :phone1, :class => 'text_field' %>
+          </div>
+        </div>
+        <div class="control-group">
+          <%= f.label :phone2, :class => 'control-label' %>
+          <div class="controls">
+            <%= f.text_field :phone2, :class => 'text_field' %>
+          </div>
+        </div>
+        <div class="control-group" style="margin-bottom: 13px">
+          <%= f.label :active, :class => 'control-label' %>
+          <div class="controls">
+            <%= f.check_box :active, :checked => true, :readonly => true, :disable => true, :class => 'text_field' %>
+          </div>
+        </div>
+        <br />
+      </div>
+    </div>
+
+
+    <div class="block span6">
+      <a href="#address" class="block-heading" data-toggle="collapse"><%=t(:address)%></a>
+      <div id="address" class="block-body collapse in">
+        <br />
+        <div class="control-group">
+          <%= f.label :address1, :class => 'control-label' %>
+          <div class="controls">
+            <%= f.text_field :address1, :class => 'text_field' %>
+          </div>
+        </div>
+        <div class="control-group">
+          <%= f.label :address2, :class => 'control-label' %>
+          <div class="controls">
+            <%= f.text_field :address2, :class => 'text_field' %>
+          </div>
+        </div>
+        <div class="control-group">
+          <%= f.label :zip, :class => 'control-label' %>
+          <div class="controls">
+            <%= f.text_field :zip, :class => 'text_field' %>
+          </div>
+        </div>
+        <div class="control-group">
+          <%= f.label :city, :class => 'control-label' %>
+          <div class="controls">
+            <%= f.text_field :city, :class => 'text_field' %>
+          </div>
+        </div>
+        <div class="control-group">
+          <%= f.label :state, :class => 'control-label' %>
+          <div class="controls">
+            <%= f.text_field :state, :class => 'text_field' %>
+          </div>
+        </div>
+        <div class="control-group">
+          <%= f.label :country, :class => 'control-label' %>
+          <div class="controls">
+            <%= f.text_field :country, :class => 'text_field' %>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <%= f.fields_for :bills %><br />
+  <%if controller.action_name == "edit"%>
+    <div class="row-fluid">
+      <div class="block span6">
+        <a href="#login" class="block-heading" data-toggle="collapse"><%= t(:login_info) %></a>
+        <div id="login" class="block-body collapse in">
+          <br />     
+          <div class="control-group">
+            <%= f.label :username, :class => 'control-label' %>
+            <div class="controls">
+              <%= f.text_field :username, :class => 'text_field' %>
+            </div>
+          </div>
+          <div class="control-group">
+            <%= f.label :email, :class => 'control-label' %>
+            <div class="controls">
+              <%= f.text_field :email, :class => 'text_field' %>
+            </div>
+          </div>
+          <br />
+        </div>
+      </div>
+
+      <div class="block span6">
+        <a href="#passwords" class="block-heading" data-toggle="collapse"><%=t(:passwords)%></a>
+        <div id="passwords" class="block-body collapse in">
+          <br />
+          <div class="control-group">
+            <%= f.label :password, :class => 'control-label' %>
+            <div class="controls">
+              <%= f.password_field :password, :class => 'text_field' %>
+            </div>
+          </div>
+          <div class="control-group">
+            <%= f.label :password_confirmation, :class => 'control-label' %>
+            <div class="controls">
+              <%= f.password_field :password_confirmation, :class => 'text_field' %>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <%= f.hidden_field :role_id, :value => @role.id %>
+    <%= f.hidden_field :branch_id, :value => current_user.branch_id %>
+  <%end%>
+  <div class="form-actions">
+    <%= f.submit nil, :class => 'btn btn-primary' %>
+    <%if can? :index, Client%>
+      <%= link_to t(:back, :default => t("helpers.links.back")),
+        clients_path, :class => 'btn'  %>
+    <%end%>
+  </div>
+<% end %>

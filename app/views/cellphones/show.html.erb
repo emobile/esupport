@@ -1,0 +1,73 @@
+<%content_for :breadcrumb do%>
+  <ul class="breadcrumb">
+    <%if can? :show, Cellphone and signed_in?%>
+      <li><%=link_to @current_user.branch.name, @current_user.branch%><span class="divider">/</span></li>
+    <%end%>
+    <%if can? :index, Cellphone%>
+      <li><%=link_to t(:index), cellphones_path%><span class="divider">/</span></li>
+    <%end%>
+    <li class="active"><%=@cellphone.model%></li>
+  </ul>
+<%end%>
+
+<div class="row-fluid">
+  <div class="block span6">
+    <a href="#details" class="block-heading" data-toggle="collapse"><%= @cellphone.model %><span class="label label-notice"><%= t(:id) + ": " + @cellphone.id.to_s%></span></a>
+    <div id="details" class="block-body collapse in">
+      <p>
+        <b><%= t'.model' %>:</b>
+        <%= @cellphone.model %>
+      </p>
+
+      <p>
+        <b><%= t'.brand' %>:</b>
+        <%= @cellphone.brand %>
+      </p>
+
+      <p>
+        <b><%= t'.color' %>:</b>
+        <%= @cellphone.color %>
+      </p>
+
+      <p>
+        <b><%= t'.ope_system' %>:</b>
+        <%= @cellphone.ope_system %>
+      </p>
+
+      <p>
+        <b><%= t'.imei' %>:</b>
+        <%= @cellphone.imei %>
+      </p>
+
+      <p>
+        <b><%= t'.client_id' %>:</b>
+        <%= @cellphone.client.fullname %>
+      </p>
+    </div>
+  </div>   
+</div>
+
+
+
+<div class="form-actions">
+  <%if can? :index, Cellphone%>
+    <%= link_to t(:back, :default => t("helpers.links.back")),
+      cellphones_path, :class => 'btn'  %>
+  <%end%>
+  <%if can? :edit, Cellphone%>
+    <%= link_to t(:edit, :default => t("helpers.links.edit")),
+      edit_cellphone_path(@cellphone), :class => 'btn' %>
+  <%end%>
+  <%if can? :destroy, Cellphone%>
+    <%= link_to t(:destroy, :default => t("helpers.links.destroy")),
+      cellphone_path(@cellphone),
+      :method => 'delete',
+      :data => { :confirm => t('.confirm', :default => t("helpers.links.confirm", :default => 'Are you sure?')) },
+      :class => 'btn btn-danger' %>
+  <%end%>
+  <%if can? :new, Cellphone%>
+    <%= link_to t(:new, :default => t("helpers.links.new")),
+      new_cellphone_path,
+      :class => 'btn btn-primary', :title => t(:new) %>
+  <%end%>
+</div>

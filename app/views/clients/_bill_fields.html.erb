@@ -1,0 +1,104 @@
+<script>
+  function setBillingInfo(value) {
+    if (value == "true") {
+      var first_name = document.getElementById("client_first_name").value;
+      var last_name = document.getElementById("client_last_name").value;
+      $("#client_bills_attributes_0_name").val(first_name + " " + last_name);
+      var email = document.getElementById("client_email").value;
+      $("#client_bills_attributes_0_email").val(email);
+      var phone1 = document.getElementById("client_phone1").value;
+      $("#client_bills_attributes_0_phone1").val(phone1);
+      var phone2 = document.getElementById("client_phone2").value;
+      $("#client_bills_attributes_0_phone2").val(phone2);
+      //var fax = document.getElementById("client_fax").value;
+      //$("#client_bills_attributes_0_fax").val(fax);
+      var address1 = document.getElementById("client_address1").value;
+      $("#client_bills_attributes_0_address1").val(address1);
+      var address2 = document.getElementById("client_address2").value;
+      $("#client_bills_attributes_0_address2").val(address2);
+      var zip = document.getElementById("client_zip").value;
+      $("#client_bills_attributes_0_zip").val(zip);
+      var city = document.getElementById("client_city").value;
+      $("#client_bills_attributes_0_city").val(city);
+      var state = document.getElementById("client_state").value;
+      $("#client_bills_attributes_0_state").val(state);
+      var country = document.getElementById("client_country").value;
+      $("#client_bills_attributes_0_country").val(country);
+    } else {
+      $("#client_bills_attributes_0_name").val(null);
+      $("#client_bills_attributes_0_email").val(null);
+      $("#client_bills_attributes_0_phone1").val(null);
+      $("#client_bills_attributes_0_phone2").val(null);
+      $("#client_bills_attributes_0_fax").val(null);
+      $("#client_bills_attributes_0_address1").val(null);
+      $("#client_bills_attributes_0_address2").val(null);
+      $("#client_bills_attributes_0_zip").val(null);
+      $("#client_bills_attributes_0_city").val(null);
+      $("#client_bills_attributes_0_state").val(null);
+      $("#client_bills_attributes_0_country").val(null);
+    }
+  }
+</script>
+
+<div class="row-fluid">
+  <div class="block span6">
+    <a href="#rfc-info" class="block-heading" data-toggle="collapse"><%= t(:bill_info) %></a>
+    <div id="rfc-info" class="block-body collapse in">
+      <br />
+      <%= t(:billing_info_is_the_same_as_delivery_info) %>: <br />
+      <input type="radio" name="group1" value=false onclick="setBillingInfo(this.value);" checked> <%= t(:no) %>
+      <input type="radio" name="group1" value=true onclick="setBillingInfo(this.value);"> <%= t(:yes) %> <br /><br /><br />
+      <div class="field">
+        <%= f.label :name %><br />
+        <%= f.text_field :name %>
+      </div>
+      <div class="field">
+        <%= f.label :rfc %><br />
+        <%= f.text_field :rfc %>
+      </div>
+      <div class="field">
+        <%= f.label :email %><br />
+        <%= f.text_field :email %>
+      </div>
+      <div class="field">
+        <%= f.label :phone1 %><br />
+        <%= f.text_field :phone1 %>
+      </div>
+      <div class="field">
+        <%= f.label :phone2 %><br />
+        <%= f.text_field :phone2 %>
+      </div>
+      <br />
+    </div>
+  </div>
+  <div class="block span6">
+    <a href="#bill-address" class="block-heading" data-toggle="collapse"><%=t(:bill_address)%></a>
+    <div id="bill-address" class="block-body collapse in">
+      <br />
+      <div class="field">
+        <%= f.label :address1 %><br />
+        <%= f.text_field :address1 %>
+      </div>
+      <div class="field">
+        <%= f.label :address2 %><br />
+        <%= f.text_field :address2 %>
+      </div>
+      <div class="field">
+        <%= f.label :zip %><br />
+        <%= f.number_field :zip %>
+      </div>
+      <div class="field">
+        <%= f.label :city %><br />
+        <%= f.text_field :city %>
+      </div>
+      <div class="field">
+        <%= f.label :state %><br />
+        <%= f.text_field :state %>
+      </div>
+      <div class="field">
+        <%= f.label :country %><br />
+        <%= f.text_field :country %>
+      </div>
+    </div>
+  </div>
+</div>

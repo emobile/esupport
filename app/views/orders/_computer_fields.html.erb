@@ -1,0 +1,66 @@
+<div class="field">
+  <%= f.label :model%><br />
+  <%= f.autocomplete_field :model, autocomplete_computer_model_orders_path, :update_elements => {:brand => '#order_computers_attributes_0_brand', :color => '#order_computers_attributes_0_color', :ope_system => '#order_computers_attributes_0_ope_system', :computer_type => '#order_computers_attributes_0_computer_type', :hard_drive => '#order_computers_attributes_0_hard_drive', :units => '#order_computers_attributes_0_units', :memory => '#order_computers_attributes_0_memory', :proccessor => '#order_computers_attributes_0_proccessor', :charger => '#order_computers_attributes_0_charger', :monitor => '#order_computers_attributes_0_monitor', :keyboard => '#order_computers_attributes_0_keyboard', :mouse => '#order_computers_attributes_0_mouse'} %>
+</div>
+<div class="field">
+  <%= f.label :brand%><br />
+  <%= f.text_field  :brand%>
+</div>
+<div class="field">
+  <%= f.label :ope_system%><br />
+  <%= f.text_field  :ope_system%>
+</div>
+<div class="field">
+  <%= f.label :serial_number%><br />
+  <%= f.text_field  :serial_number%>
+</div>
+<div class="field">
+  <%= f.label :computer_type%><br />
+  <%= f.text_field  :computer_type%>
+</div>
+<div class="field">
+  <%= f.label :hard_drive%><br />
+  <%= f.text_field  :hard_drive%>
+</div>
+<div class="field">
+  <%= f.label :units%><br />
+  <%= f.text_field  :units%>
+</div>
+<div class="field">
+  <%= f.label :memory%><br />
+  <%= f.text_field  :memory%>
+</div>
+<div class="field">
+  <%= f.label :proccessor%><br />
+  <%= f.text_field  :proccessor%>
+</div>
+<div class="field">
+  <%= f.label :color%><br />
+  <%= f.text_field  :color%>
+</div>
+<div class="field">
+  <%= f.label :charger%><br />
+  <%= f.text_field  :charger%>
+</div>
+<div class="field">
+  <%= f.label :usb%><br />
+  <%= f.text_field  :usb%>
+</div>
+<div class="field">
+  <%= f.label :monitor%><br />
+  <%= f.text_field  :monitor%>
+</div>
+<div class="field">
+  <%= f.label :keyboard%><br />
+  <%= f.text_field  :keyboard%>
+</div>
+<div class="field">
+  <%= f.label :mouse%><br />
+  <%= f.text_field  :mouse%>
+</div>
+<div class="field">
+  <%= f.hidden_field :branch_id, :value => current_user.branch_id%>
+</div>
+<div class="field">
+  <%=f.hidden_field :client_id%>
+</div>

@@ -1,0 +1,1198 @@
+es:
+  leave_comment: Leave comment
+  my_account: My account
+  logout: Logout
+  repair_centers: Repair centers
+  home: Home
+  account: Account
+  edit_my_account: Edit my account
+  all_branches: All branches
+  administration: Administration
+  new_order_service: New order service
+  errors_reports: Error reports
+  legal: Legal
+  help: Help
+  faq: FAQ
+  language: Language
+  comment: Comment
+  delivery_date: Delivery date
+  client: Client
+  select_a_client: Select a client
+  search_a_client: Search a client
+  new_client: New client
+  client_info: Client information
+  client_id: Client id
+  fullname: Fullname
+  phone1: Phone
+  phone2: Cellphone
+  email: Email
+  address: Address
+  billing_address: Billing address
+  name_or_social_reason: Name or social reason
+  rfc: RFC
+  fax: Fax
+  product_type: Product type
+  cellphone: Cellphone
+  computer: Computer
+  condition: Condition
+  failure: Failure
+  wcomments: Comments
+  accessories: Accessories
+  parts: Parts
+  wclient_needs: Client needs
+  index: Index
+  new: New
+  worder: Order
+  address_info: Address information
+  client_needs:
+    index:
+      id: Id
+  branch: Branch
+  cellphones: Cellphones
+  details: Details
+  something_wrong: ! 'Error: '
+  backtrace: Backtrace
+  error_reports:
+    index:
+      referer_url: Referer url
+    show:
+      referer_url: Referer url
+      branch: Branch
+      no_branch_available: No branch available
+      other: Other
+  description: Description
+  all_branches: All branches
+  client_general_info: Client general information
+  billing_info_is_the_same_as_delivery_info: Billing info is the same as delivery info
+  'no': 'No'
+  'yes': Yes
+  bill_address: Billing address
+  login_info: Login information
+  passwords: Passwords
+  id: Id
+  comment_by: ! 'Comment by: '
+  user_info: User information
+  billing_info: Billing information
+  edit_billing_info: Edit billing information
+  errors_reports: Errors report
+  total_due: Total due
+  add_new_progress: Add new progress
+  current_progress: Current progress
+  client_id: Client id
+  fullname: Fullname
+  phone1: Phone
+  phone2: Cellphone
+  billing_address: Billing address
+  name_or_social_reason: Name or social reason
+  rfc: RFC
+  fax: Fax
+  cellphone: Cellphone
+  computer: Computer
+  delivery_date: Delivery date
+  workshop_info: Workshop information
+  edit_workshop_info: Edit workshop information
+  'true': "Si"
+  'false': "No"
+  main_title: "Main title"
+  home: "Home"
+  language: "Language"
+  language_changed: "Language changed successfully"
+  logout : "Logout"
+  login: "Username or email"
+  password: "Password"
+  sign_up: "Sign up"
+  sign_in: " Sign in"  
+  sign_in_or_sign_up: "Sign in or sign up"
+  sign_into_account: "Sign into account:"
+  create_account: "Crea tu cuenta:"  
+  shopping_cart: " Shopping cart"
+  welcome: "Welcome"
+  edit_my_account: "Edit my account"
+  are_you_sure?: "Are you sure you want to delete this %{model}?"
+  date:
+    abbr_day_names:
+    - sun
+    - mon
+    - tue
+    - wed
+    - thu
+    - fri
+    - sat
+    abbr_month_names:
+    -
+    - jan
+    - feb
+    - mar
+    - apr
+    - may
+    - jun
+    - jul
+    - aug
+    - sep
+    - oct
+    - nov
+    - dec
+    day_names:
+    - Sunday
+    - Monday
+    - Tuesday
+    - Wednesday
+    - Thursday
+    - Friday
+    - Saturday
+    formats:
+      default: ! '%d/%m/%Y'
+      long: ! '%A, %d de %B de %Y'
+      short: ! '%d de %b'
+    month_names:
+    -
+    - January
+    - February
+    - March
+    - April
+    - May
+    - June
+    - July
+    - August
+    - September
+    - October
+    - November
+    - December
+    order:
+    - :day
+    - :month
+    - :year
+  datetime:
+    distance_in_words:
+      about_x_hours:
+        one: cerca de 1 hora
+        other: cerca de %{count} horas
+      about_x_months:
+        one: cerca de 1 mes
+        other: cerca de %{count} meses
+      about_x_years:
+        one: cerca de 1 año
+        other: cerca de %{count} años
+      almost_x_years:
+        one: casi 1 año
+        other: casi %{count} años
+      half_a_minute: medio minuto
+      less_than_x_minutes:
+        one: menos de 1 minuto
+        other: menos de %{count} minutos
+      less_than_x_seconds:
+        one: menos de 1 segundo
+        other: menos de %{count} segundos
+      over_x_years:
+        one: más de 1 año
+        other: más de %{count} años
+      x_days:
+        one: 1 día
+        other: ! '%{count} días'
+      x_minutes:
+        one: 1 minuto
+        other: ! '%{count} minutos'
+      x_months:
+        one: 1 mes
+        other: ! '%{count} meses'
+      x_seconds:
+        one: 1 segundo
+        other: ! '%{count} segundos'
+    prompts:
+      day: Día
+      hour: Hora
+      minute: Minuto
+      month: Mes
+      second: Segundos
+      year: Año
+  errors: &errors
+    format: ! '%{attribute} %{message}'
+    messages:
+      accepted: debe ser aceptado
+      blank: no puede estar en blanco
+      confirmation: no coincide con la confirmación
+      empty: no puede estar vacío
+      equal_to: debe ser igual a %{count}
+      even: debe ser un número par
+      exclusion: está reservado
+      greater_than: debe ser mayor que %{count}
+      greater_than_or_equal_to: debe ser mayor o igual que %{count}
+      inclusion: no está incluído en la lista
+      invalid: es inválido
+      less_than: debe ser menor que %{count}
+      less_than_or_equal_to: debe ser menor o igual que %{count}
+      not_a_number: no es un número
+      not_an_integer: debe ser un entero
+      odd: debe ser un número non
+      record_invalid: ! 'La validación falló: %{errors}'
+      taken: ya ha sido tomado
+      too_long:
+        one: es demasiado largo (máximo 1 caracter)
+        other: es demasiado largo (máximo %{count} caracteres)
+      too_short:
+        one: es demasiado corto (mínimo 1 caracter)
+        other: es demasiado corto (mínimo %{count} caracteres)
+      wrong_length:
+        one: longitud errónea (debe ser de 1 caracter)
+        other: longitud errónea (debe ser de %{count} caracteres)
+    template:
+      body: ! 'Revise que los siguientes campos sean válidos:'
+      header:
+        one: ! '%{model} no pudo guardarse debido a 1 error'
+        other: ! '%{model} no pudo guardarse debido a %{count} errores'
+  helpers:
+    select:
+      prompt: Por favor selecciona
+    submit:
+      create: Crear %{model}
+      submit: Guardar %{model}
+      update: Actualizar %{model}
+    links:
+      back: Back
+  number:
+    currency:
+      format:
+        delimiter: ! ','
+        format: ! '%u%n'
+        precision: 2
+        separator: .
+        significant: false
+        strip_insignificant_zeros: false
+        unit: $
+    format:
+      delimiter: ! ','
+      precision: 2
+      separator: .
+      significant: false
+      strip_insignificant_zeros: false
+    human:
+      decimal_units:
+        format: ! '%n %u'
+        units:
+          billion: mil millones
+          million: millón
+          quadrillion: mil billones
+          thousand: mil
+          trillion: billón
+          unit: ''
+      format:
+        delimiter: ! ','
+        precision: 3
+        significant: true
+        strip_insignificant_zeros: true
+      storage_units:
+        format: ! '%n %u'
+        units:
+          byte:
+            one: Byte
+            other: Bytes
+          gb: GB
+          kb: KB
+          mb: MB
+          tb: TB
+    percentage:
+      format:
+        delimiter: ! ','
+    precision:
+      format:
+        delimiter: ! ','
+  support:
+    array:
+      last_word_connector: ! ' y '
+      two_words_connector: ! ' y '
+      words_connector: ! ', '
+  time:
+    am: am
+    formats:
+      default: ! '%a, %d de %b de %Y a las %H:%M:%S %Z'
+      long: ! '%A, %d de %B de %Y a las %I:%M %p'
+      short: ! '%d de %b a las %H:%M hrs'
+    pm: pm
+  actions:
+    show: "Mostrar %{model}"
+    edit: "Editar %{model}"
+    destroy: "Eliminar %{model}"
+    new:  "Crear %{model}"
+    return_to:  "Regresar a %{model}"
+ 
+  devise:
+    sessions:
+      new:
+        fullname: "Nombre"
+        first_name: "Nombre(s)"
+        last_name: "Apellido(s)"
+        phone1: "Teléfono"
+        phone2: "Celular"
+        fax: "Fax"
+        address1: "Dirección"
+        address2: "Colonia"
+        city: "Ciudad"
+        state: "Estado"
+        zip: "Código Postal"
+        country: "País"
+        role_id: "Rol"
+        active: "Activo"
+        email: "Correo Electrónico"     
+        username: "Nombre de Usuario"
+        password: "Contraseña"
+        password_confirmation: "Confirmacion de Contraseña"
+        created_at: "Registrado el"
+        updated_at: "Actualizado el"
+        last_sign_in_at: "Acceso por última vez el día"
+    registrations:
+      new:
+        fullname: "Nombre"
+        first_name: "Nombre(s)"
+        last_name: "Apellido(s)"
+        phone1: "Teléfono"
+        phone2: "Celular"
+        fax: "Fax"
+        address1: "Dirección"
+        address2: "Colonia"
+        city: "Ciudad"
+        state: "Estado"
+        zip: "Código Postal"
+        country: "País"
+        role_id: "Rol"
+        active: "Activo"
+        email: "Correo Electrónico"     
+        username: "Nombre de Usuario"
+        password: "Contraseña"
+        password_confirmation: "Confirmacion de Contraseña"
+        created_at: "Registrado el"
+        updated_at: "Actualizado el"
+        last_sign_in_at: "Acceso por última vez el día"
+    confirmations:
+      resend: "Reenviar instrucciones de confirmación"
+    links:
+      forgot_pwd: "¿Olvidó su contraseña?"
+      conf_inst: "¿No recibió las instrucciones de confirmación?"
+      unlock_inst: "¿No recibió las instrucciones de desbloqueo?"
+    mailer:
+      confirm:
+        conf_legend: "Usted puede confirmar su cuenta de correo electrónico a través del siguiente enlace:"
+        usr&pwd: "Su usuario y contraseña son: "
+        conf_account: "Confirmar su cuenta"
+      reset:   
+    passwords:
+      mail:
+        message: "Alguien ha cambiado su contraseña, si usted no solicitó este cambio por favor de clic en el siguiente link el cual estará disponible 24hrs después de haber recibido este correo: "
+        message_two: "De lo contrario haga caso omiso de este correo."
+        token_expired: 'Si el token para resetear su contraseña ha expirado, favor de dar clic en el siguiente link:'
+        subject: "Su contraseña ha cambiado"
+      change_your: "Cambiar su contraseña"
+      new: "Nueva contraseña"
+      confirm: "Confirmar nueva contraseña"
+      change_my: "Cambiar mi contraseña"
+      forgot: "¿Olvidé mi contraseña?"
+      send_reset_inst: "Envíenme las instrucciones para reestablecer mi contraseña"
+      requested: "Alguien ha solicitado restablecer su contraseña, puede hacer esto mediante la liga que aparece a continuación."
+      ignore: "Si usted no solicitó esto, por favor ignore este correo electrónico."
+      wont_change: "Su contraseña no cambiará hasta que accese a la liga que aparece arriba y cree una nueva contraseña."
+    unlock:
+      has_been_locked: "Su cuenta ha sido bloqueada debido un excesivo número de intentos fallidos de autenticación."
+      click_link: "De clic a la siguiente liga para desbloquear su cuenta:"
+      account: "Desbloquear mi cuenta"
+      resend: "Reenviar instrucciones de desbloqueo"
+  will_paginate:
+    previous_label: "&#8592; Anteriores"
+    next_label: "Siguientes &#8594;"
+    page_gap: "&hellip;"
+    page_entries_info:
+      single_page:
+        zero:  "Ninguno encontrado"
+        one:   "Mostrando 1 %{model}"
+        other: "Mostrando todos (%{count})"
+      single_page_html:
+        zero:  "Ninguno encontrado"
+        one:   "Mostrando <b>1</b> %{model}"
+        other: "Mostrando todos <b>(%{count})</b>"
+      multi_page: "Mostrando %{from} - %{to} de %{count} en total"
+      multi_page_html: "Mostrando <b>%{from}&nbsp;-&nbsp;%{to}</b> de <b> %{count}</b> en total"   
+        
+  users:
+    index:
+      id: Id
+      branch: Sucursal
+    show: 
+      fullname: "Nombre: "
+      first_name: "Nombre(s): "
+      last_name: "Apellido(s): "
+      phone1: "Teléfono: "
+      phone2: "Celular: "
+      fax: "Fax: "
+      address1: "Dirección: "
+      address2: "Colonia: "
+      city: "Ciudad: "
+      state: "Estado: "
+      zip: "Código Postal: "
+      country: "País: "
+      role_id:  "Rol: "
+      active: "Activo: "
+      email: "Correo Electrónico: "      
+      username: "Nombre de Usuario: "
+      password: "Contraseña: "
+      password_confirmation: "Confirmacion de Contraseña: "
+      created_at: "Registrado el: "
+      updated_at: "Actualizado el: "
+      last_sign_in_at: "Acceso por última vez el día : " 
+  bills:
+    show:
+      id: 'Id: '
+      name: 'Name: '
+      rfc: 'Rfc: '
+      email: 'Email: '
+      phone1: 'Phone1: '
+      phone2: 'Phone2: '
+      fax: 'Fax: '
+      address1: 'Address1: '
+      address2: 'Address2: '
+      zip: 'Zip: '
+      city: 'City: '
+      state: 'State: '
+      country: 'Country: '
+      client_id: 'Client: '
+      created_at: 'Created At: '
+      updated_at: 'Updated At: '
+    index:
+      id: 'Id'
+      name: 'Name'
+      rfc: 'Rfc'
+      email: 'Email'
+      phone1: 'Phone1'
+      phone2: 'Phone2'
+      fax: 'Fax'
+      address1: 'Address1'
+      address2: 'Address2'
+      zip: 'Zip'
+      city: 'City'
+      state: 'State'
+      country: 'Country'
+      client_id: 'Client'
+      created_at: 'Created At'
+      updated_at: 'Updated At'
+      client: Client
+      actions: Actions
+  branch_client_orders:
+    show:
+      id: 'Id: '
+      branch_id: 'Branch: '
+      client_id: 'Client: '
+      order_id: 'Order: '
+      created_at: 'Created At: '
+      updated_at: 'Updated At: '
+    index:
+      id: 'Id'
+      branch_id: 'Branch'
+      client_id: 'Client'
+      order_id: 'Order'
+      created_at: 'Created At'
+      updated_at: 'Updated At'
+  branches:
+    show:
+      id: 'Id: '
+      name: 'Name: '
+      email1: 'Email1: '
+      email2: 'Email2: '
+      webpage: 'Webpage: '
+      phone1: 'Phone1: '
+      phone2: 'Phone2: '
+      address1: 'Address1: '
+      address2: 'Address2: '
+      zip: 'Zip: '
+      city: 'City: '
+      state: 'State: '
+      country: 'Country: '
+      description: 'Description: '
+      created_at: 'Created At: '
+      updated_at: 'Updated At: '
+    index:
+      id: 'Id'
+      name: 'Name'
+      email1: 'Email1'
+      email2: 'Email2'
+      webpage: 'Webpage'
+      phone1: 'Phone1'
+      phone2: 'Phone2'
+      address1: 'Address1'
+      address2: 'Address2'
+      zip: 'Zip'
+      city: 'City'
+      state: 'State'
+      country: 'Country'
+      description: 'Description'
+      created_at: 'Created At'
+      updated_at: 'Updated At'
+  branch_clients:
+    show:
+      id: 'Id: '
+      branch_id: 'Branch: '
+      client_id: 'Client: '
+      created_at: 'Created At: '
+      updated_at: 'Updated At: '
+    index:
+      id: 'Id'
+      branch_id: 'Branch'
+      client_id: 'Client'
+      created_at: 'Created At'
+      updated_at: 'Updated At'
+  clients:
+    show:
+      id: 'Id: '
+      first_name: 'First Name: '
+      last_name: 'Last Name: '
+      phone1: 'Phone1: '
+      phone2: 'Phone2: '
+      fax: 'Fax: '
+      address1: 'Address1: '
+      address2: 'Address2: '
+      city: 'City: '
+      state: 'State: '
+      zip: 'Zip: '
+      country: 'Country: '
+      active: 'Active: '
+      created_at: 'Created At: '
+      updated_at: 'Updated At: '
+      username: 'Username: '
+      email: 'Email: '
+      encrypted_password: 'Encrypted Password: '
+      reset_password_token: 'Reset Password Token: '
+      reset_password_sent_at: 'Reset Password Sent At: '
+      remember_created_at: 'Remember Created At: '
+      sign_in_count: 'Sign In Count: '
+      current_sign_in_at: 'Current Sign In At: '
+      last_sign_in_at: 'Last Sign In At: '
+      current_sign_in_ip: 'Current Sign In Ip: '
+      last_sign_in_ip: 'Last Sign In Ip: '
+      confirmation_token: 'Confirmation Token: '
+      confirmed_at: 'Confirmed At: '
+      confirmation_sent_at: 'Confirmation Sent At: '
+      unconfirmed_email: 'Unconfirmed Email: '
+      failed_attempts: 'Failed Attempts: '
+      unlock_token: 'Unlock Token: '
+      locked_at: 'Locked At: '
+      authentication_token: 'Authentication Token: '
+    index:
+      id: 'Id'
+      first_name: 'First Name'
+      last_name: 'Last Name'
+      phone1: 'Phone1'
+      phone2: 'Phone2'
+      fax: 'Fax'
+      address1: 'Address1'
+      address2: 'Address2'
+      city: 'City'
+      state: 'State'
+      zip: 'Zip'
+      country: 'Country'
+      active: 'Active'
+      created_at: 'Created At'
+      updated_at: 'Updated At'
+      username: 'Username'
+      email: 'Email'
+      encrypted_password: 'Encrypted Password'
+      reset_password_token: 'Reset Password Token'
+      reset_password_sent_at: 'Reset Password Sent At'
+      remember_created_at: 'Remember Created At'
+      sign_in_count: 'Sign In Count'
+      current_sign_in_at: 'Current Sign In At'
+      last_sign_in_at: 'Last Sign In At'
+      current_sign_in_ip: 'Current Sign In Ip'
+      last_sign_in_ip: 'Last Sign In Ip'
+      confirmation_token: 'Confirmation Token'
+      confirmed_at: 'Confirmed At'
+      confirmation_sent_at: 'Confirmation Sent At'
+      unconfirmed_email: 'Unconfirmed Email'
+      failed_attempts: 'Failed Attempts'
+      unlock_token: 'Unlock Token'
+      locked_at: 'Locked At'
+      authentication_token: 'Authentication Token'
+      phone2s: Cellphone
+  comments:
+    show:
+      id: 'Id: '
+      fullname: 'Fullname: '
+      email: 'Email: '
+      comment: 'Comment: '
+      created_at: 'Created At: '
+      updated_at: 'Updated At: '
+    index:
+      id: 'Id'
+      fullname: 'Fullname'
+      email: 'Email'
+      comment: 'Comment'
+      created_at: 'Created At'
+      updated_at: 'Updated At'
+  computers:
+    show:
+      id: 'Id: '
+      brand: 'Brand: '
+      model: 'Model: '
+      ope_system: 'Ope System: '
+      serial_number: 'Serial Number: '
+      computer_type: 'Computer Type: '
+      hard_drive: 'Hard Drive: '
+      units: 'Units: '
+      memory: 'Memory: '
+      proccessor: 'Proccessor: '
+      color: 'Color: '
+      charger: 'Charger: '
+      usb: 'Usb: '
+      monitor: 'Monitor: '
+      keyboard: 'Keyboard: '
+      mouse: 'Mouse: '
+      client_id: 'Client: '
+      branch_id: 'Branch: '
+      created_at: 'Created At: '
+      updated_at: 'Updated At: '
+    index:
+      id: 'Id'
+      brand: 'Brand'
+      model: 'Model'
+      ope_system: 'Ope System'
+      serial_number: 'Serial Number'
+      computer_type: 'Computer Type'
+      hard_drive: 'Hard Drive'
+      units: 'Units'
+      memory: 'Memory'
+      proccessor: 'Proccessor'
+      color: 'Color'
+      charger: 'Charger'
+      usb: 'Usb'
+      monitor: 'Monitor'
+      keyboard: 'Keyboard'
+      mouse: 'Mouse'
+      client_id: 'Client'
+      branch_id: 'Branch'
+      created_at: 'Created At'
+      updated_at: 'Updated At'
+  error_reports:
+    show:
+      id: 'Id: '
+      user: 'User: '
+      controller_name: 'Controller Name: '
+      action_name: 'Action Name: '
+      line_number: 'Line Number: '
+      referrer_url: 'Referrer Url: '
+      original_path: 'Original Path: '
+      environment: 'Environment: '
+      branch_id: 'Branch: '
+      description: 'Description: '
+      backtrace: 'Backtrace: '
+      error_time: 'Error Time: '
+      created_at: 'Created At: '
+      updated_at: 'Updated At: '
+    index:
+      id: 'Id'
+      user: 'User'
+      controller_name: 'Controller Name'
+      action_name: 'Action Name'
+      line_number: 'Line Number'
+      referrer_url: 'Referrer Url'
+      original_path: 'Original Path'
+      environment: 'Environment'
+      branch_id: 'Branch'
+      description: 'Description'
+      backtrace: 'Backtrace'
+      error_time: 'Error Time'
+      created_at: 'Created At'
+      updated_at: 'Updated At'
+  order_cellphones:
+    show:
+      id: 'Id: '
+      order_id: 'Order: '
+      cellphone_id: 'Cellphone: '
+      created_at: 'Created At: '
+      updated_at: 'Updated At: '
+    index:
+      id: 'Id'
+      order_id: 'Order'
+      cellphone_id: 'Cellphone'
+      created_at: 'Created At'
+      updated_at: 'Updated At'
+  order_client_needs:
+    show:
+      id: 'Id: '
+      order_id: 'Order: '
+      client_need_id: 'Client Need: '
+      created_at: 'Created At: '
+      updated_at: 'Updated At: '
+    index:
+      id: 'Id'
+      order_id: 'Order'
+      client_need_id: 'Client Need'
+      created_at: 'Created At'
+      updated_at: 'Updated At'
+  order_computers:
+    show:
+      id: 'Id: '
+      order_id: 'Order: '
+      computer_id: 'Computer: '
+      created_at: 'Created At: '
+      updated_at: 'Updated At: '
+    index:
+      id: 'Id'
+      order_id: 'Order'
+      computer_id: 'Computer'
+      created_at: 'Created At'
+      updated_at: 'Updated At'
+  order_parts:
+    show:
+      id: 'Id: '
+      order_id: 'Order: '
+      part_id: 'Part: '
+      created_at: 'Created At: '
+      updated_at: 'Updated At: '
+    index:
+      id: 'Id'
+      order_id: 'Order'
+      part_id: 'Part'
+      created_at: 'Created At'
+      updated_at: 'Updated At'
+  orders:
+    show:
+      id: 'Id: '
+      client_id: 'Client: '
+      condition: 'Condition: '
+      failure: 'Failure: '
+      comments: 'Comments: '
+      accessories: 'Accessories: '
+      workshop_id: 'Workshop: '
+      require_bill: 'Require Bill: '
+      bill_id: 'Bill: '
+      status_id: 'Status: '
+      branch_id: 'Branch: '
+      product_type: 'Product Type: '
+      total_due: 'Total Due: '
+      delivery_date: 'Delivery Date: '
+      created_at: 'Created At: '
+      updated_at: 'Updated At: '
+      status: Status
+      divise: Divise
+    index:
+      id: 'Id'
+      client_id: 'Client'
+      condition: 'Condition'
+      failure: 'Failure'
+      comments: 'Comments'
+      accessories: 'Accessories'
+      workshop_id: 'Workshop'
+      require_bill: 'Require Bill'
+      bill_id: 'Bill'
+      status_id: 'Status'
+      branch_id: 'Branch'
+      product_type: 'Product Type'
+      total_due: 'Total Due'
+      delivery_date: 'Delivery Date'
+      created_at: 'Created At'
+      updated_at: 'Updated At'
+      identifier: No. order/bill
+    form:
+      first_name: Name
+      identifier: No. order/bill
+  progresses:
+    show:
+      id: 'Id: '
+      short_description: 'Short Description: '
+      full_description: 'Full Description: '
+      user_id: 'User: '
+      order_id: 'Order: '
+      branch_id: 'Branch: '
+      created_at: 'Created At: '
+      updated_at: 'Updated At: '
+    index:
+      id: 'Id'
+      short_description: 'Short Description'
+      full_description: 'Full Description'
+      user_id: 'User'
+      order_id: 'Order'
+      branch_id: 'Branch'
+      created_at: 'Created At'
+      updated_at: 'Updated At'
+  roles:
+    show:
+      id: 'Id: '
+      name: 'Name: '
+      protected: 'Protected: '
+      super_admin: 'Super Admin: '
+      branch_admin: 'Branch Admin: '
+      description: 'Description: '
+      branch_id: 'Branch: '
+      created_at: 'Created At: '
+      updated_at: 'Updated At: '
+    index:
+      id: 'Id'
+      name: 'Name'
+      protected: 'Protected'
+      super_admin: 'Super Admin'
+      branch_admin: 'Branch Admin'
+      description: 'Description'
+      branch_id: 'Branch'
+      created_at: 'Created At'
+      updated_at: 'Updated At'
+  statuses:
+    show:
+      id: 'Id: '
+      name: 'Name: '
+      description: 'Description: '
+      hierarchy: 'Hierarchy: '
+      branch_id: 'Branch: '
+      created_at: 'Created At: '
+      updated_at: 'Updated At: '
+    index:
+      id: 'Id'
+      name: 'Name'
+      description: 'Description'
+      hierarchy: 'Hierarchy'
+      branch_id: 'Branch'
+      created_at: 'Created At'
+      updated_at: 'Updated At'
+  workshops:
+    show:
+      id: 'Id: '
+      name: 'Name: '
+      email1: 'Email1: '
+      email2: 'Email2: '
+      phone1: 'Phone1: '
+      phone2: 'Phone2: '
+      fax: 'Fax: '
+      address1: 'Address1: '
+      address2: 'Address2: '
+      zip: 'Zip: '
+      city: 'City: '
+      state: 'State: '
+      country: 'Country: '
+      description: 'Description: '
+      user_id: 'User: '
+      branch_id: 'Branch: '
+      created_at: 'Created At: '
+      updated_at: 'Updated At: '
+    index:
+      id: 'Id'
+      name: 'Name'
+      email1: 'Email1'
+      email2: 'Email2'
+      phone1: 'Phone1'
+      phone2: 'Phone2'
+      fax: 'Fax'
+      address1: 'Address1'
+      address2: 'Address2'
+      zip: 'Zip'
+      city: 'City'
+      state: 'State'
+      country: 'Country'
+      description: 'Description'
+      user_id: 'User'
+      branch_id: 'Branch'
+      created_at: 'Created At'
+      updated_at: 'Updated At'
+  #END OF VIEWS VARIABLES DO NOT DELETE OR MOVE OR TAB THIS COMMENT
+  
+  activerecord:
+    models:
+      user: 'Usuario'
+      users: "Usuarios"
+      registrations: "Registro"
+      sessions: "Inicio de Sesión"
+      bill: 'Bill'
+      bills: 'Bills'
+      branch_client_orders: 'Branch Client Orders'
+      branch_client_orders: 'Branch Client Orders'
+      branch: 'Branch'
+      branches: 'Branches'
+      branch_client: 'Branch Client'
+      branch_clients: 'Branch Clients'
+      cellphones: 'Cellphones'
+      client: 'Client'
+      clients: 'Clients'
+      client_needs: 'Client needs'
+      comment: 'Comment'
+      comments: 'Comments'
+      computer: 'Computer'
+      computers: 'Computers'
+      error_report: 'Error Report'
+      error_reports: 'Error Reports'
+      order_cellphone: 'Order Cellphone'
+      order_cellphones: 'Order Cellphones'
+      order_client_need: 'Order Client Need'
+      order_client_needs: 'Order Client Needs'
+      order_computer: 'Order Computer'
+      order_computers: 'Order Computers'
+      order_part: 'Order Part'
+      order_parts: 'Order Parts'
+      order: 'Order'
+      orders: 'Orders'
+      parts: 'Parts'
+      progress: 'Progress'
+      progresses: 'Progresses'
+      role: 'Role'
+      roles: 'Roles'
+      serial_number: "Serial number"
+      serial_numbers: "Serial numbers"
+      status: 'Status'
+      statuses: 'Status'
+      users: 'Users'
+      welcome: 'Welcome'
+      workshop: 'Workshop'
+      workshops: 'Workshops'
+      #END OF MODELS DO NOT DELETE OR MOVE OR TAB THIS COMMENT
+      
+    attributes:
+      user:
+        login: "Iniciar sesión"
+        first_name: "Nombre(s): "
+        last_name: "Apellido(s): "
+        phone1: "Teléfono: "
+        phone2: "Celular: "
+        fax: "Fax: "
+        address1: "Dirección: "
+        address2: "Colonia: "
+        city: "Ciudad: "
+        state: "Estado: "
+        zip: "Código Postal: "
+        country: "País: "
+        role_id:  "Rol: "
+        active: "Activo: "
+        email: "Correo Electrónico: "        
+        username: "Nombre de Usuario: "
+        password: "Contraseña: "
+        remember_me: "Recordarme: "
+        password_confirmation: "Confirmacion de Contraseña: "
+      bill:
+        id: 'Id: '
+        name: 'Name: '
+        rfc: 'Rfc: '
+        email: 'Email: '
+        phone1: 'Phone1: '
+        phone2: 'Phone2: '
+        fax: 'Fax: '
+        address1: 'Address1: '
+        address2: 'Address2: '
+        zip: 'Zip: '
+        city: 'City: '
+        state: 'State: '
+        country: 'Country: '
+        client_id: 'Client: '
+        created_at: 'Created At: '
+        updated_at: 'Updated At: '
+      branch_client_orders:
+        id: 'Id: '
+        branch_id: 'Branch: '
+        client_id: 'Client: '
+        order_id: 'Order: '
+        created_at: 'Created At: '
+        updated_at: 'Updated At: '
+      branch:
+        id: 'Id: '
+        name: 'Name: '
+        email1: 'Email1: '
+        email2: 'Email2: '
+        webpage: 'Webpage: '
+        phone1: 'Phone1: '
+        phone2: 'Phone2: '
+        address1: 'Address1: '
+        address2: 'Address2: '
+        zip: 'Zip: '
+        city: 'City: '
+        state: 'State: '
+        country: 'Country: '
+        description: 'Description: '
+        created_at: 'Created At: '
+        updated_at: 'Updated At: '
+      branch_clients:
+        id: 'Id: '
+        branch_id: 'Branch: '
+        client_id: 'Client: '
+        created_at: 'Created At: '
+        updated_at: 'Updated At: '
+      client:
+        id: 'Id: '
+        first_name: 'First Name: '
+        last_name: 'Last Name: '
+        phone1: 'Phone1: '
+        phone2: 'Phone2: '
+        fax: 'Fax: '
+        address1: 'Address1: '
+        address2: 'Address2: '
+        city: 'City: '
+        state: 'State: '
+        zip: 'Zip: '
+        country: 'Country: '
+        active: 'Active: '
+        created_at: 'Created At: '
+        updated_at: 'Updated At: '
+        username: 'Username: '
+        email: 'Email: '
+        encrypted_password: 'Encrypted Password: '
+        reset_password_token: 'Reset Password Token: '
+        reset_password_sent_at: 'Reset Password Sent At: '
+        remember_created_at: 'Remember Created At: '
+        sign_in_count: 'Sign In Count: '
+        current_sign_in_at: 'Current Sign In At: '
+        last_sign_in_at: 'Last Sign In At: '
+        current_sign_in_ip: 'Current Sign In Ip: '
+        last_sign_in_ip: 'Last Sign In Ip: '
+        confirmation_token: 'Confirmation Token: '
+        confirmed_at: 'Confirmed At: '
+        confirmation_sent_at: 'Confirmation Sent At: '
+        unconfirmed_email: 'Unconfirmed Email: '
+        failed_attempts: 'Failed Attempts: '
+        unlock_token: 'Unlock Token: '
+        locked_at: 'Locked At: '
+        authentication_token: 'Authentication Token: '
+      comment:
+        id: 'Id: '
+        fullname: 'Fullname: '
+        email: 'Email: '
+        comment: 'Comment: '
+        created_at: 'Created At: '
+        updated_at: 'Updated At: '
+      computer:
+        id: 'Id: '
+        brand: 'Brand: '
+        model: 'Model: '
+        ope_system: 'Ope System: '
+        serial_number: 'Serial Number: '
+        computer_type: 'Computer Type: '
+        hard_drive: 'Hard Drive: '
+        units: 'Units: '
+        memory: 'Memory: '
+        proccessor: 'Proccessor: '
+        color: 'Color: '
+        charger: 'Charger: '
+        usb: 'Usb: '
+        monitor: 'Monitor: '
+        keyboard: 'Keyboard: '
+        mouse: 'Mouse: '
+        client_id: 'Client: '
+        branch_id: 'Branch: '
+        created_at: 'Created At: '
+        updated_at: 'Updated At: '
+      error_report:
+        id: 'Id: '
+        user: 'User: '
+        controller_name: 'Controller Name: '
+        action_name: 'Action Name: '
+        line_number: 'Line Number: '
+        referrer_url: 'Referrer Url: '
+        original_path: 'Original Path: '
+        environment: 'Environment: '
+        branch_id: 'Branch: '
+        description: 'Description: '
+        backtrace: 'Backtrace: '
+        error_time: 'Error Time: '
+        created_at: 'Created At: '
+        updated_at: 'Updated At: '
+      order_cellphone:
+        id: 'Id: '
+        order_id: 'Order: '
+        cellphone_id: 'Cellphone: '
+        created_at: 'Created At: '
+        updated_at: 'Updated At: '
+      order_client_need:
+        id: 'Id: '
+        order_id: 'Order: '
+        client_need_id: 'Client Need: '
+        created_at: 'Created At: '
+        updated_at: 'Updated At: '
+      order_computer:
+        id: 'Id: '
+        order_id: 'Order: '
+        computer_id: 'Computer: '
+        created_at: 'Created At: '
+        updated_at: 'Updated At: '
+      order_part:
+        id: 'Id: '
+        order_id: 'Order: '
+        part_id: 'Part: '
+        created_at: 'Created At: '
+        updated_at: 'Updated At: '
+      order:
+        id: 'Id: '
+        client_id: 'Client: '
+        condition: 'Condition: '
+        failure: 'Failure: '
+        comments: 'Comments: '
+        accessories: 'Accessories: '
+        workshop_id: 'Workshop: '
+        require_bill: 'Requiere Factura: '
+        bill_id: 'Bill: '
+        status_id: 'Status: '
+        branch_id: 'Branch: '
+        product_type: 'Product Type: '
+        total_due: 'Total Due: '
+        delivery_date: 'Delivery Date: '
+        created_at: 'Created At: '
+        updated_at: 'Updated At: '
+      progress:
+        id: 'Id: '
+        short_description: 'Short Description: '
+        full_description: 'Full Description: '
+        user_id: 'User: '
+        order_id: 'Order: '
+        branch_id: 'Branch: '
+        created_at: 'Created At: '
+        updated_at: 'Updated At: '
+      role:
+        id: 'Id: '
+        name: 'Name: '
+        protected: 'Protected: '
+        super_admin: 'Super Admin: '
+        branch_admin: 'Branch Admin: '
+        description: 'Description: '
+        branch_id: 'Branch: '
+        created_at: 'Created At: '
+        updated_at: 'Updated At: '
+      status:
+        id: 'Id: '
+        name: 'Name: '
+        description: 'Description: '
+        hierarchy: 'Hierarchy: '
+        branch_id: 'Branch: '
+        created_at: 'Created At: '
+        updated_at: 'Updated At: '
+      workshop:
+        id: 'Id: '
+        name: 'Name: '
+        email1: 'Email1: '
+        email2: 'Email2: '
+        phone1: 'Phone1: '
+        phone2: 'Phone2: '
+        fax: 'Fax: '
+        address1: 'Address1: '
+        address2: 'Address2: '
+        zip: 'Zip: '
+        city: 'City: '
+        state: 'State: '
+        country: 'Country: '
+        description: 'Description: '
+        user_id: 'User: '
+        branch_id: 'Branch: '
+        created_at: 'Created At: '
+        updated_at: 'Updated At: '
+      #END OF FORM VARIABLES DO NOT DELETE OR MOVE OR TAB THIS COMMENT
+     
+    errors: 
+      template:
+        header:
+          one: "Un error evitó que este elemento ( %{model}) fuera registrado:"
+          other: "%{count} errores evitaron que este elemento ( %{model}) fuera registrado:"
+        body: "Se encontraron problemas con los siguientes campos:"
+      messages:
+        invalid_attachment_size: " sobrepasa el límite de tamaño permitido, elija un archivo diferente."
+        invalid_attachment_content_type: " inválido, elija un archivo diferente con la extension correspondiente."
+        taken: "registro ya existente."
+        invalid: "campo inválido."
+        blank: "no puede ser un campo vacío."
+        too_short: "valor demasiado corto."
+        too_long: "valor demasiado largo."
+        not_a_number: "no es un valor numérico." 
+        not_saved: "%{count} errores evitaron que este elemento ( %{model}) fuera registrado:"
+        rol_type: "Debe seleccionar al menos un tipo de rol."
+        access_denied: "Usted no tiene permiso para realizar esa acción."
+      models:
+        user:
+          attributes:
+            first_name:
+              too_long: " valor demasiado largo, se aceptan como máximo 30 caracteres."
+            last_name:  

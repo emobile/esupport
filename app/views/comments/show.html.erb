@@ -1,0 +1,67 @@
+<%content_for :breadcrumb do%>
+  <ul class="breadcrumb">
+    <%if can? :show, Comment and @is_user%>
+      <li><%=link_to @current_user.branch.name, @current_user.branch%><span class="divider">/</span></li>
+    <%end%>
+    <%if can? :index, Comment  and @is_user%>
+      <li><%=link_to t(:index), comments_path%><span class="divider">/</span></li>
+    <%end%>
+      <li class="active"><%= t(:comment_by) + " : "+ @comment.fullname%></li>
+  </ul>
+<%end%>
+
+<div class="row-fluid">
+  <div class="block span6" >
+    <a href="#user_info" class="block-heading" data-toggle="collapse"><%= t(:user_info)%></a>
+    <div id="user_info" class="block-body collapse in">
+      <br />
+      <p>
+        <b><%=t'.fullname' %>:</b>
+        <%= @comment.fullname %>
+      </p>
+
+      <p>
+        <b><%=t'.email' %>:</b>
+        <%= @comment.email %>
+      </p>
+    </div>
+  </div>   
+  <div class="block span6" >
+    <a href="#comment" class="block-heading" data-toggle="collapse"><%= t(:comment)%></a>
+    <div id="comment" class="block-body collapse in">
+      <br />
+      <div class="field">
+        <%= @comment.comment %>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="form-actions">
+  
+  <%if can? :index, Comment%>
+    <%= link_to t(:back, :default => t("helpers.links.back")),
+      comments_path, :class => 'btn'  %>
+  <%end%>
+ 
+  <%if can? :edit, Comment%>
+    <%= link_to t(:edit, :default => t("helpers.links.edit")),
+      edit_comment_path(@comment), :class => 'btn' %>
+  <%end%>
+  
+  
+  <%if can? :destroy, Comment%>
+    <%= link_to t(:destroy, :default => t("helpers.links.destroy")),
+      comment_path(@comment),
+      :method => 'delete',
+      :data => { :confirm => t('.confirm', :default => t("helpers.links.confirm", :default => 'Are you sure?')) },
+      :class => 'btn btn-danger' %>
+  <%end%>
+   
+  
+  <%if can? :new, Comment%>
+    <%= link_to t(:new, :default => t("helpers.links.new")),
+      new_comment_path,
+      :class => 'btn btn-primary', :title => t(:new) %>
+  <%end%>
+</div>

@@ -1,0 +1,10 @@
+<%content_for :breadcrumb do%>
+  <ul class="breadcrumb">
+    <li><%=link_to @current_user.branch.name, @current_user.branch%><span class="divider">/</span></li>
+    <%if can? :index, Progress%>
+      <li><%=link_to t(:index), progresses_path%><span class="divider">/</span></li>
+    <%end%>
+    <li class="active"><%=link_to @progreses.user.fullname, @progress%></li>
+  </ul>
+<%end%>
+<%= render 'form' %>

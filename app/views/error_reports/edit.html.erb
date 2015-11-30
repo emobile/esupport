@@ -1,0 +1,10 @@
+<%content_for :breadcrumb do%>
+  <ul class="breadcrumb">
+    <li><%=link_to @current_user.branch.name, @current_user.branch%><span class="divider">/</span></li>
+    <%if can? :index, Bill%>
+      <li><%=link_to t(:index), error_reports_path%><span class="divider">/</span></li>
+    <%end%>
+    <li class="active"><%=link_to @error_report.controller_name, @error_report%></li>
+  </ul>
+<%end%>
+<%= render 'form' %>

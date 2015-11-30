@@ -1,0 +1,15 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Part:</b>
+  <%= @serial_number.part %>
+</p>
+
+<p>
+  <b>Serial number:</b>
+  <%= @serial_number.serial_number %>
+</p>
+
+
+<%= link_to 'Edit', edit_serial_number_path(@serial_number) %> |
+<%= link_to 'Back', serial_numbers_path %>

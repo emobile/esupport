@@ -1,0 +1,66 @@
+<%content_for :breadcrumb do%>
+  <ul class="breadcrumb">
+    <%if can? :show, Status and signed_in?%>
+      <li><%=link_to @current_user.branch.name, @current_user.branch%><span class="divider">/</span></li>
+    <%end%>
+    <%if can? :index, Status%>
+      <li><%=link_to t(:index), statuses_path%><span class="divider">/</span></li>
+    <%end%>
+    <li class="active"><%=@status.name%></li>
+  </ul>
+<%end%>
+
+<div class="row-fluid">
+  <div class="block span6">
+    <a href="#details" class="block-heading" data-toggle="collapse"><%= t(:general_info) %></a>
+    <div id="details" class="block-body collapse in">
+      <p>
+        <b> <%= t'.name' %>: </b>
+        <%= @status.name %>
+      </p>
+      <p>
+        <b><%= t'.branch_id' %>:</b>
+        <%= @status.branch.name %>
+      </p>  
+      <p>
+        <b><%= t'.hierarchy' %>:</b>
+        <%= @status.hierarchy %>
+      </p>
+    </div>
+  </div>
+  <div class="block span6">
+    <a href="#box-info-backgroud" class="block-heading" data-toggle="collapse"><%= t'.description' %></a>
+    <div id="box-info-backgroud" class="block-body collapse in">
+      <br />
+      <p>
+        <b><%=t'.description'%>:</b>
+        <%= @status.description %>
+      </p>
+    </div>
+  </div>
+</div>
+
+
+
+<div class="form-actions">
+  <%if can? :index, Status%>
+    <%= link_to t(:back, :default => t("helpers.links.back")),
+      statuses_path, :class => 'btn'  %>
+  <%end%>
+  <%if can? :edit, Status%>
+    <%= link_to t(:edit, :default => t("helpers.links.edit")),
+      edit_status_path(@status), :class => 'btn' %>
+  <%end%>
+  <%if can? :destroy, Status%>
+    <%= link_to t(:destroy, :default => t("helpers.links.destroy")),
+      status_path(@status),
+      :method => 'delete',
+      :data => { :confirm => t('.confirm', :default => t("helpers.links.confirm", :default => 'Are you sure?')) },
+      :class => 'btn btn-danger' %>
+  <%end%>
+  <%if can? :new, Status%>
+    <%= link_to t(:new, :default => t("helpers.links.new")),
+      new_status_path,
+      :class => 'btn btn-primary', :title => t(:new) %>
+  <%end%>
+</div>

@@ -1,0 +1,115 @@
+<%content_for :breadcrumb do%>
+  <ul class="breadcrumb">
+    <li><%=link_to t(:home), root_path%><span class="divider">/</span></li>
+    <li class="active"><%=link_to t(:index), bills_path%><span class="divider">/</span></li>
+    <li class="active"><%=link_to t(:new), new_bill_path%></li>
+  </ul>
+<%end%>
+<div class="row-fluid">
+  <div class="block span6">
+    <a href="#general-info" class="block-heading" data-toggle="collapse"><%=t(:general_info)%><span class="label label-notice"><%= (:id) %>: <%=@bill.id%></span></a>
+    <div id="general-info" class="block-body collapse in">
+      <% if @bill.errors.any? %>
+        <div id="error_explanation">
+          <h2><%= pluralize(@bill.errors.count, "error") %> prohibited this bill from being saved:</h2>
+
+          <ul>
+            <% @bill.errors.full_messages.each do |msg| %>
+              <li><%= msg %></li>
+            <% end %>
+          </ul>
+        </div>
+      <% end %>
+      <br />
+      <p>
+        <b><%=t'.client_id' %></b>
+        <%= @bill.client.fullname %>
+      </p>
+      <p>
+        <b><%=t'.name' %> </b>
+        <%= @bill.name %>
+      </p>
+
+      <p>
+        <b><%=t'.rfc'%>:</b>
+        <%= @bill.rfc %>
+      </p>
+
+      <p>
+        <b><%=t'.email'%>:</b>
+        <%= @bill.email %>
+      </p>
+
+      <p>
+        <b><%=t'.phone1'%>:</b>
+        <%= @bill.phone1 %>
+      </p>
+
+      <p>
+        <b><%=t'.phone2'%>:</b>
+        <%= @bill.phone2 %>
+      </p>
+
+      <p>
+        <b><%=t'.fax'%>:</b>
+        <%= @bill.fax %>
+      </p>
+    </div>
+  </div>
+  <div class="block span6">
+    <a href="#address-info" class="block-heading" data-toggle="collapse"><%=t(:address_info)%></a>
+    <div id="address-info" class="block-body collapse in">
+      <br />
+      <p>
+        <b><%=t'.address1'%>:</b>
+        <%= @bill.address1 %>
+      </p>
+
+      <p>
+        <b><%=t'.address2'%>:</b>
+        <%= @bill.address2 %>
+      </p>
+      <p>
+        <b><%=t'.zip'%>:</b>
+        <%= @bill.zip %>
+      </p>
+
+      <p>
+        <b><%=t'.city'%>:</b>
+        <%= @bill.city %>
+      </p>
+
+      <p>
+        <b><%=t'.state'%>:</b>
+        <%= @bill.state %>
+      </p>
+
+      <p>
+        <b><%=t'.country'%>:</b>
+        <%= @bill.country %>
+      </p>
+    </div>
+  </div>
+</div>
+
+
+<div class="form-actions">
+  <%= link_to t(:back, :default => t("helpers.links.back")),
+    bills_path, :class => 'btn'  %>
+  <%if can? :edit, Bill%>
+    <%= link_to t(:edit, :default => t("helpers.links.edit")),
+      edit_bill_path(@bill), :class => 'btn' %>
+  <%end%>
+  <%if can? :destroy, Bill%>
+    <%= link_to t(:destroy, :default => t("helpers.links.destroy")),
+      bill_path(@bill),
+      :method => 'delete',
+      :data => { :confirm => t('.confirm', :default => t("helpers.links.confirm", :default => 'Are you sure?')) },
+      :class => 'btn btn-danger' %>
+  <%end%>
+  <%if can? :new, Bill%>
+    <%= link_to t(:new, :default => t("helpers.links.new")),
+      new_bill_path,
+      :class => 'btn btn-primary', :title => t(:new) %>
+  <%end%>
+</div>

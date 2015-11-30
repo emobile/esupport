@@ -1,0 +1,56 @@
+<%= form_for(@part) do |f| %>
+  <% if @part.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@part.errors.count, "error") %> prohibited this part from being saved:</h2>
+
+      <ul>
+        <% @part.errors.full_messages.each do |msg| %>
+          <li><%= msg %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="row-fluid">
+    <div class="block span6">
+      <a href="#general_info" class="block-heading" data-toggle="collapse"><%= t(:general_info)%></a>
+      <div id="general_info" class="block-body collapse in">
+        <br />
+        <div class="field">
+          <%= f.label :name %><br />
+            <%= f.autocomplete_field :name, autocomplete_part_name_orders_path, :update_elements => {:cost => '#part_cost', :description => '#part_description'} %>
+        </div>
+        <div class="field">
+          <%= f.label :serial_number %><br />
+          <%= f.text_field :serial_number %>
+        </div>
+        <div class="field">
+          <%= f.label :cost %><br />
+          <%= f.text_field :cost %>
+        </div>
+        <%@branches = current_user.role.super_admin == true ? Branch.all : Branch.where(:id => current_user.branch_id)%>
+        <div class="field">
+          <%= f.label :branch %><br />
+          <%= f.collection_select(:branch_id, @branches, :id, :name, :prompt => false)%>
+        </div>
+      </div>
+    </div>
+    <div class="block span6">
+      <a href="#description" class="block-heading" data-toggle="collapse"><%= t(:description)%></a>
+      <div id="description" class="block-body collapse in">
+        <br />
+        <div class="field">
+          <%= f.text_area :description, :style => "height: 342px;"%>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="form-actions">
+    <%= f.submit nil, :class => 'btn btn-primary' %>
+    <%if can? :index, Part%>
+      <%= link_to t(:back, :default => t("helpers.links.back")),
+        parts_path, :class => 'btn'  %>
+    <%end%>
+  </div>
+<% end %>

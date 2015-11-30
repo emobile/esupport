@@ -1,0 +1,108 @@
+<%content_for :breadcrumb do%>
+  <ul class="breadcrumb">
+    <%if can? :show, Branch and @is_user%>
+      <li><%=link_to @current_user.branch.name, @current_user.branch%><span class="divider">/</span></li>
+    <%end%>
+    <%if can? :index, User%>
+      <li><%=link_to t(:index), users_path%><span class="divider">/</span></li>
+    <%end%>
+    <li class="active"><%="Orden de " + @user.fullname%></li>
+  </ul>
+<%end%>
+<div class="row-fluid">
+  <div class="block span6" >
+    <a href="#comments_info" class="block-heading" data-toggle="collapse"><%= @user.fullname %></a>
+    <div id="comments_info" class="block-body collapse in show-details">
+      <br />
+      <p>
+        <b><%=  t'.branch_id' %>:</b>
+        <%=link_to @user.branch.name,  @user.branch%>
+      </p>
+
+      <p>
+        <b><%= t'.email' %>:</b>
+        <%=  mail_to @user.email, @user.email%>
+      </p>
+
+      <p>
+        <b><%= t'.phone1'  %>:</b>
+        <%= @user.phone1 %>
+      </p>
+
+      <p>
+        <b> <%=t'.phone2' %>:</b>
+        <%= @user.phone2 %>
+      </p>
+
+      <p>
+        <b><%=t'.address1'%>:</b>
+        <%= @user.address1 %>
+      </p>
+
+      <p>
+        <b><%=t'.address2'%>:</b>
+        <%= @user.address2 %>
+      </p>
+
+      <p>
+        <b><%=t'.city'%>:</b>
+        <%= @user.city %>
+      </p>
+
+      <p>
+        <b><%=t'.state'%>:</b>
+        <%= @user.state %>
+      </p>
+
+      <p>
+        <b><%= t'.zip' %>:</b>
+        <%= @user.zip %>
+      </p>
+
+      <p>
+        <b><%=t'.country'%>:</b>
+        <%= @user.country %>
+      </p>
+
+      <p>
+        <b><%= t'.role_id' %>:</b>
+        <%if can? :show, Role%>
+          <%=link_to @user.role.name,  role_path(@user.role)%>
+        <%else%>
+          <%=@user.role.name%>
+        <%end%>
+      </p>
+
+    </div>
+  </div>
+</div>
+
+<div class="form-actions">
+  <%if can? :index, User%>
+    <%= link_to t(:back, :default => t("helpers.links.back")),
+      users_path, :class => 'btn'  %>
+  <%end%>
+  <%if can? :edit, User%>
+    <%if current_user.id == @user.id%>
+      <%= link_to t(:edit, :default => t("helpers.links.edit")),
+        edit_user_registration_path(@user), :class => 'btn' %>
+    <%else%>
+      <%if current_user.role.branch_admin == true%>
+        <%= link_to t(:edit, :default => t("helpers.links.edit")),
+          admin_edit_user_path(@user.id), :class => 'btn' %>
+      <%end%>
+    <%end%>
+  <%end%>
+  <%if can? :destroy, User%>
+    <%= link_to t(:destroy, :default => t("helpers.links.destroy")),
+      user_path(@user),
+      :method => 'delete',
+      :data => { :confirm => t('.confirm', :default => t("helpers.links.confirm", :default => 'Are you sure?')) },
+      :class => 'btn btn-danger' %>
+  <%end%>
+  <%if can? :new, User%>
+    <%= link_to t(:new, :default => t("helpers.links.new")),
+      new_user_registration_path,
+      :class => 'btn btn-primary', :title => t(:new) %>
+  <%end%>
+</div>

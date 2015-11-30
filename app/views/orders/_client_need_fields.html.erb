@@ -1,0 +1,12 @@
+<div class="field">
+  <%= f.label :name, :id => "label_order_client_needs_attributes_0_name" %> 
+  <%= f.autocomplete_field :name, autocomplete_client_need_name_orders_path, :update_elements => {:cost => "#order_client_needs_attributes_0_cost", :description => '#order_client_needs_attributes_0_description'}, :id => "order_client_needs_attributes_0_name"%>  <%= f.link_to_remove "[ - ]", :class => 'btn btn-danger', :style => "float:right" %>
+</div>
+<div class="field">
+  <%= f.label :cost, :id => "label_order_client_needs_attributes_0_cost" %>
+<%#= f.number_field :cost%>
+  <%= f.text_field :cost, :id => "order_client_needs_attributes_0_cost" %>
+</div>
+<div class="field">
+  <%= f.hidden_field :branch_id, :value => current_user.branch_id, :id => "order_client_needs_attributes_0_branch_id"  %>
+</div>

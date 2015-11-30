@@ -1,0 +1,365 @@
+{\rtf1\ansi\ansicpg1252\cocoartf1187\cocoasubrtf390
+{\fonttbl\f0\fswiss\fcharset0 Helvetica;\f1\froman\fcharset0 Times-Roman;\f2\fnil\fcharset0 Tahoma;
+\f3\fmodern\fcharset0 Courier;\f4\fmodern\fcharset0 Courier-Bold;}
+{\colortbl;\red255\green255\blue255;\red52\green52\blue52;\red178\green0\blue170;\red82\green0\blue38;
+}
+\margl1440\margr1440\vieww18280\viewh13100\viewkind0
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural
+
+\f0\fs24 \cf0 1. crear archivo app_name.conf dentro del httpdoc\
+\pard\pardeftab720
+
+\f1 \cf0  <VirtualHost *:80>\
+      ServerName www.servi-net.us\
+      # !!! Be sure to point DocumentRoot to 'public'!\
+      DocumentRoot /var/www/vhosts/servi-net.us/httpdocs/esupport/public/\
+     # RailsEnv production     \
+ <Directory /var/www/vhosts/servi-net.us/httpdocs/esupport/public/>\
+         # This relaxes Apache security settings.\
+         AllowOverride all\
+         # MultiViews must be turned off.\
+         Options -MultiViews\
+      </Directory>\
+   </VirtualHost>\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural
+
+\f0 \cf0 \
+2. anadir:\
+\pard\pardeftab720
+
+\f1 \cf0  <VirtualHost *:80>\
+      ServerName www.servi-net.us\
+      # !!! Be sure to point DocumentRoot to 'public'!\
+      DocumentRoot /var/www/vhosts/servi-net.us/httpdocs/esupport/public/\
+     # RailsEnv production     \
+ <Directory /var/www/vhosts/servi-net.us/httpdocs/esupport/public/>\
+         # This relaxes Apache security settings.\
+         AllowOverride all\
+         # MultiViews must be turned off.\
+         Options -MultiViews\
+      </Directory>\
+   </VirtualHost>\
+en /etc/httpd/conf/httpd.conf\
+\
+3. Crear symbolic link con: \
+ln -s /itstaff/public/\
+posicionado en la carpeta de nombre_del_dominio/httpdocs\
+\
+4. Crear 
+\f2\b\fs22 \cf2  .htaccess
+\b0  en public folder de rails app con los siguientes datos:\
+PassengerEnabled On\
+PassengerAppRoot /var/www/vhosts/DOMINIO/httpdocs/RoR_App_Name/\
+\
+5. Remover todos los archivos de httpdocs y solo dejar los archivos de plesk y la carpeta de la app de RoR\
+\
+6. Dar permisos al folder de public\
+\
+7. Reiniciar el servidor apache con 
+\f3\fs24 \cf0 /sbin/service httpd restart\
+\
+8.Reiniciar passenger con touch tmp/restart.txt\
+\
+\
+\
+\
+\
+<VirtualHost *:80>\
+      ServerName www.servi-net.us\
+      # !!! Be sure to point DocumentRoot to 'public'!\
+      DocumentRoot /var/www/vhosts/servi-net.us/httpdocs/esupport/public/\
+      <Directory /var/www/vhosts/servi-net.us/httpdocs/esupport/public/>\
+         # This relaxes Apache security settings.\
+         AllowOverride all\
+         # MultiViews must be turned off.\
+         Options -MultiViews\
+      </Directory>\
+   </VirtualHost>\
+\
+\
+ <VirtualHost *:80>\
+      ServerName www.servi-net.us\
+      # !!! Be sure to point DocumentRoot to 'public'!\
+      DocumentRoot /var/www/vhosts/servi-net.us/httpdocs/esupport/public/\
+     # RailsEnv production     \
+ <Directory /var/www/vhosts/servi-net.us/httpdocs/esupport/public/>\
+         # This relaxes Apache security settings.\
+         AllowOverride all\
+         # MultiViews must be turned off.\
+         Options -MultiViews\
+      </Directory>\
+   </VirtualHost>\
+\
+ <VirtualHost *:80>\
+      ServerName www.emobile-demos.com.mx\
+      # !!! Be sure to point DocumentRoot to 'public'!\
+      DocumentRoot /var/www/vhosts/emobile-demos.com.mx/httpdocs/itstaff/public/\
+     # RailsEnv production     \
+ <Directory /var/www/vhosts/emobile-demos.com.mx/httpdocs/itstaff/public/>\
+         # This relaxes Apache security settings.\
+         AllowOverride all\
+         # MultiViews must be turned off.\
+         Options -MultiViews\
+      </Directory>\
+   </VirtualHost>\
+\
+\
+LoadModule passenger_module /usr/local/lib/ruby/gems/1.9.1/gems/passenger-4.0.5/libout/apache2/mod_passenger.so\
+PassengerRoot /usr/local/lib/ruby/gems/1.9.1/gems/passenger-4.0.5\
+PassengerDefaultRuby /usr/local/bin/ruby\
+\
+\
+\
+\pard\pardeftab720\sa240
+
+\f1 \cf0 * To start mysql server:\
+\pard\pardeftab720
+
+\f3 \cf0 /etc/init.d/mysqld start\
+\pard\pardeftab720\sa240
+
+\f1 \cf0 * To stop mysql server:\
+\pard\pardeftab720
+
+\f3 \cf0 /etc/init.d/mysqld stop\
+\pard\pardeftab720\sa240
+
+\f1 \cf0 * To restart mysql server\
+\pard\pardeftab720
+
+\f3 \cf0  /etc/init.d/mysqld restart\
+\
+\pard\pardeftab720\sa240
+
+\f1 \cf0 You have a couple of options:\
+\pard\pardeftab720
+
+\f3 \cf0 lsof -i tcp:80\
+\pard\pardeftab720\sa240
+
+\f1 \cf0 will give you the list of processes using tcp port 80.\
+Alternatively,\
+\pard\pardeftab720
+
+\f3 \cf0 sudo netstat -nlp\
+\pard\pardeftab720\sa240
+
+\f1 \cf0 will give you all open network connections.\
+\pard\pardeftab720
+
+\f3 \cf0 \
+\
+The Apache 2 module was successfully installed.\
+\
+Please edit your Apache configuration file, and add these lines:\
+\
+   LoadModule passenger_module /usr/local/rvm/gems/ruby-2.0.0-p247/gems/passenger-4.0.14/buildout/apache2/mod_passenger.so\
+   PassengerRoot /usr/local/rvm/gems/ruby-2.0.0-p247/gems/passenger-4.0.14\
+   PassengerDefaultRuby /usr/local/rvm/wrappers/ruby-2.0.0-p247/ruby\
+\
+After you restart Apache, you are ready to deploy any number of Ruby on Rails\
+applications on Apache, without any further Ruby on Rails-specific\
+configurati\
+\
+\
+--------------------------------------------\
+Deploying a Ruby on Rails application: an example\
+\
+Suppose you have a Rails application in /somewhere. Add a virtual host to your\
+Apache configuration file and set its DocumentRoot to /somewhere/public:\
+\
+   <VirtualHost *:80>\
+      ServerName 162.210.48.196\
+      # !!! Be sure to point DocumentRoot to 'public'!\
+      DocumentRoot /test1/public    \
+      <Directory /test1/public>\
+         # This relaxes Apache security settings.\
+         AllowOverride all\
+         # MultiViews must be turned off.\
+         Options -MultiViews\
+      </Directory>\
+   </VirtualHost>\
+\
+And that's it! You may also want to check the Users Guide for security and\
+optimization tips, troubleshooting and other useful information:\
+\
+  /usr/local/rvm/gems/ruby-2.0.0-p247/gems/passenger-4.0.14/doc/Users guide Apache.html\
+\
+Enjoy Phusion Passenger, a product of Phusion (www.phusion.nl) :-)\
+https://www.phusionpassenger.com\
+\
+\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural
+
+\f0 \cf0 LoadModule passenger_module /usr/local/rvm/gems/ruby-2.0.0-p247/gems/passenger-4.0.14/buildout/apache2/mod_passenger.so\
+PassengerRoot /usr/local/rvm/gems/ruby-2.0.0-p247/gems/passenger-4.0.14\
+PassengerDefaultRuby /usr/local/rvm/wrappers/ruby-2.0.0-p247/ruby\
+\
+<VirtualHost 108.174.154.136:80>\
+      ServerName emobile-demos.com.mx\
+      ServerAlias emobile-demos.com.mx www.emobile-demos.com.mx\
+      ServerAdmin aballesteros@emobile.com.mx\
+      # !!! Be sure to point DocumentRoot to 'public'!\
+      DocumentRoot /home/edemos/Rails/itstaff/public\
+      <Directory /home/edemos/Rails/itstaff/public>\
+         # This relaxes Apache security settings.\
+         AllowOverride all\
+         # MultiViews must be turned off.\
+         Options -MultiViews\
+         Allow from all\
+      </Directory>\
+</VirtualHost>\
+\
+#Include "/home/edemos/.itstaff.conf"\
+\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural
+
+\f3 \cf0 \
+\pard\pardeftab720
+\cf0 \
+RAILS_ENV=production bundle exec rake assets:precompile\
+\
+bundle 
+\f4\b \cf3 install
+\f3\b0 \cf0  \cf4 --path\cf0  vendor
+\f4\b /
+\f3\b0 bundle\
+\
+\
+faltan de agregar redireccionamiento de webmaster: \
+chihhuahua.info\
+xoftware.com\
+jrsurtidora.com.mx\
+PassengerRoot\
+/usr/local/rvm/gems/ruby-2.0.0-p247/bin/passenger\
+\
+root@web [/home/emobile/public_html]# rm -f /etc/httpd/logs/error_log \
+root@web [/home/emobile/public_html]# rm -f /etc/httpd/logs/access_log \
+root@web [/home/emobile/public_html]# vi /etc/httpd/logs/error_log \
+root@web [/home/emobile/public_html]# vi /etc/httpd/logs/access_log\
+root@web [/home/emobile/public_html]# vi /etc/httpd/conf/httpd.conf\
+root@web [/home/emobile/public_html]# /sbin/service httpd restart  \
+\
+\
+# -FrontPage-\
+\
+IndexIgnore .htaccess */.??* *~ *# */HEADER* */README* */_vti*\
+\
+<Limit GET POST>\
+order deny,allow\
+deny from all\
+allow from all\
+</Limit>\
+<Limit PUT DELETE>\
+order deny,allow\
+deny from all\
+</Limit>\
+AuthName emobile-demos.com.mx\
+AuthUserFile /home/edemos/public_html/_vti_pvt/service.pwd\
+AuthGroupFile /home/edemos/public_html/_vti_pvt/service.grp\
+\
+\
+\
+\
+\
+\
+\
+<VirtualHost 162.210.48.196:80>\
+      ServerName www.emobile-demos.com.mx\
+      ServerAlias www.emobile-demos.com.mx emobile-demos.com.mx\
+      ServerAdmin webmaster@emobile-demos.com.mx\
+      DocumentRoot  /home/edemos/public_html\
+           RailsBaseURI /esuppor\
+            <Directory /home/edemos/Rails/esupport/public>\
+                 AllowOverride all\
+                 Options -MultiViews\
+                 Allow from all\
+           </Directory>\
+          RackBaseURI /itstaff\
+            <Directory /home/edemos/Rails/itstaff/public>\
+                 AllowOverride all\
+                 Options -MultiViews\
+                 Allow from all\
+            </Directory>\
+</VirtualHost>\
+\
+\
+<a href="http://www.servinet.chihuahuaenlinea.com">ServiNet</a><br /><br />\
+<a href="http://www.itstaff.emobile-demos.com.mx">ItStaff</a>\
+\
+\
+\
+  adapter: mysql2\
+  database: edemos_anadic\
+  host: localhost\
+  username: edemos_anadic\
+  password: emobilej2011\
+\
+\
+\
+\
+  <table id="orders-table">\
+    <tr style="height: 50px; border-bottom: 1px solid #ccc;">\
+      <th style="width: 50px; border-right: 1px solid #ccc;">ID</th>\
+      <th style="width: 100px; border-right: 1px solid #ccc;">Cliente</th>\
+      <th style="width: 200px;">Dias</th>\
+      <th style="width: 80px;"></th>\
+    </tr>\
+    <%= f.fields_for :schedules_routes, :wrapper => false do |schedule_route_form| %>\
+      <tr class="fields" style="border-bottom: 1px solid #ccc;">\
+        <td class="order-id" style="width: 50px; border-right: 1px solid #ccc;"><%= schedule_route_form.object.schedule.id unless schedule_route_form.object.schedule.nil? %></td>\
+        <td class="client-name" style="width: 500px; border-right: 1px solid #ccc;"><%= schedule_route_form.object.schedule.client.fullname  unless schedule_route_form.object.schedule.nil? %></td>\
+        <%unless schedule_route_form.object.schedule.nil?%>\
+          <td class="import" style="width: 80px;">\
+            <%= t(:monday) if schedule_route_form.object.schedule.monday %>\
+            <%= t(:tuesday) if schedule_route_form.object.schedule.tuesday %>\
+            <%= t(:wednesday) if schedule_route_form.object.schedule.wednesday %>\
+            <%= t(:thursday) if schedule_route_form.object.schedule.thursday %>\
+            <%= t(:friday) if schedule_route_form.object.schedule.friday %>\
+            <%= t(:saturday) if schedule_route_form.object.schedule.saturday %>\
+            <%= t(:sunday) if schedule_route_form.object.schedule.sunday %>\
+          </td>\
+        <%end%>\
+        <td style="width: 80px;">\
+          <%= schedule_route_form.hidden_field :schedule_id, :class => "hidden-order-id" %>\
+          <%= schedule_route_form.link_to_remove "[ - ]", :class => "btn btn-primary" %>\
+        </td>\
+      </tr>\
+    <% end %>\
+  </table>\
+\
+\
+\
+https://wrapbootstrap.com/search?q=clothes\
+http://bootstrap-commerce.com.domainpreview.eu/\
+http://wrapbootstrap.com/preview/WB00H3A42\
+http://wbpreview.com/previews/WB0096211/index.html\
+http://wbpreview.com/previews/WB0BMF1K5/index.html#\
+http://leapfrogui.com/shopfrog/pink/collection.html\
+\
+\
+\
+\
+LoadModule passenger_module /usr/local/rvm/gems/ruby-2.0.0-p247/gems/passenger-4.0.14/buildout/apache2/mod_passenger.so\
+PassengerRoot /usr/local/rvm/gems/ruby-2.0.0-p247/gems/passenger-4.0.14\
+PassengerDefaultRuby /usr/local/rvm/wrappers/ruby-2.0.0-p247/ruby\
+LoadModule auth_passthrough_module modules/mod_auth_passthrough.so\
+LoadModule bwlimited_module modules/mod_bwlimited.so\
+LoadModule frontpage_module modules/mod_frontpage.so\
+\
+Include "/home/edemos/.edemos.conf"\
+Include "/home/emobilea/.emobilea.conf"\
+Include "/home/servinet/.servinet.conf"\
+Include "/home/chihuahu/.chihuahu.conf"\
+\
+\
+\
+\
+SoftException in Application.cpp:363: GID of script "/home/edemos/public_html/home/index.php" is smaller than min_gid\
+chown edemos:edemos -R /home/edemos/public_html/home/\
+\
+mysql -u root -q\
+GRANT ALL ON *.* TO servinet_servine@'%' IDENTIFIED BY 'emobilej2011';
+\
+\
+}
