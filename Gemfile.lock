@@ -129,6 +129,8 @@ GEM
     rdoc (3.12.2)
       json (~> 1.4)
     ref (1.0.5)
+    rename (1.0.2)
+      rails (>= 3.0.0)
     sass (3.2.9)
     sass-rails (3.2.6)
       railties (~> 3.2.0)
@@ -195,6 +197,7 @@ DEPENDENCIES
   pg
   rails (= 3.2.11)
   rails3-jquery-autocomplete
+  rename
   sass-rails (~> 3.2.3)
   seed_dump (~> 0.4.3)
   sqlite3

@@ -59,3 +59,4 @@ gem 'i18n-tasks', '~> 0.1.0'#rake i18n:missing
 
 # To use debugger
 # gem 'debugger'
+gem 'rename'
