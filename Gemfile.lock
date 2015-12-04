@@ -203,6 +203,3 @@ DEPENDENCIES
   uglifier (>= 1.0.3)
   will_paginate
   will_paginate-bootstrap
-
-BUNDLED WITH
-   1.10.6
