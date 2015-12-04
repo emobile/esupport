@@ -6,8 +6,6 @@ gem 'rails', '3.2.11'
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
 gem 'sqlite3'
-#gem "activerecord-postgresql-adapter"
-gem "pg"
 gem "thin"
 gem "less-rails"
 gem "therubyracer"
@@ -24,7 +22,7 @@ gem 'will_paginate'
 gem 'will_paginate-bootstrap'
 gem "seed_dump", "~> 0.4.3"
 gem 'rails3-jquery-autocomplete'
-gem 'mysql2'
+gem "mysql2", "~> 0.3.18"
 gem 'ckeditor_rails'
 gem 'bootstrap-datepicker-rails'
 gem "i18n-missing_translations"
